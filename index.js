@@ -1,4 +1,5 @@
-document.addEventListener('wheel', function(event) {
+document.getElementById('gallery')
+  .addEventListener('wheel', function(event) {
     if (event.deltaMode == event.DOM_DELTA_PIXEL) {
       var modifier = 1;
       // иные режимы возможны в Firefox
@@ -12,4 +13,6 @@ document.addEventListener('wheel', function(event) {
       this.scrollLeft += modifier * event.deltaY;
       event.preventDefault();
     }
-});
+  }, {
+    passive: false
+  });

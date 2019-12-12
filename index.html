@@ -8,28 +8,127 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="gallery">
-        <div class="section">
+    <div class="gallery" id="gallery">
 
-            <figure class="picture" data-picture="main">
+        <!-- 1 зал. Барбарисовна и котик -->
+        <div class="section" data-section="first">
 
+            <!-- Мона Лиза -->
+            <figure class="picture" data-picture="monalisa">
                 <div class="picture__image">
-
+                    <img src="images/monalisa.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
                     Екатерина Барбарисовна
                 </figcaption>
             </figure>
 
-        </div>
-        <div class="section">
-            <div class="picture" data-picture="homer"></div>
-        </div>
-        <div class="section">
-            <div class="picture" data-picture="homer"></div>
-        </div>
+            <!-- Тигр -->
+            <figure class="picture" data-picture="tiger">
+                <div class="picture__image">
+                    <img src="images/tiger.jpg" alt="">
+                </div>
+
+                <figcaption class="picture__caption">
+                    Туся Барбарисовна
+                </figcaption>
+            </figure>
+        </div><!-- 1 зал. Барбарисовна и котик -->
+
+
+        <!-- 2 зал. Купание красного кота -->
+        <div class="section" data-section="second">
+
+            <!-- Купание красного коня -->
+            <figure class="picture" data-picture="redhorse">
+                <div class="picture__image">
+                    <img src="images/redhorse.jpg" alt="">
+                </div>
+                <figcaption class="picture__caption">
+                    Купание красного кота
+                </figcaption>
+            </figure>
+
+        </div><!-- 2 зал. Купание красного кота -->
+
+
+        <!-- Египетский зал -->
+        <div class="section" data-section="egypt">
+            <div class="mummy"></div>
+            <div class="wall"></div>
+            <div class="cat"></div>
+            <div class="beetle"></div>
+        </div><!-- Египетский зал -->
+
+        <!-- Мультяшный зал -->
+        <div class="section" data-section="mult">
+
+            <!-- Гомер в воронке -->
+            <figure class="picture" data-picture="homer1">
+                <div class="picture__image">
+                    <img src="images/homer1.png" alt="">
+                </div>
+            </figure>
+
+            <!-- Гомер с пивом -->
+            <figure class="picture" data-picture="homer2">
+                <div class="picture__image">
+                    <img src="images/homer2.jpg" alt="">
+                </div>
+            </figure>
+
+            <!-- Конь Боджек -->
+            <figure class="picture" data-picture="bojack">
+                <div class="picture__image">
+                    <img src="images/bojack.jpg" alt="">
+                </div>
+            </figure>
+
+            <!-- Царь горы -->
+            <figure class="picture" data-picture="hillking">
+                <div class="picture__image">
+                    <img src="images/hillking.jpg" alt="">
+                </div>
+            </figure>
+
+        </div><!-- Мультяшный зал -->
+
+        <!-- Буквальный зал -->
+        <div class="section" data-section="literally">
+            <figure class="picture" data-picture="comics1">
+                <div class="picture__image">
+                    <img src="images/comics1.jpg" alt="">
+                </div>
+            </figure>
+
+            
+            <figure class="picture" data-picture="comics2">
+                <div class="picture__image">
+                    <img src="images/comics2.jpg" alt="">
+                </div>
+            </figure>
+
+            
+            <figure class="picture" data-picture="comics3">
+                <div class="picture__image">
+                    <img src="images/comics3.jpg" alt="">
+                </div>
+            </figure>
+
+            
+            <figure class="picture" data-picture="comics4">
+                <div class="picture__image">
+                    <img src="images/comics4.jpg" alt="">
+                </div>
+            </figure>
+
+        </div><!-- Зал инопланетян -->
     </div>
 
     <script src="index.js"></script>
+
+    <script>
+        document.getElementById('gallery').scrollLeft = 5000;
+    </script>
 </body>
 </html>
