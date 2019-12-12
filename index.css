@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.gallery {
+    position: absolute;
+    top: 0;
+    bottom: -40px;
+    padding-bottom: 40px;
+    min-height: 500px;
+    width: 100%;
+    background: lightsalmon;
+
+    display: flex;
+    overflow: auto;
+}
+
+.section {
+    border: 2px solid red;
+    margin: 10px;
+    width: 500px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.picture {
+    width: 200px; 
+    height: 200px;
+    background: red;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
