@@ -45,6 +45,17 @@ body {
     right: 0;
 }
 
+.section__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .picture {
     background: red;
     position: absolute;
@@ -257,37 +268,30 @@ body {
 }
 
 [data-picture="starwars"] {
-    left: 0%;
-    right: 60%;
+    left: 40%;
+    right: 30%;
     margin: auto;
     top: 100px;
-    width: 392px;
-    height: 220px;
-}
-
-[data-picture="potter"] {
-    left: 0%;
-    right: 60%;
-    margin: auto;
-    width: 210px;
-    height: 140px;
-    top: 355px;
+    width: 340px;
+    height: 555px;
 }
 
 [data-picture="got"] {
-    left: 40%;
-    right: 25%;
+    left: 5%;
+    right: 60%;
     width: 440px;
     height: 400px;
+    margin: auto;
     top: 100px;
 }
 
 [data-picture="friends"] {
-    left: 75%;
-    right: 0%;
+    left: 70%;
+    right: 10%;
     top: 100px;
     width: 300px;
     height: 400px;
+    margin: auto;
 }
 
 /* Зал Исаакиевского собора */ 
@@ -328,9 +332,10 @@ body {
 }
 
 /* Рабочий зал */
+
 [data-section="job"] {
     background: yellowgreen;
-    min-width: 3000px;
+    min-width: 3500px;
 }
 
 .coffeemachine {
@@ -375,4 +380,45 @@ body {
     width: 376px;
     height: 281px;
     top: 219px;
+}
+
+[data-picture="gun"] {
+    left: 2986px;
+    width: 264px;
+    height: 400px;
+    top: 100px;
+}
+
+/* Зал физического здоровья */
+
+[data-section="physical"] {
+    background: orange;
+    min-width: 3500px;
+}
+
+
+/* Зал душевного здоровья */
+
+[data-section="mental"] {
+    background: lightseagreen;
+    min-width: 3500px;
+}
+
+/* Зал апсны */
+
+[data-section="apsny"] {
+    background: goldenrod;
+    
+}
+
+/* Зал примитивного искусства */
+
+[data-section="primitive"] {
+    background: chocolate;
+}
+
+/* Праздничный зал */
+
+[data-section="holiday"] {
+    
 }
