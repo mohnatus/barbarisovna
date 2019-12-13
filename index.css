@@ -179,39 +179,36 @@ body {
     background-color: aqua;
 }
 
+[data-section="literally"] [data-picture] {
+    width: 270px;
+    height: 270px;
+    margin: auto;
+}
 
+[data-picture="comics1"], [data-picture="comics3"] {
+    top: 100px;
+}
 
-
-
-
-
-
-
+[data-picture="comics2"], [data-picture="comics4"] {
+    top: 200px;
+}
 
 [data-picture="comics1"] {
-    top: 100px;
-    width: 20%;
-    height: 35%;
-    left: 4%;
+    left: 0;
+    right: 75%;
 }
 
 [data-picture="comics2"] {
-    top: 100px;
-    width: 20%;
-    height: 35%;
-    left: 28%;
+    left: 25%;
+    right: 50%;
 }
 
 [data-picture="comics3"] {
-    top: 100px;
-    width: 20%;
-    height: 35%;
-    left: 52%;
+    left: 50%;
+    right: 25%;
 }
 
 [data-picture="comics4"] {
-    top: 100px;
-    width: 20%;
-    height: 35%;
-    left: 74%
+    left: 75%;
+    right: 0%;
 }
