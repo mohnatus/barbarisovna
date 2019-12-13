@@ -223,8 +223,8 @@ body {
 }
 
 [data-section="literally"] [data-picture] {
-    width: 270px;
-    height: 270px;
+    width: 300px;
+    height: 300px;
     margin: auto;
 }
 
@@ -342,8 +342,9 @@ body {
     position: absolute;
     bottom: 50px;
     left: 50px;
-    width: 200px;
-    height: 540px;
+    width: 270px;
+    height: 686px;
+    z-index: 10;
     background: url(images/job/coffeemachine.png) bottom / contain no-repeat;
 }
 
@@ -504,16 +505,10 @@ body {
     
 }
 
-/* Зал примитивного искусства */
-
-[data-section="primitive"] {
-    background: chocolate;
-}
-
 /* Праздничный зал */
 
 [data-section="holiday"] {
-    min-width: 2200px;
+    min-width: 1700px;
 }
 
 [data-picture="empress"] {
@@ -527,13 +522,13 @@ body {
 [data-picture="keanu1"] {
     width: 300px;
     height: 470px;
-    left: calc(25% - 150px);
+    left: calc(50% - 700px);
     top: 100px;
 }
 
 [data-picture="keanu2"] {
     width: 300px;
     height: 405px;
-    left: calc(75% - 150px);
+    left: calc(50% + 400px);
     top: 100px;
 }
