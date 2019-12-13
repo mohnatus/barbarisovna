@@ -513,5 +513,27 @@ body {
 /* Праздничный зал */
 
 [data-section="holiday"] {
-    
+    min-width: 2200px;
+}
+
+[data-picture="empress"] {
+    left: 50%;
+    top: 200px;
+    width: 700px;
+    height: 528px;
+    transform: translateX(-50%);
+}
+
+[data-picture="keanu1"] {
+    width: 300px;
+    height: 470px;
+    left: calc(25% - 150px);
+    top: 100px;
+}
+
+[data-picture="keanu2"] {
+    width: 300px;
+    height: 405px;
+    left: calc(75% - 150px);
+    top: 100px;
 }
