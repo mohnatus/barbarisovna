@@ -127,7 +127,7 @@ body {
     bottom: 40px;
     left: 30px;
     background: url(images/mummy.png) center / 110% auto no-repeat;
-    width: 520px;
+    width: 468px;
     height: 710px;
 }
 
@@ -136,6 +136,13 @@ body {
     top: 50px;
     width: 727px;
     height: 455px;
+}
+
+[data-picture="beetle"] {
+    right: 820px;
+    top: 50px;
+    width: 100px;
+    height: 100px;
 }
 
 /* Мультяшный зал */ 
