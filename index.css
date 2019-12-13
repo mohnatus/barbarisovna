@@ -120,29 +120,52 @@ body {
 /* Египетский зал */ 
 [data-section="egypt"] {
     background-color: sandybrown;
+    width: 200vw;
+    min-width: 2800px;
 }
 
 [data-section="egypt"] .mummy {
     position: absolute;
     bottom: 40px;
     left: 30px;
-    background: url(images/mummy.png) center / 110% auto no-repeat;
+    background: url(images/egypt/mummy.png) center / 110% auto no-repeat;
     width: 468px;
     height: 710px;
 }
 
-[data-picture="egyptwall"] {
-    right: 50px;
+[data-picture="egypt4"] {
+    left: 1000px;
     top: 50px;
-    width: 727px;
-    height: 455px;
+    width: 730px;
+    height: 486px;
 }
 
 [data-picture="beetle"] {
-    right: 820px;
+    left: 637px;
+    top: 400px;
+    width: 150px;
+    height: 151px;
+}
+
+[data-picture="egypt1"] {
+    left: 500px;
     top: 50px;
-    width: 100px;
-    height: 100px;
+    width: 418px;
+    height: 300px;
+}
+
+[data-picture="egypt2"] {
+    left: 1800px;
+    top: 150px;
+    width: 404px;
+    height: 300px;
+}
+
+[data-picture="egypt3"] {
+    left: 2276px;
+    top: 150px;
+    width: 439px;
+    height: 300px;
 }
 
 /* Мультяшный зал */ 
@@ -218,4 +241,10 @@ body {
 [data-picture="comics4"] {
     left: 75%;
     right: 0%;
+}
+
+/* Зал кино и сериалов */ 
+
+[data-section="cinema"] {
+    background-color: black;
 }
