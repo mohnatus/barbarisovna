@@ -254,3 +254,74 @@ body {
 [data-section="cinema"] {
     background-color: black;
 }
+
+[data-picture="starwars"] {
+    left: 0%;
+    right: 60%;
+    margin: auto;
+    top: 100px;
+    width: 392px;
+    height: 220px;
+}
+
+[data-picture="potter"] {
+    left: 0%;
+    right: 60%;
+    margin: auto;
+    width: 210px;
+    height: 140px;
+    top: 355px;
+}
+
+[data-picture="got"] {
+    left: 40%;
+    right: 25%;
+    width: 440px;
+    height: 400px;
+    top: 100px;
+}
+
+[data-picture="friends"] {
+    left: 75%;
+    right: 0%;
+    top: 100px;
+    width: 300px;
+    height: 400px;
+}
+
+/* Зал Исаакиевского собора */ 
+
+[data-section="isaak"] {
+    background-color: skyblue;
+    width: 150vw;
+    min-width: 2100px;
+}
+
+[data-picture="isaak1"] {
+    top: 60px;
+    bottom: calc(100% - 516px);
+    left: 0%;
+    right: 75%;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+}
+
+[data-picture="isaak2"] {
+    top: 60px;
+    left: 25%;
+    right: 25%;
+    width: 1000px;
+    height: 476px;
+    margin: auto;
+}
+
+[data-picture="isaak3"] {
+    top: 60px;
+    bottom: calc(100% - 516px);
+    left: 75%;
+    right: 0%;
+    width: 300px;
+    height: 208px;
+    margin: auto;
+}
