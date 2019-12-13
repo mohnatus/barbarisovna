@@ -393,7 +393,43 @@ body {
 
 [data-section="physical"] {
     background: orange;
-    min-width: 3500px;
+    min-width: 1800px;
+}
+
+[data-picture="peaches"] {
+    left: 0;
+    right: 75%;
+    width: 345px;
+    height: 386px;
+    top: 100px;
+    margin: auto;
+}
+
+[data-picture="venera"] {
+    left: 25%;
+    right: 35%;
+    width: 634px;
+    height: 398px;
+    top: 100px;
+    margin: auto;
+}
+
+[data-picture="yoga"] {
+    left: 65%;
+    right: 25%;
+    width: 210px;
+    height: 210px;
+    top: 190px;
+    margin: auto;
+}
+
+[data-picture="ball"] {
+    left: 75%;
+    right: 0;
+    width: 284px;
+    height: 400px;
+    top: 100px;
+    margin: auto;
 }
 
 
