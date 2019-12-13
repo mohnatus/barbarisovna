@@ -144,6 +144,35 @@ body {
     background-color: red;
 }
 
+[data-picture="homer1"] {
+    top: 100px;
+    width: 566px;
+    height: 300px;
+    left: 50%;
+}
+
+[data-picture="homer2"] {
+    top: 100px;
+    width: 250px;
+    height: 142px;
+    left: 10%;
+}
+
+[data-picture="bojack"] {
+    top: 320px;
+    left: calc(25% - 120px);
+    width: 355px;
+    height: 200px;
+    
+}
+
+[data-picture="hillking"] {
+    top: 460px;
+    width: 220px;
+    height: 165px;
+    left: 48%;
+} 
+
 /* Буквальный зал */ 
 
 [data-section="literally"] {
@@ -156,33 +185,7 @@ body {
 
 
 
-[data-picture="homer1"] {
-    top: 100px;
-    width: 20%;
-    height: 27%;
-    left: 4%;
-}
 
-[data-picture="homer2"] {
-    top: 100px;
-    width: 20%;
-    height: 30%;
-    left: 28%;
-}
-
-[data-picture="bojack"] {
-    top: 100px;
-    width: 20%;
-    height: 30%;
-    left: 52%;
-}
-
-[data-picture="hillking"] {
-    top: 100px;
-    width: 20%;
-    height: 40%;
-    left: 74%
-}
 
 
 [data-picture="comics1"] {
