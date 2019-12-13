@@ -437,8 +437,65 @@ body {
 
 [data-section="mental"] {
     background: lightseagreen;
-    min-width: 3500px;
+    min-width: 4600px;
 }
+
+[data-picture="owl"] {
+    left: 100px;
+    top: 250px;
+    width: 200px;
+    height: 150px;
+}
+
+[data-picture="cat1"] {
+    left: 400px;
+    top: 150px;
+    width: 400px;
+    height: 400px;
+}
+
+[data-picture="riders"] {
+    left: 900px;
+    top: 150px;
+    width: 604px;
+    height: 400px;
+}
+
+[data-picture="cat2"] {
+    left: 1600px;
+    top: 150px;
+    width: 400px;
+    height: 400px;
+}
+
+[data-picture="demon"] {
+    left: 2100px;
+    top: 150px;
+    width: 664px;
+    height: 400px;
+}
+
+[data-picture="cat3"] {
+    left: 2860px;
+    top: 150px;
+    width: 400px;
+    height: 400px;
+}
+
+[data-picture="night"] {
+    left: 3360px;
+    top: 150px;
+    width: 641px;
+    height: 400px;
+}
+
+[data-picture="cat4"] {
+    left: 4100px;
+    top: 150px;
+    width: 400px;
+    height: 400px;
+}
+
 
 /* Зал апсны */
 
