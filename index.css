@@ -1,3 +1,12 @@
+@keyframes shining {
+    from {
+        filter: drop-shadow(0 0 10px currentColor);
+    }
+    to {
+        filter: drop-shadow(0 0 25px currentColor);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +21,8 @@ body {
     position: absolute;
     top: 0;
     bottom: -40px;
-    min-height: 500px;
+    min-height: 750px;
+
     width: 100%;
     background: lightsalmon;
 
@@ -20,6 +30,46 @@ body {
     overflow: auto;
 }
 
+.active {
+    cursor: pointer;
+    color: goldenrod;
+    filter: drop-shadow(0 0 10px currentColor);
+}
+
+.active:hover {
+    animation-name: shining;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    
+}
+
+.wish {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: opacity 400ms;
+    z-index: 100;
+}
+
+.wish__wrapper {
+    position: absolute;
+    right: 20px;
+    left: 20px;
+    width: 300px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: calc(100% - 40px);
+    margin: auto;
+    background: white;
+    padding: 20px;
+}
 
 .section {
     width: 100vw;
@@ -33,27 +83,57 @@ body {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 10px;
-    background: black;
+    width: 20px;
+    background: url(images/concrete.jpg);
+    z-index: 3;
 }
 
 .section:before {
-    left: 0;
+    left: -10px;
 }
 
 .section:after {
-    right: 0;
+    right: -10px;
 }
 
 .section__title {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 10px;
+    min-width: 200px;
+    height: 50px;
+    background: url(images/table.png) center / 100% 100% no-repeat;
     text-align: center;
-    padding-top: 10px;
+    line-height: 45px;
+    padding: 0 30px;
     font-size: 20px;
     font-weight: bold;
+    color: black;
+    left: 100px;
+}
+
+.section__floor {
+    height: 200px;
+    bottom: -35px;
+    position: absolute;
+    z-index: 2;
+    left: 0px; right: 0px;
+    overflow: hidden;
+}
+
+.section__floor span {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: -500px; right: -500px;
+    transform: perspective(1000px) rotate3d(0.3,0,0,62deg)
+}
+
+.section__granny {
+    width: 200px;
+    height: 500px;
+    position: absolute;
+    z-index: 5;
+    right: -100px;
+    bottom: 50px;
 }
 
 .picture {
@@ -65,7 +145,10 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
+    
+    border: 40px solid #353535;
 }
+
 
 .picture img {
     width: 100%;
@@ -78,45 +161,115 @@ body {
 .picture__caption {
     position: absolute;
     top: calc(100% + 15px);
-    padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    height: 40px;
+    background: url(images/tablelong.png) center / 100% 100% no-repeat;
     text-align: center;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background: white;
+    line-height: 40px;
+    padding: 0 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
 }
 
-.picture__caption--small {
-    font-size: 0.8em;
+.picture__caption--long {
+    background: url(images/tablelong.png) center / 100% 100% no-repeat;
 }
 
+.picture__line {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 0; right: 0;
+    
+    white-space: nowrap;
+    height: 40px;
+    background: url(images/tablelong.png) center / 100% 100% no-repeat;
+    text-align: center;
+    line-height: 40px;
+    padding: 0 35px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+.picture__line > span {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}
+
+.picture__line span span {
+    position: relative;
+}
+
+
+.frame1 {
+    border-width: 40px;
+    border-style: solid;
+    border-image: url(images/frames/frame1.png) 445 430 stretch;
+}
+
+
+.frame1:before {
+    background: #353535;
+    content: '';
+    position: absolute;
+    top: -12px;
+    bottom: -15px;
+    left: -12px;
+    right: -12px;
+}
 
 /* Первый зал: монализа и тигр */
 
 [data-section="first"] {
+    min-width: 1200px;
+    background: 
+        url(images/start/wall.jpg) center / 200px auto repeat;
+}
 
+[data-section="first"]:before {
+    display: none;
+}
+
+[data-section="first"] .section__floor span {
+    background: url(images/start/floor.jpg) center / 500px;
 }
 
 [data-picture="monalisa"] {
-    left: calc(35% - 155px);
+    left: calc(35% - 175px - 50px);
     top: 60px;
 
-    width: 310px;
+    width: 340px;
     height: 470px;
 }
 
 [data-picture="tiger"] {
-    top: 330px;
-    left: calc(66% - 160px);
+    top: 230px;
+    left: calc(66% - 160px + 50px);
 
     width: 319px;
-    height: 244px;
+    height: 265px;
 }
 
 /* Второй зал: Купание красного кота */
 
 [data-section="second"] {
+    min-width: 1200px;
+    background: 
+        url(images/start/wall.jpg) center / 200px auto repeat;
+}
 
+[data-section="second"] .section__floor span {
+    background: url(images/start/floor.jpg) center / 500px;
+}
+
+[data-section="second"] .section__granny {
+    background: url(images/start/granny.png) bottom / contain no-repeat;
+    right: 50px;
 }
 
 [data-picture="redhorse"] {
@@ -130,8 +283,19 @@ body {
 
 /* Египетский зал */ 
 [data-section="egypt"] {
-    background-color: sandybrown;
     min-width: 2800px;
+    background: 
+        url(images/egypt/wall.jpg) center / 200px auto repeat;
+}
+
+[data-section="egypt"] .section__floor span {
+    background: url(images/egypt/floor.jpg) center / 500px;
+    transform: perspective(2000px) rotate3d(0.3,0,0,62deg);
+}
+
+[data-section="egypt"] .section__granny {
+    background: url(images/egypt/granny.png) bottom / contain no-repeat;
+    right: -50px;
 }
 
 [data-section="egypt"] .mummy {
@@ -141,53 +305,63 @@ body {
     background: url(images/egypt/mummy.png) center / 110% auto no-repeat;
     width: 468px;
     height: 710px;
+    z-index: 3;
 }
 
 [data-picture="egypt4"] {
     left: 1000px;
-    top: 50px;
+    top: 100px;
     width: 730px;
-    height: 486px;
+    height: 512px;
 }
 
 [data-picture="beetle"] {
     left: 637px;
-    top: 400px;
+    top: 450px;
     width: 150px;
     height: 151px;
 }
 
 [data-picture="egypt1"] {
-    left: 500px;
-    top: 50px;
-    width: 418px;
-    height: 300px;
+    left: 517px;
+    top: 100px;
+    width: 391px;
+    height: 301px;
 }
 
 [data-picture="egypt2"] {
     left: 1800px;
     top: 150px;
     width: 404px;
-    height: 300px;
+    height: 322px;
 }
 
 [data-picture="egypt3"] {
     left: 2276px;
     top: 150px;
     width: 439px;
-    height: 300px;
+    height: 322px;
 }
 
 /* Мультяшный зал */ 
 
 [data-section="mult"] {
-    background-color: red;
+    background-color: #f9a0af;
+}
+
+[data-section="mult"] .section__floor span {
+    background: #01a19d;
+}
+
+[data-section="mult"] .section__granny {
+    background: url(images/mult/granny.png) bottom / contain no-repeat;
+    right: -50px;
 }
 
 [data-picture="homer1"] {
     top: 100px;
     width: 566px;
-    height: 300px;
+    height: 338px;
     left: 50%;
     right: 0%;
     margin: auto;
@@ -195,31 +369,40 @@ body {
 
 [data-picture="homer2"] {
     top: 100px;
-    width: 250px;
-    height: 142px;
-    left: 10%;
+    width: 308px;
+    height: 210px;
+    left: 31%;
 }
 
 [data-picture="bojack"] {
-    top: 320px;
-    left: calc(25% - 120px);
-    width: 355px;
-    height: 200px;
-    
+    top: 100px;
+    left: 10%;
+    width: 271px;
+    height: 306px;
 }
 
 [data-picture="hillking"] {
-    top: 460px;
-    width: 220px;
-    height: 165px;
-    left: calc(25% + 350px);
+    top: 343px;
+    width: 311px;
+    height: 253px;
+    left: 31%;
 } 
 
 /* Буквальный зал */ 
 
 [data-section="literally"] {
-    background-color: aqua;
+    background-color: #acc8f0;
     min-width: 1750px;
+}
+
+[data-section="literally"] .section__floor span {
+    background: #f987a1;
+}
+
+[data-section="literally"] .section__granny {
+    background: url(images/literally/granny.png) bottom / contain no-repeat;
+    right: -50px;
+    width: 250px;
 }
 
 [data-section="literally"] [data-picture] {
@@ -264,7 +447,19 @@ body {
 /* Зал кино и сериалов */ 
 
 [data-section="cinema"] {
-    background-color: black;
+    color: white;
+    background: 
+        url(images/cinema/wall.jpg) center / 200px auto repeat;
+}
+
+[data-section="cinema"] .section__floor span {
+    background: url(images/cinema/floor.jpg) center / 500px;
+    /* transform: perspective(2000px) rotate3d(0.3,0,0,62deg); */
+}
+
+[data-section="cinema"] .section__granny {
+    background: url(images/cinema/granny.jpg) bottom / contain no-repeat;
+    right: -50px;
 }
 
 [data-picture="starwars"] {
@@ -273,14 +468,14 @@ body {
     margin: auto;
     top: 100px;
     width: 340px;
-    height: 555px;
+    height: 507px;
 }
 
 [data-picture="got"] {
     left: 5%;
     right: 60%;
     width: 440px;
-    height: 400px;
+    height: 408px;
     margin: auto;
     top: 100px;
 }
@@ -289,7 +484,7 @@ body {
     left: 70%;
     right: 10%;
     top: 100px;
-    width: 300px;
+    width: 326px;
     height: 400px;
     margin: auto;
 }
@@ -297,9 +492,20 @@ body {
 /* Зал Исаакиевского собора */ 
 
 [data-section="isaak"] {
-    background-color: skyblue;
     width: 150vw;
     min-width: 2100px;
+    background: 
+        url(images/isaak/wall.jpg) center / 200px auto repeat;
+}
+
+[data-section="isaak"] .section__floor span {
+    background: url(images/isaak/floor.jpg) center / 500px;
+    /* transform: perspective(2000px) rotate3d(0.3,0,0,62deg); */
+}
+
+[data-section="isaak"] .section__granny {
+    background: url(images/isaak/granny.png) bottom / contain no-repeat;
+    right: -50px;
 }
 
 [data-picture="isaak1"] {
@@ -307,8 +513,8 @@ body {
     bottom: calc(100% - 516px);
     left: 0%;
     right: 75%;
-    width: 300px;
-    height: 200px;
+    width: 430px;
+    height: 313px;
     margin: auto;
 }
 
@@ -317,7 +523,7 @@ body {
     left: 25%;
     right: 25%;
     width: 1000px;
-    height: 476px;
+    height: 517px;
     margin: auto;
 }
 
@@ -326,16 +532,27 @@ body {
     bottom: calc(100% - 516px);
     left: 75%;
     right: 0%;
-    width: 300px;
-    height: 208px;
+    width: 430px;
+    height: 322px;
     margin: auto;
 }
 
 /* Рабочий зал */
 
 [data-section="job"] {
-    background: yellowgreen;
     min-width: 3500px;
+    background: 
+        url(images/job/wall.jpg) center / 200px auto repeat;
+}
+
+[data-section="job"] .section__floor span {
+    background: url(images/job/floor.jpg) center / 500px;
+    /* transform: perspective(2000px) rotate3d(0.3,0,0,62deg); */
+}
+
+[data-section="job"] .section__granny {
+    background: url(images/job/granny.png) bottom / contain no-repeat;
+    right: -50px;
 }
 
 .coffeemachine {
@@ -343,22 +560,23 @@ body {
     bottom: 50px;
     left: 50px;
     width: 270px;
+    z-index: 3;
     height: 686px;
     z-index: 10;
     background: url(images/job/coffeemachine.png) bottom / contain no-repeat;
 }
 
 [data-picture="coffee"] {
-    left: 270px;
+    left: 337px;
     top: 100px;
-    width: 683px;
+    width: 635px;
     height: 400px;
 }
 
 [data-picture="bears"] {
-    left: 1050px;
+    left: 1084px;
     top: 219px;
-    width: 450px;
+    width: 406px;
     height: 281px;
 }
 
@@ -372,13 +590,13 @@ body {
 [data-picture="scream"] {
     left: 2100px;
     width: 310px;
-    height: 400px;
-    top: 100px;
+    height: 376px;
+    top: 124px;
 }
 
 [data-picture="dali"] {
-    left: 2510px;
-    width: 376px;
+    left: 2527px;
+    width: 359px;
     height: 281px;
     top: 219px;
 }
@@ -386,8 +604,8 @@ body {
 [data-picture="gun"] {
     left: 2986px;
     width: 264px;
-    height: 400px;
-    top: 100px;
+    height: 360px;
+    top: 140px;
 }
 
 /* Зал физического здоровья */
@@ -395,6 +613,18 @@ body {
 [data-section="physical"] {
     background: orange;
     min-width: 1800px;
+    background: 
+        url(images/physical/wall.jpg) center / cover repeat;
+}
+
+[data-section="physical"] .section__floor span {
+    background: url(images/physical/floor.png) center / 500px;
+    /* transform: perspective(2000px) rotate3d(0.3,0,0,62deg); */
+}
+
+[data-section="physical"] .section__granny {
+    background: url(images/physical/granny.png) bottom / contain no-repeat;
+    right: -50px;
 }
 
 [data-picture="peaches"] {
@@ -437,28 +667,32 @@ body {
 /* Зал душевного здоровья */
 
 [data-section="mental"] {
-    background: lightseagreen;
-    min-width: 4600px;
+    min-width: 3436px;
+    background: 
+        url(images/mental/wall.jpg) center / 200px auto repeat;
+}
+
+[data-section="mental"] .section__floor span {
+    background: url(images/mental/floor.jpg) center / 500px;
+    /* transform: perspective(2000px) rotate3d(0.3,0,0,62deg); */
+}
+
+[data-section="mental"] .section__granny {
+    background: url(images/mental/granny.png) bottom / contain no-repeat;
+    right: -50px;
 }
 
 [data-picture="owl"] {
     left: 100px;
     top: 250px;
-    width: 200px;
-    height: 150px;
+    width: 215px;
+    height: 182px;
 }
 
 [data-picture="cat1"] {
     left: 400px;
     top: 150px;
     width: 400px;
-    height: 400px;
-}
-
-[data-picture="riders"] {
-    left: 900px;
-    top: 150px;
-    width: 604px;
     height: 400px;
 }
 
@@ -470,23 +704,23 @@ body {
 }
 
 [data-picture="demon"] {
-    left: 2100px;
+    left: 900px;
     top: 150px;
-    width: 664px;
+    width: 617px;
     height: 400px;
 }
 
 [data-picture="cat3"] {
-    left: 2860px;
+    left: 2836px;
     top: 150px;
     width: 400px;
     height: 400px;
 }
 
 [data-picture="night"] {
-    left: 3360px;
+    left: 2108px;
     top: 150px;
-    width: 641px;
+    width: 589px;
     height: 400px;
 }
 
@@ -501,21 +735,43 @@ body {
 /* Зал апсны */
 
 [data-section="apsny"] {
-    background: goldenrod;
+    background: 
+        url(images/holiday/wall.jpg) center / 200px auto repeat;
     
+}
+
+[data-section="apsny"] .section__floor span {
+    background: url(images/apsny/floor.jpg) center / 500px;
+    /* transform: perspective(2000px) rotate3d(0.3,0,0,62deg); */
+}
+
+[data-section="apsny"] .section__granny {
+    background: url(images/apsny/granny.png) bottom / contain no-repeat;
+    right: -50px;
 }
 
 /* Праздничный зал */
 
 [data-section="holiday"] {
     min-width: 1700px;
+    background: 
+        url(images/holiday/wall.jpg) center / 200px auto repeat;
+}
+
+[data-section="holiday"]:after {
+    display: none;
+}
+
+[data-section="holiday"] .section__floor span {
+    background: url(images/apsny/floor.jpg) center / 500px;
+    /* transform: perspective(2000px) rotate3d(0.3,0,0,62deg); */
 }
 
 [data-picture="empress"] {
     left: 50%;
-    top: 200px;
-    width: 700px;
-    height: 528px;
+    top: 169px;
+    width: 554px;
+    height: 415px;
     transform: translateX(-50%);
 }
 

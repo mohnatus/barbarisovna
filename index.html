@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=4">
 </head>
 <body>
     <div class="gallery" id="gallery">
 
         <!-- 1 зал. Барбарисовна и котик -->
         <div class="section" data-section="first">
+            <div class="section__floor"><span></span></div>
 
             <!-- Мона Лиза -->
-            <figure class="picture" data-picture="monalisa">
-                <div class="picture__image">
+            <figure class="picture active" onclick="showWish('monalisa')" data-picture="monalisa">
+                <div class="picture__image frame1">
                     <img src="images/start/monalisa.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
@@ -24,8 +25,8 @@
             </figure>
 
             <!-- Тигр -->
-            <figure class="picture" data-picture="tiger">
-                <div class="picture__image">
+            <figure class="picture active" onclick="showWish('tiger')" data-picture="tiger">
+                <div class="picture__image frame1">
                     <img src="images/start/tiger.jpg" alt="">
                 </div>
 
@@ -38,10 +39,12 @@
 
         <!-- 2 зал. Купание красного кота -->
         <div class="section" data-section="second">
+            <div class="section__floor"><span></span></div>
+            <div class="section__granny"></div>
 
             <!-- Купание красного коня -->
-            <figure class="picture" data-picture="redhorse">
-                <div class="picture__image">
+            <figure class="picture active" data-picture="redhorse" onclick="showWish('redhorse')" >
+                <div class="picture__image frame1">
                     <img src="images/start/redhorse.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
@@ -53,12 +56,15 @@
 
         <!-- 4. Египетский зал -->
         <div class="section" data-section="egypt">
+            <div class="section__floor"><span></span></div>
+            <div class="section__granny"></div>
+
             <div class="section__title">Египетский зал</div>
-            <div class="mummy"></div>
+            <div class="mummy active" onclick="showWish('mummy')"></div>
 
             <!-- поклонение коту -->
-            <figure class="picture" data-picture="egypt4">
-                <div class="picture__image">
+            <figure class="picture active" data-picture="egypt4" onclick="showWish('fluidcat')">
+                <div class="picture__image frame1">
                     <img src="images/egypt/egypt4.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
@@ -67,29 +73,32 @@
             </figure>
 
             <!-- священный жук -->
-            <figure class="picture" data-picture="beetle">
-                <div class="picture__image">
+            <figure class="picture active" data-picture="beetle" onclick="showWish('beetle')">
+                <div class="picture__image frame1">
                     <img src="images/egypt/beetle.jpg" alt="">
                 </div>
+                <figcaption class="picture__caption">
+                    Священный скарабей с какашкой
+                </figcaption>
             </figure>
 
             
             <figure class="picture" data-picture="egypt1">
-                <div class="picture__image">
+                <div class="picture__image frame1">
                     <img src="images/egypt/egypt1.png" alt="">
                 </div>
             </figure>
 
             
             <figure class="picture" data-picture="egypt2">
-                <div class="picture__image">
+                <div class="picture__image frame1">
                     <img src="images/egypt/egypt2.jpg" alt="">
                 </div>
             </figure>
 
             
             <figure class="picture" data-picture="egypt3">
-                <div class="picture__image">
+                <div class="picture__image frame1">
                     <img src="images/egypt/egypt3.jpg" alt="">
                 </div>
             </figure>
@@ -100,32 +109,44 @@
         <div class="section" data-section="mult">
             <div class="section__title">Мультяшный зал</div>
 
+            <div class="section__floor"><span></span></div>
+            <div class="section__granny"></div>
+
             <!-- Гомер в воронке -->
-            <figure class="picture" data-picture="homer1">
-                <div class="picture__image">
+            <figure class="picture active" data-picture="homer1">
+                <div class="picture__image frame1">
                     <img src="images/mult/homer1.png" alt="">
                 </div>
+                <figcaption class="picture__caption">
+                    Счастливое спасение
+                </figcaption>
             </figure>
 
             <!-- Гомер с пивом -->
-            <figure class="picture" data-picture="homer2">
-                <div class="picture__image">
+            <figure class="picture active" data-picture="homer2">
+                <div class="picture__image frame1">
                     <img src="images/mult/homer2.jpg" alt="">
                 </div>
             </figure>
 
             <!-- Конь Боджек -->
-            <figure class="picture" data-picture="bojack">
-                <div class="picture__image">
+            <figure class="picture active" onclick="showWish('bojack')" data-picture="bojack">
+                <div class="picture__image frame1">
                     <img src="images/mult/bojack.jpg" alt="">
                 </div>
+                <figcaption class="picture__caption">
+                    Конь с жемчужной сережкой
+                </figcaption>
             </figure>
 
             <!-- Царь горы -->
-            <figure class="picture" data-picture="hillking">
-                <div class="picture__image">
+            <figure class="picture active"onclick="showWish('hillking')"  data-picture="hillking">
+                <div class="picture__image frame1">
                     <img src="images/mult/hillking.jpg" alt="">
                 </div>
+                <figcaption class="picture__caption">
+                    Царица горы
+                </figcaption>
             </figure>
 
         </div><!-- Мультяшный зал -->
@@ -133,24 +154,36 @@
         <!-- 6. Зал кино и сериалов -->
         <div class="section" data-section="cinema">
             <div class="section__title">Зал кино и сериалов</div>
-            <figure class="picture" data-picture="starwars">
-                <div class="picture__image">
+            <div class="section__floor"><span></span></div>
+            <div class="section__granny"></div>
+
+            <figure class="picture active" data-picture="starwars">
+                <div class="picture__image frame1">
                     <img src="images/cinema/starwars.png" alt="">
                 </div>
+                <figcaption class="picture__caption">
+
+                </figcaption>
             </figure>
 
             
-            <figure class="picture" data-picture="got">
-                <div class="picture__image">
+            <figure class="picture active" data-picture="got">
+                <div class="picture__image frame1">
                     <img src="images/cinema/got.png" alt="">
                 </div>
+                <figcaption class="picture__line">
+                    <span><span>Дейенерис Бурерожденная из дома Таргариенов, от крови древней Валирии, первая этого имени, королева андалов, ройнаров и Первых Людей, владычица семи королевств, и хранительница областей, Неопалимая, правительница Миэрина, кхалиси Великого травяного моря, Разрушительница Оков и Матерь Драконов</span></span>
+                </figcaption>
             </figure>
 
             
-            <figure class="picture" data-picture="friends">
-                <div class="picture__image">
+            <figure class="picture active" data-picture="friends">
+                <div class="picture__image frame1">
                     <img src="images/cinema/friends.jpg" alt="">
                 </div>
+                <figcaption class="picture__caption">
+                    
+                </figcaption>
             </figure>
 
         </div><!-- Зал кино и сериалов -->
@@ -158,35 +191,38 @@
         <!-- 7. Буквальный зал -->
         <div class="section" data-section="literally">
             <div class="section__title">Буквальный зал</div>
+            <div class="section__floor"><span></span></div>
+            <div class="section__granny"></div>
+
             <figure class="picture" data-picture="comics1">
-                <div class="picture__image">
+                <div class="picture__image frame1">
                     <img src="images/literally/comics1.jpg" alt="">
                 </div>
             </figure>
 
             
             <figure class="picture" data-picture="comics2">
-                <div class="picture__image">
+                <div class="picture__image frame1">
                     <img src="images/literally/comics2.jpg" alt="">
                 </div>
             </figure>
 
             
             <figure class="picture" data-picture="comics3">
-                <div class="picture__image">
+                <div class="picture__image frame1">
                     <img src="images/literally/comics3.jpg" alt="">
                 </div>
             </figure>
 
             
             <figure class="picture" data-picture="comics4">
-                <div class="picture__image">
+                <div class="picture__image frame1">
                     <img src="images/literally/comics4.jpg" alt="">
                 </div>
             </figure>
 
             <figure class="picture" data-picture="comics5">
-                <div class="picture__image">
+                <div class="picture__image frame1">
                     <img src="images/literally/comics5.jpg" alt="">
                 </div>
             </figure>
@@ -196,20 +232,23 @@
         <!-- 8. Зал Исаакиевского собора -->
         <div class="section" data-section="isaak">
             <div class="section__title">Исаакиевский зал</div>
+            <div class="section__floor"><span></span></div>
+            <div class="section__granny"></div>
+
             <figure class="picture" data-picture="isaak1">
-                <div class="picture__image">
+                <div class="picture__image frame1">
                     <img src="images/isaak/isaak1.jpg" alt="">
                 </div>
             </figure>
 
             <figure class="picture" data-picture="isaak2">
-                <div class="picture__image">
+                <div class="picture__image frame1">
                     <img src="images/isaak/isaak2.jpg" alt="">
                 </div>
             </figure>
 
             <figure class="picture" data-picture="isaak3">
-                <div class="picture__image">
+                <div class="picture__image frame1">
                     <img src="images/isaak/isaak3.jpg" alt="">
                 </div>
             </figure>
@@ -218,11 +257,14 @@
         <!-- 9. Рабочий зал -->
         <div class="section" data-section="job">
             <div class="section__title">Рабочий зал</div>
-            <div class="coffeemachine"></div>
+            <div class="section__floor"><span></span></div>
+            <div class="section__granny"></div>
+
+            <div class="coffeemachine active"  onclick="showWish('coffeemachine')"></div>
 
             <!-- Банки кофе, Уорхол -->
-            <figure class="picture" data-picture="coffee">
-                <div class="picture__image">
+            <figure class="picture active"  onclick="showWish('coffee')" data-picture="coffee">
+                <div class="picture__image frame1">
                     <img src="images/job/coffee.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
@@ -231,8 +273,8 @@
             </figure>
 
             <!-- Утро в сосновом бору -->
-            <figure class="picture" data-picture="bears">
-                <div class="picture__image">
+            <figure class="picture active" data-picture="bears"  onclick="showWish('bears')">
+                <div class="picture__image frame1">
                     <img src="images/job/bears.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
@@ -241,8 +283,8 @@
             </figure>
 
             <!-- Витрувианская Барбарисовна -->
-            <figure class="picture" data-picture="vitruvian">
-                <div class="picture__image">
+            <figure class="picture active" data-picture="vitruvian"  onclick="showWish('vitruvian')">
+                <div class="picture__image frame1">
                     <img src="images/job/vitruvian.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
@@ -251,8 +293,8 @@
             </figure>
 
             <!-- Крик -->
-            <figure class="picture" data-picture="scream">
-                <div class="picture__image">
+            <figure class="picture active" data-picture="scream">
+                <div class="picture__image frame1">
                     <img src="images/job/scream.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
@@ -261,8 +303,8 @@
             </figure>
 
             <!-- Постоянство памяти -->
-            <figure class="picture" data-picture="dali">
-                <div class="picture__image">
+            <figure class="picture active" data-picture="dali"  onclick="showWish('dali')">
+                <div class="picture__image frame1">
                     <img src="images/job/dali.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
@@ -271,8 +313,8 @@
             </figure>
 
             <!-- Винтовка это праздник -->
-            <figure class="picture" data-picture="gun">
-                <div class="picture__image">
+            <figure class="picture active" data-picture="gun">
+                <div class="picture__image frame1">
                     <img src="images/job/gun.jpeg" alt="">
                 </div>
                 <figcaption class="picture__caption">
@@ -284,10 +326,12 @@
         <!-- 10. Зал физического здоровья -->
         <div class="section" data-section="physical">
             <div class="section__title">Зал физического здоровья</div>
+            <div class="section__floor"><span></span></div>
+            <div class="section__granny"></div>
 
             <!-- Девочка с персиками -->
-            <figure class="picture" data-picture="peaches">
-                <div class="picture__image">
+            <figure class="picture active" onclick="showWish('peaches')" data-picture="peaches">
+                <div class="picture__image frame1">
                     <img src="images/physical/peaches.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
@@ -296,8 +340,8 @@
             </figure>
 
             <!-- Рождение Венеры -->
-            <figure class="picture" data-picture="venera">
-                <div class="picture__image">
+            <figure class="picture active" onclick="showWish('venera')" data-picture="venera">
+                <div class="picture__image frame1">
                     <img src="images/physical/venera.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
@@ -305,16 +349,16 @@
                 </figcaption>
             </figure>
 
-            <!-- Девочка с персиками -->
-            <figure class="picture" data-picture="yoga">
-                <div class="picture__image">
+            <!-- Йога -->
+            <figure class="picture active" onclick="showWish('yoga')" data-picture="yoga">
+                <div class="picture__image frame1">
                     <img src="images/physical/yoga.jpeg" alt="">
                 </div>
             </figure>
 
             <!-- Девочка на шаре -->
-            <figure class="picture" data-picture="ball">
-                <div class="picture__image">
+            <figure class="picture active" onclick="showWish('ball')" data-picture="ball">
+                <div class="picture__image frame1">
                     <img src="images/physical/ball.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
@@ -326,87 +370,75 @@
         <!-- 11. Зал душевного здоровья -->
         <div class="section" data-section="mental">
             <div class="section__title">Зал душевного здоровья</div>
+            <div class="section__floor"><span></span></div>
+            <div class="section__granny"></div>
 
-            <figure class="picture" data-picture="owl">
-                <div class="picture__image">
+            <figure class="picture active" onclick="showWish('owl')" data-picture="owl">
+                <div class="picture__image frame1">
                     <img src="images/mental/owl.jpg" alt="">
                 </div>
             </figure>
 
-            <figure class="picture" data-picture="cat1">
-                <div class="picture__image">
+            <figure class="picture active" onclick="showWish('cat1')" data-picture="cat1">
+                <div class="picture__image frame1">
                     <img src="images/mental/cat1.jpg" alt="">
                 </div>
             </figure>
 
-            <!-- Три богатыря -->
-            <figure class="picture" data-picture="riders">
-                <div class="picture__image">
-                    <img src="images/mental/riders.jpg" alt="">
-                </div>
-            </figure>
-
-            <figure class="picture" data-picture="cat2">
-                <div class="picture__image">
-                    <img src="images/mental/cat2.jpg" alt="">
+            <figure class="picture active" onclick="showWish('cat2')" data-picture="cat2">
+                <div class="picture__image frame1">
+                    <img src="images/mental/cat2.png" alt="">
                 </div>
             </figure>
 
             <!-- Демон -->
-            <figure class="picture" data-picture="demon">
-                <div class="picture__image">
+            <figure class="picture active" data-picture="demon">
+                <div class="picture__image frame1">
                     <img src="images/mental/demon.jpg" alt="">
                 </div>
             </figure>
 
-            <figure class="picture" data-picture="cat3">
-                <div class="picture__image">
-                    <img src="images/mental/cat3.jpg" alt="">
+            <figure class="picture active" onclick="showWish('cat3')" data-picture="cat3">
+                <div class="picture__image frame1">
+                    <img src="images/mental/cat3.png" alt="">
                 </div>
                 
             </figure>
 
             <!-- Звездная ночь -->
-            <figure class="picture" data-picture="night">
-                <div class="picture__image">
+            <figure class="picture active" onclick="showWish('night')" data-picture="night">
+                <div class="picture__image frame1">
                     <img src="images/mental/night.jpg" alt="">
                 </div>
-            </figure>
-
-            <figure class="picture" data-picture="cat4">
-                <div class="picture__image">
-                    <img src="images/mental/cat4.jpg" alt="">
-                </div>
-               
             </figure>
         </div><!-- Зал душевного здоровья -->
 
         <!-- 12. Зал апсны -->
         <div class="section" data-section="apsny">
             <div class="section__title">Зал Апсны</div>
+            <div class="section__floor"><span></span></div>
+            <div class="section__granny"></div>
         </div><!-- Зал апсны -->
 
         <!-- 13. Праздничный зал -->
         <div class="section" data-section="holiday">
-            <div class="section__title">Императорский зал</div>
+            <div class="section__title section__title--center">Императорский зал</div>
+            <div class="section__floor"><span></span></div>
 
-            <figure class="picture" data-picture="keanu1">
-                <div class="picture__image">
+            <figure class="picture active" onclick="showWish('keanu1')" data-picture="keanu1">
+                <div class="picture__image frame1">
                     <img src="images/holiday/keanu1.png" alt="">
                 </div>
             </figure>
 
-            <figure class="picture" data-picture="keanu2">
-                <div class="picture__image">
+            <figure class="picture active" onclick="showWish('keanu2')" data-picture="keanu2">
+                <div class="picture__image frame1">
                     <img src="images/holiday/keanu2.png" alt="">
                 </div>
-                <figcaption class="picture__caption">
-                    Нет, это ты потрясающий!
-                </figcaption>
             </figure>
 
-            <figure class="picture" data-picture="empress">
-                <div class="picture__image">
+            <figure class="picture active" onclick="showWish('empress')" data-picture="empress">
+                <div class="picture__image frame1">
                     <img src="images/holiday/empress.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
@@ -414,6 +446,13 @@
                 </figcaption>
             </figure>
         </div><!-- Праздничный зал -->
+    </div>
+
+    <div id="wish" class="wish">
+        <div class="wish__wrapper">
+            <div class="wish__title">Желаю!</div>
+            <div class="wish__text"></div>
+        </div>
     </div>
 
     <script src="index.js"></script>
