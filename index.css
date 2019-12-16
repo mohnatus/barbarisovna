@@ -132,12 +132,11 @@ body {
     height: 500px;
     position: absolute;
     z-index: 5;
-    right: -100px;
+    left: 30px;
     bottom: 50px;
 }
 
 .picture {
-    background: red;
     position: absolute;
 }
 
@@ -223,62 +222,47 @@ body {
     right: -12px;
 }
 
-/* Первый зал: монализа и тигр */
+/* Парадный зал */
 
-[data-section="first"] {
-    min-width: 1200px;
-    background: 
-        url(images/start/wall.jpg) center / 200px auto repeat;
-}
+    [data-section="ceremonial"] {
+        min-width: 2101px;
+        background: 
+            url(images/ceremonial/wall.jpg) center / 200px auto repeat;
+    }
 
-[data-section="first"]:before {
-    display: none;
-}
+    [data-section="ceremonial"]:before {
+        display: none;
+    }
 
-[data-section="first"] .section__floor span {
-    background: url(images/start/floor.jpg) center / 500px;
-}
+    [data-section="ceremonial"] .section__floor span {
+        background: url(images/ceremonial/floor.jpg) center / 500px;
+    }
 
-[data-picture="monalisa"] {
-    left: calc(35% - 175px - 50px);
-    top: 60px;
+    [data-section="ceremonial"] .section__granny {
+        background: url(images/ceremonial/granny.png) bottom / contain no-repeat;
+        right: 50px;
+    }
 
-    width: 340px;
-    height: 470px;
-}
+    [data-picture="tiger"] {
+        top: 177px;
+        left: 351px;
+        width: 360px;
+        height: 292px;
+    }
 
-[data-picture="tiger"] {
-    top: 230px;
-    left: calc(66% - 160px + 50px);
+    [data-picture="monalisa"] {
+        left: 878px;
+        top: 60px;
+        width: 340px;
+        height: 470px;
+    }
 
-    width: 319px;
-    height: 265px;
-}
-
-/* Второй зал: Купание красного кота */
-
-[data-section="second"] {
-    min-width: 1200px;
-    background: 
-        url(images/start/wall.jpg) center / 200px auto repeat;
-}
-
-[data-section="second"] .section__floor span {
-    background: url(images/start/floor.jpg) center / 500px;
-}
-
-[data-section="second"] .section__granny {
-    background: url(images/start/granny.png) bottom / contain no-repeat;
-    right: 50px;
-}
-
-[data-picture="redhorse"] {
-    left: 0; right: 0;
-    top: 100px;
-    margin: 0 auto;
-    width: 517px;
-    height: 455px;
-}
+    [data-picture="redhorse"] {
+        left: 1371px;
+        top: 60px;
+        width: 530px;
+        height: 470px;
+    }
 
 
 /* Египетский зал */ 

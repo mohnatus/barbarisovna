@@ -25,14 +25,13 @@ for (let i = 0; i < lines.length; i++) {
   let track = wrapper.querySelector('span span');
 
   let move = function() {
-    console.log('move')
-    
+
     if (track.getBoundingClientRect().right < wrapper.getBoundingClientRect().right) {
       track.style.left = 0;
     } else {
       track.style.left = (parseInt(track.style.left) || 0) - 2 + 'px';
     }
-    setTimeout(move, 100);
+    setTimeout(move, 50);
   }
 
   move();
