@@ -427,7 +427,7 @@ body {
 
     [data-section="literally"] {
         background-color: #acc8f0;
-        min-width: 1750px;
+        min-width: 2696px;
     }
 
     [data-section="literally"] .section__floor span {
@@ -441,13 +441,13 @@ body {
     }
 
     [data-section="literally"] [data-picture] {
-        width: 300px;
-        height: 300px;
+        width: 350px;
+        height: 350px;
         margin: auto;
     }
 
     [data-picture="comics1"], [data-picture="comics3"], [data-picture="comics5"] {
-        top: 100px;
+        top: 70px;
     }
 
     [data-picture="comics2"], [data-picture="comics4"] {
@@ -455,28 +455,23 @@ body {
     }
 
     [data-picture="comics1"] {
-        left: 0%;
-        right: 80%;
+        left: 350px;
     }
 
     [data-picture="comics2"] {
-        left: 20%;
-        right: 60%;
+        left: 800px;
     }
 
     [data-picture="comics3"] {
-        left: 40%;
-        right: 40%;
+        left: 1250px;
     }
 
     [data-picture="comics4"] {
-        left: 60%;
-        right: 20%;
+        left: 1700px;
     }
 
     [data-picture="comics5"] {
-        left: 80%;
-        right: 0%;
+        left: 2150px;
     }
 
 
@@ -485,7 +480,7 @@ body {
 
 [data-section="isaak"] {
     width: 150vw;
-    min-width: 2100px;
+    min-width: 2900px;
     background: 
         url(images/isaak/wall.jpg) center / 200px auto repeat;
 }
@@ -501,38 +496,30 @@ body {
 }
 
 [data-picture="isaak1"] {
-    top: 60px;
-    bottom: calc(100% - 516px);
-    left: 0%;
-    right: 75%;
-    width: 430px;
-    height: 313px;
-    margin: auto;
+    top: 142px;
+    width: 488px;
+    height: 355px;
+    left: 350px;
 }
 
 [data-picture="isaak2"] {
     top: 60px;
-    left: 25%;
-    right: 25%;
-    width: 1000px;
+    width: 1034px;
     height: 517px;
-    margin: auto;
+    left: 1000px;
 }
 
 [data-picture="isaak3"] {
-    top: 60px;
-    bottom: calc(100% - 516px);
-    left: 75%;
-    right: 0%;
-    width: 430px;
-    height: 322px;
-    margin: auto;
+    top: 120px;
+    width: 483px;
+    height: 363px;
+    left: 2182px;
 }
 
 /* Рабочий зал */
 
 [data-section="job"] {
-    min-width: 3500px;
+    min-width: 4500px;
     background: 
         url(images/job/wall.jpg) center / 200px auto repeat;
 }
@@ -550,7 +537,7 @@ body {
 .coffeemachine {
     position: absolute;
     bottom: 50px;
-    left: 50px;
+    left: 4157px;
     width: 270px;
     z-index: 3;
     height: 686px;
@@ -559,42 +546,42 @@ body {
 }
 
 [data-picture="coffee"] {
-    left: 337px;
-    top: 100px;
-    width: 635px;
-    height: 400px;
+    left: 350px;
+    top: 123px;
+    width: 528px;
+    height: 343px;
 }
 
 [data-picture="bears"] {
-    left: 1084px;
-    top: 219px;
-    width: 406px;
-    height: 281px;
+    left: 1053px;
+    top: 40px;
+    width: 786px;
+    height: 520px;
 }
 
 [data-picture="vitruvian"] {
-    left: 1600px;
+    left: 2020px;
     width: 400px;
     height: 400px;
     top: 100px;
 }
 
 [data-picture="scream"] {
-    left: 2100px;
+    left: 2642px;
     width: 310px;
     height: 376px;
     top: 124px;
 }
 
 [data-picture="dali"] {
-    left: 2527px;
+    left: 3170px;
     width: 359px;
     height: 281px;
     top: 219px;
 }
 
 [data-picture="gun"] {
-    left: 2986px;
+    left: 3745px;
     width: 264px;
     height: 360px;
     top: 140px;
