@@ -259,220 +259,227 @@ body {
 
     [data-picture="redhorse"] {
         left: 1371px;
-        top: 60px;
-        width: 530px;
-        height: 470px;
+        top: 78px;
+        width: 488px;
+        height: 440px;
     }
 
 
 /* Египетский зал */ 
-[data-section="egypt"] {
-    min-width: 3800px;
-    background: 
-        url(images/egypt/wall.jpg) center / 200px auto repeat;
-}
+    [data-section="egypt"] {
+        min-width: 3800px;
+        background: 
+            url(images/egypt/wall.jpg) center / 200px auto repeat;
+    }
 
-[data-section="egypt"] .section__floor span {
-    background: url(images/egypt/floor.jpg) center / 500px;
-    transform: perspective(2000px) rotate3d(0.3,0,0,62deg);
-}
+    [data-section="egypt"] .section__floor span {
+        background: url(images/egypt/floor.jpg) center / 500px;
+        transform: perspective(2000px) rotate3d(0.3,0,0,62deg);
+    }
 
-[data-section="egypt"] .section__granny {
-    background: url(images/egypt/granny.png) bottom / contain no-repeat;
-    right: -50px;
-}
+    [data-section="egypt"] .section__granny {
+        background: url(images/egypt/granny.png) bottom / contain no-repeat;
+        right: -50px;
+    }
 
-[data-section="egypt"] .mummy {
-    position: absolute;
-    bottom: 40px;
-    left: 3245px;
-    background: url(images/egypt/mummy.png) center / 110% auto no-repeat;
-    width: 468px;
-    height: 710px;
-    z-index: 3;
-}
+    [data-section="egypt"] .mummy {
+        position: absolute;
+        bottom: 40px;
+        left: 3245px;
+        background: url(images/egypt/mummy.png) center / 110% auto no-repeat;
+        width: 468px;
+        height: 710px;
+        z-index: 3;
+    }
 
-[data-picture="egypt4"] {
-    left: 1248px;
-    top: 50px;
-    width: 730px;
-    height: 512px;
-}
+    [data-picture="egypt4"] {
+        left: 1248px;
+        top: 50px;
+        width: 730px;
+        height: 512px;
+    }
 
-[data-picture="beetle"] {
-    left: 877px;
-    top: 191px;
-    width: 250px;
-    height: 251px;
-}
+    [data-picture="beetle"] {
+        left: 877px;
+        top: 191px;
+        width: 250px;
+        height: 251px;
+    }
 
-[data-picture="egypt1"] {
-    left: 350px;
-    top: 163px;
-    width: 391px;
-    height: 301px;
-}
+    [data-picture="egypt1"] {
+        left: 350px;
+        top: 163px;
+        width: 391px;
+        height: 301px;
+    }
 
-[data-picture="egypt2"] {
-    left: 2122px;
-    top: 150px;
-    width: 404px;
-    height: 322px;
-}
+    [data-picture="egypt2"] {
+        left: 2122px;
+        top: 194px;
+        width: 404px;
+        height: 322px;
+    }
 
-[data-picture="egypt3"] {
-    left: 2676px;
-    top: 150px;
-    width: 439px;
-    height: 322px;
-}
+    [data-picture="egypt3"] {
+        left: 2676px;
+        top: 92px;
+        width: 439px;
+        height: 322px;
+    }
 
 /* Мультяшный зал */ 
 
-[data-section="mult"] {
-    min-width: 2720px;
-    background-color: #f9a0af;
-}
+    [data-section="mult"] {
+        min-width: 2879px;
+        background-color: #f9a0af;
+    }
 
-[data-section="mult"] .section__floor span {
-    background: #01a19d;
-}
+    [data-section="mult"] .section__floor span {
+        background: #01a19d;
+    }
 
-[data-section="mult"] .section__granny {
-    background: url(images/mult/granny.png) bottom / contain no-repeat;
-    right: -50px;
-}
+    [data-section="mult"] .section__granny {
+        background: url(images/mult/granny.png) bottom / contain no-repeat;
+        right: -50px;
+    }
 
-[data-picture="homer1"] {
-    top: 100px;
-    width: 648px;
-    height: 376px;
-    left: 1231px;
-    /* right: 0%; */
-    /* margin: auto; */
-}
+    [data-picture="bojack"] {
+        top: 100px;
+        left: 350px;
+        width: 332px;
+        height: 376px;
+    }
 
-[data-picture="homer2"] {
-    top: 172px;
-    width: 308px;
-    height: 210px;
-    left: 800px;
-}
+    [data-picture="homer1"] {
+        top: 100px;
+        width: 648px;
+        height: 376px;
+        left: 2039px;
+    }
 
-[data-picture="bojack"] {
-    top: 100px;
-    left: 350px;
-    width: 332px;
-    height: 376px;
-}
+    [data-picture="hillking"] {
+        top: 30px;
+        width: 676px;
+        height: 530px;
+        left: 1234px;
+    } 
 
-[data-picture="hillking"] {
-    top: 100px;
-    width: 481px;
-    height: 376px;
-    left: 2019px;
-} 
-
-/* Буквальный зал */ 
-
-[data-section="literally"] {
-    background-color: #acc8f0;
-    min-width: 1750px;
-}
-
-[data-section="literally"] .section__floor span {
-    background: #f987a1;
-}
-
-[data-section="literally"] .section__granny {
-    background: url(images/literally/granny.png) bottom / contain no-repeat;
-    right: -50px;
-    width: 250px;
-}
-
-[data-section="literally"] [data-picture] {
-    width: 300px;
-    height: 300px;
-    margin: auto;
-}
-
-[data-picture="comics1"], [data-picture="comics3"], [data-picture="comics5"] {
-    top: 100px;
-}
-
-[data-picture="comics2"], [data-picture="comics4"] {
-    top: 200px;
-}
-
-[data-picture="comics1"] {
-    left: 0%;
-    right: 80%;
-}
-
-[data-picture="comics2"] {
-    left: 20%;
-    right: 60%;
-}
-
-[data-picture="comics3"] {
-    left: 40%;
-    right: 40%;
-}
-
-[data-picture="comics4"] {
-    left: 60%;
-    right: 20%;
-}
-
-[data-picture="comics5"] {
-    left: 80%;
-    right: 0%;
-}
+    [data-picture="homer2"] {
+        top: 172px;
+        width: 308px;
+        height: 210px;
+        left: 800px;
+    }
 
 /* Зал кино и сериалов */ 
 
-[data-section="cinema"] {
-    color: white;
-    background: 
-        url(images/cinema/wall.jpg) center / 200px auto repeat;
-}
+    [data-section="cinema"] {
+        color: white;
+        min-width: 3166px;
+        background: url(images/cinema/wall.jpg) center / 200px repeat;
+    }
 
-[data-section="cinema"] .section__floor span {
-    background: url(images/cinema/floor.jpg) center / 500px;
-    /* transform: perspective(2000px) rotate3d(0.3,0,0,62deg); */
-}
+    [data-section="cinema"] .section__floor span {
+        background: url(images/cinema/floor.jpg) center / 500px;
+    }
 
-[data-section="cinema"] .section__granny {
-    background: url(images/cinema/granny.jpg) bottom / contain no-repeat;
-    right: -50px;
-}
+    [data-section="cinema"] .section__granny {
+        background: url(images/cinema/granny.jpg) bottom / contain no-repeat;
+        right: -50px;
+    }
 
-[data-picture="starwars"] {
-    left: 40%;
-    right: 30%;
-    margin: auto;
-    top: 100px;
-    width: 340px;
-    height: 507px;
-}
+    [data-picture="starwars1"] {
+        left: 350px;
+        top: 129px;
+        width: 479px;
+        height: 380px;
+    }
 
-[data-picture="got"] {
-    left: 5%;
-    right: 60%;
-    width: 440px;
-    height: 408px;
-    margin: auto;
-    top: 100px;
-}
+    [data-picture="got"] {
+        left: 959px;
+        width: 440px;
+        height: 410px;
+        top: 100px;
+    }
 
-[data-picture="friends"] {
-    left: 70%;
-    right: 10%;
-    top: 100px;
-    width: 326px;
-    height: 400px;
-    margin: auto;
-}
+    [data-picture="starwars2"] {
+        left: 1558px;
+        top: 42px;
+        width: 340px;
+        height: 507px;
+    }
+
+    [data-picture="friends"] {
+        left: 2072px;
+        top: 100px;
+        width: 326px;
+        height: 400px;
+    }
+
+    [data-picture="starwars3"] {
+        left: 2563px;
+        top: 42px;
+        width: 340px;
+        height: 507px;
+    }
+
+/* Буквальный зал */ 
+
+    [data-section="literally"] {
+        background-color: #acc8f0;
+        min-width: 1750px;
+    }
+
+    [data-section="literally"] .section__floor span {
+        background: #f987a1;
+    }
+
+    [data-section="literally"] .section__granny {
+        background: url(images/literally/granny.png) bottom / contain no-repeat;
+        right: -50px;
+        width: 250px;
+    }
+
+    [data-section="literally"] [data-picture] {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+    }
+
+    [data-picture="comics1"], [data-picture="comics3"], [data-picture="comics5"] {
+        top: 100px;
+    }
+
+    [data-picture="comics2"], [data-picture="comics4"] {
+        top: 200px;
+    }
+
+    [data-picture="comics1"] {
+        left: 0%;
+        right: 80%;
+    }
+
+    [data-picture="comics2"] {
+        left: 20%;
+        right: 60%;
+    }
+
+    [data-picture="comics3"] {
+        left: 40%;
+        right: 40%;
+    }
+
+    [data-picture="comics4"] {
+        left: 60%;
+        right: 20%;
+    }
+
+    [data-picture="comics5"] {
+        left: 80%;
+        right: 0%;
+    }
+
+
 
 /* Зал Исаакиевского собора */ 
 
