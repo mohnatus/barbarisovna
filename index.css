@@ -267,7 +267,7 @@ body {
 
 /* Египетский зал */ 
 [data-section="egypt"] {
-    min-width: 2800px;
+    min-width: 3800px;
     background: 
         url(images/egypt/wall.jpg) center / 200px auto repeat;
 }
@@ -285,7 +285,7 @@ body {
 [data-section="egypt"] .mummy {
     position: absolute;
     bottom: 40px;
-    left: 30px;
+    left: 3245px;
     background: url(images/egypt/mummy.png) center / 110% auto no-repeat;
     width: 468px;
     height: 710px;
@@ -293,35 +293,35 @@ body {
 }
 
 [data-picture="egypt4"] {
-    left: 1000px;
-    top: 100px;
+    left: 1248px;
+    top: 50px;
     width: 730px;
     height: 512px;
 }
 
 [data-picture="beetle"] {
-    left: 637px;
-    top: 450px;
-    width: 150px;
-    height: 151px;
+    left: 877px;
+    top: 191px;
+    width: 250px;
+    height: 251px;
 }
 
 [data-picture="egypt1"] {
-    left: 517px;
-    top: 100px;
+    left: 350px;
+    top: 163px;
     width: 391px;
     height: 301px;
 }
 
 [data-picture="egypt2"] {
-    left: 1800px;
+    left: 2122px;
     top: 150px;
     width: 404px;
     height: 322px;
 }
 
 [data-picture="egypt3"] {
-    left: 2276px;
+    left: 2676px;
     top: 150px;
     width: 439px;
     height: 322px;
@@ -330,6 +330,7 @@ body {
 /* Мультяшный зал */ 
 
 [data-section="mult"] {
+    min-width: 2720px;
     background-color: #f9a0af;
 }
 
@@ -344,32 +345,32 @@ body {
 
 [data-picture="homer1"] {
     top: 100px;
-    width: 566px;
-    height: 338px;
-    left: 50%;
-    right: 0%;
-    margin: auto;
+    width: 648px;
+    height: 376px;
+    left: 1231px;
+    /* right: 0%; */
+    /* margin: auto; */
 }
 
 [data-picture="homer2"] {
-    top: 100px;
+    top: 172px;
     width: 308px;
     height: 210px;
-    left: 31%;
+    left: 800px;
 }
 
 [data-picture="bojack"] {
     top: 100px;
-    left: 10%;
-    width: 271px;
-    height: 306px;
+    left: 350px;
+    width: 332px;
+    height: 376px;
 }
 
 [data-picture="hillking"] {
-    top: 343px;
-    width: 311px;
-    height: 253px;
-    left: 31%;
+    top: 100px;
+    width: 481px;
+    height: 376px;
+    left: 2019px;
 } 
 
 /* Буквальный зал */ 
