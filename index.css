@@ -279,7 +279,7 @@ body {
 
     [data-section="egypt"] .section__granny {
         background: url(images/egypt/granny.png) bottom / contain no-repeat;
-        right: -50px;
+        
     }
 
     [data-section="egypt"] .mummy {
@@ -340,7 +340,7 @@ body {
 
     [data-section="mult"] .section__granny {
         background: url(images/mult/granny.png) bottom / contain no-repeat;
-        right: -50px;
+        
     }
 
     [data-picture="bojack"] {
@@ -385,7 +385,7 @@ body {
 
     [data-section="cinema"] .section__granny {
         background: url(images/cinema/granny.jpg) bottom / contain no-repeat;
-        right: -50px;
+        
     }
 
     [data-picture="starwars1"] {
@@ -436,7 +436,6 @@ body {
 
     [data-section="literally"] .section__granny {
         background: url(images/literally/granny.png) bottom / contain no-repeat;
-        right: -50px;
         width: 250px;
     }
 
@@ -474,241 +473,240 @@ body {
         left: 2150px;
     }
 
+/* Исаакиевский зал */ 
 
+    [data-section="isaak"] {
+        width: 150vw;
+        min-width: 2900px;
+        background: 
+            url(images/isaak/wall.jpg) center / 200px auto repeat;
+    }
 
-/* Зал Исаакиевского собора */ 
+    [data-section="isaak"] .section__floor span {
+        background: url(images/isaak/floor.jpg) center / 500px;
+    }
 
-[data-section="isaak"] {
-    width: 150vw;
-    min-width: 2900px;
-    background: 
-        url(images/isaak/wall.jpg) center / 200px auto repeat;
-}
+    [data-section="isaak"] .section__granny {
+        background: url(images/isaak/granny.png) bottom / contain no-repeat;
+        
+    }
 
-[data-section="isaak"] .section__floor span {
-    background: url(images/isaak/floor.jpg) center / 500px;
-    /* transform: perspective(2000px) rotate3d(0.3,0,0,62deg); */
-}
+    [data-picture="isaak1"] {
+        top: 142px;
+        width: 488px;
+        height: 355px;
+        left: 350px;
+    }
 
-[data-section="isaak"] .section__granny {
-    background: url(images/isaak/granny.png) bottom / contain no-repeat;
-    right: -50px;
-}
+    [data-picture="isaak2"] {
+        top: 60px;
+        width: 1034px;
+        height: 517px;
+        left: 1000px;
+    }
 
-[data-picture="isaak1"] {
-    top: 142px;
-    width: 488px;
-    height: 355px;
-    left: 350px;
-}
+    [data-picture="isaak3"] {
+        top: 120px;
+        width: 483px;
+        height: 363px;
+        left: 2182px;
+    }
 
-[data-picture="isaak2"] {
-    top: 60px;
-    width: 1034px;
-    height: 517px;
-    left: 1000px;
-}
+/* Демонический зал */
+    [data-section="demon"] {
+        min-width: 1750px;
+        background: url(images/demon/wall.jpg) center / 200px auto repeat;
+    }
 
-[data-picture="isaak3"] {
-    top: 120px;
-    width: 483px;
-    height: 363px;
-    left: 2182px;
-}
+    [data-section="demon"] .section__floor span {
+        background: url(images/demon/floor.jpg) center / 500px;
+    }
+
+    [data-section="demon"] .section__granny {
+        background: url(images/demon/granny.png) bottom / contain no-repeat;
+    }
+
+    [data-picture="demon"] {
+        left: 420px;
+        top: 50px;
+        width: 768px;
+        height: 500px;
+    }
 
 /* Рабочий зал */
 
-[data-section="job"] {
-    min-width: 4500px;
-    background: 
-        url(images/job/wall.jpg) center / 200px auto repeat;
-}
+    [data-section="job"] {
+        min-width: 4500px;
+        background: 
+            url(images/job/wall.jpg) center / 200px auto repeat;
+    }
 
-[data-section="job"] .section__floor span {
-    background: url(images/job/floor.jpg) center / 500px;
-    /* transform: perspective(2000px) rotate3d(0.3,0,0,62deg); */
-}
+    [data-section="job"] .section__floor span {
+        background: url(images/job/floor.jpg) center / 500px;
+    }
 
-[data-section="job"] .section__granny {
-    background: url(images/job/granny.png) bottom / contain no-repeat;
-    right: -50px;
-}
+    [data-section="job"] .section__granny {
+        background: url(images/job/granny.png) bottom / contain no-repeat;
+        
+    }
 
-.coffeemachine {
-    position: absolute;
-    bottom: 50px;
-    left: 4157px;
-    width: 270px;
-    z-index: 3;
-    height: 686px;
-    z-index: 10;
-    background: url(images/job/coffeemachine.png) bottom / contain no-repeat;
-}
+    .coffeemachine {
+        position: absolute;
+        bottom: 50px;
+        left: 4157px;
+        width: 270px;
+        z-index: 3;
+        height: 686px;
+        z-index: 10;
+        background: url(images/job/coffeemachine.png) bottom / contain no-repeat;
+    }
 
-[data-picture="coffee"] {
-    left: 350px;
-    top: 123px;
-    width: 528px;
-    height: 343px;
-}
+    [data-picture="coffee"] {
+        left: 350px;
+        top: 123px;
+        width: 528px;
+        height: 343px;
+    }
 
-[data-picture="bears"] {
-    left: 1053px;
-    top: 40px;
-    width: 786px;
-    height: 520px;
-}
+    [data-picture="bears"] {
+        left: 1053px;
+        top: 40px;
+        width: 786px;
+        height: 520px;
+    }
 
-[data-picture="vitruvian"] {
-    left: 2020px;
-    width: 400px;
-    height: 400px;
-    top: 100px;
-}
+    [data-picture="vitruvian"] {
+        left: 2020px;
+        width: 400px;
+        height: 400px;
+        top: 100px;
+    }
 
-[data-picture="scream"] {
-    left: 2642px;
-    width: 310px;
-    height: 376px;
-    top: 124px;
-}
+    [data-picture="scream"] {
+        left: 2642px;
+        width: 310px;
+        height: 376px;
+        top: 124px;
+    }
 
-[data-picture="dali"] {
-    left: 3170px;
-    width: 359px;
-    height: 281px;
-    top: 219px;
-}
+    [data-picture="dali"] {
+        left: 3170px;
+        width: 359px;
+        height: 281px;
+        top: 219px;
+    }
 
-[data-picture="gun"] {
-    left: 3745px;
-    width: 264px;
-    height: 360px;
-    top: 140px;
-}
+    [data-picture="gun"] {
+        left: 3745px;
+        width: 264px;
+        height: 360px;
+        top: 140px;
+    }
 
 /* Зал физического здоровья */
 
-[data-section="physical"] {
-    background: orange;
-    min-width: 1800px;
-    background: 
-        url(images/physical/wall.jpg) center / cover repeat;
-}
+    [data-section="physical"] {
+        min-width: 3160px;
+        background: 
+            url(images/physical/wall.jpg) center / cover repeat;
+    }
 
-[data-section="physical"] .section__floor span {
-    background: url(images/physical/floor.png) center / 500px;
-    /* transform: perspective(2000px) rotate3d(0.3,0,0,62deg); */
-}
+    [data-section="physical"] .section__floor span {
+        background: url(images/physical/floor.png) center / 500px;
+    }
 
-[data-section="physical"] .section__granny {
-    background: url(images/physical/granny.png) bottom / contain no-repeat;
-    right: -50px;
-}
+    [data-section="physical"] .section__granny {
+        background: url(images/physical/granny.png) bottom / contain no-repeat;
+        
+    }
 
-[data-picture="peaches"] {
-    left: 0;
-    right: 75%;
-    width: 345px;
-    height: 386px;
-    top: 100px;
-    margin: auto;
-}
+    [data-picture="peaches"] {
+        left: 350px;
+        width: 345px;
+        height: 386px;
+        top: 100px;
+    }
 
-[data-picture="venera"] {
-    left: 25%;
-    right: 35%;
-    width: 634px;
-    height: 398px;
-    top: 100px;
-    margin: auto;
-}
+    [data-picture="venera"] {
+        left: 843px;
+        width: 693px;
+        height: 468px;
+        top: 50px;
+    }
 
-[data-picture="yoga"] {
-    left: 65%;
-    right: 25%;
-    width: 210px;
-    height: 210px;
-    top: 190px;
-    margin: auto;
-}
+    [data-picture="yoga"] {
+        left: 1701px;
+        width: 300px;
+        height: 300px;
+        top: 190px;
+    }
 
-[data-picture="ball"] {
-    left: 75%;
-    right: 0;
-    width: 284px;
-    height: 400px;
-    top: 100px;
-    margin: auto;
-}
+    [data-picture="riders"] {
+        left: 2175px;
+        width: 787px;
+        height: 550px;
+        top: 30px;
+    }
 
 
 /* Зал душевного здоровья */
 
-[data-section="mental"] {
-    min-width: 3436px;
-    background: 
-        url(images/mental/wall.jpg) center / 200px auto repeat;
-}
+    [data-section="mental"] {
+        min-width: 3436px;
+        background: 
+            url(images/mental/wall.jpg) center / 200px auto repeat;
+    }
 
-[data-section="mental"] .section__floor span {
-    background: url(images/mental/floor.jpg) center / 500px;
-    /* transform: perspective(2000px) rotate3d(0.3,0,0,62deg); */
-}
+    [data-section="mental"] .section__floor span {
+        background: url(images/mental/floor.jpg) center / 500px;
+    }
 
-[data-section="mental"] .section__granny {
-    background: url(images/mental/granny.png) bottom / contain no-repeat;
-    right: -50px;
-}
+    [data-section="mental"] .section__granny {
+        background: url(images/mental/granny.png) bottom / contain no-repeat;
+        
+    }
 
-[data-picture="owl"] {
-    left: 100px;
-    top: 250px;
-    width: 215px;
-    height: 182px;
-}
+    [data-picture="owl"] {
+        left: 100px;
+        top: 250px;
+        width: 215px;
+        height: 182px;
+    }
 
-[data-picture="cat1"] {
-    left: 400px;
-    top: 150px;
-    width: 400px;
-    height: 400px;
-}
+    [data-picture="cat1"] {
+        left: 400px;
+        top: 150px;
+        width: 400px;
+        height: 400px;
+    }
 
-[data-picture="cat2"] {
-    left: 1600px;
-    top: 150px;
-    width: 400px;
-    height: 400px;
-}
+    [data-picture="cat2"] {
+        left: 1600px;
+        top: 150px;
+        width: 400px;
+        height: 400px;
+    }
 
-[data-picture="demon"] {
-    left: 900px;
-    top: 150px;
-    width: 617px;
-    height: 400px;
-}
+    [data-picture="cat3"] {
+        left: 2836px;
+        top: 150px;
+        width: 400px;
+        height: 400px;
+    }
 
-[data-picture="cat3"] {
-    left: 2836px;
-    top: 150px;
-    width: 400px;
-    height: 400px;
-}
+    [data-picture="night"] {
+        left: 2108px;
+        top: 150px;
+        width: 589px;
+        height: 400px;
+    }
 
-[data-picture="night"] {
-    left: 2108px;
-    top: 150px;
-    width: 589px;
-    height: 400px;
-}
-
-[data-picture="cat4"] {
-    left: 4100px;
-    top: 150px;
-    width: 400px;
-    height: 400px;
-}
+    [data-picture="cat4"] {
+        left: 4100px;
+        top: 150px;
+        width: 400px;
+        height: 400px;
+    }
 
 
 /* Зал апсны */
@@ -726,7 +724,7 @@ body {
 
 [data-section="apsny"] .section__granny {
     background: url(images/apsny/granny.png) bottom / contain no-repeat;
-    right: -50px;
+    
 }
 
 /* Праздничный зал */
