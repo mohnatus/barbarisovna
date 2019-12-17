@@ -125,7 +125,7 @@ const wishes = {
   },
   "venera": {
     title: true,
-    text: "Не забывай одеваться"
+    text: "Красивых шмоточек"
   },
   "yoga": {
     title: true,
@@ -139,37 +139,37 @@ const wishes = {
   // mental
   "cat1": {
     title: true,
-    text: "cat1"
+    text: "Не забывать отдыхать"
   },
-  
+  "corgi": {
+    title: true,
+    text: "Наслаждаться пейзажами"
+  },
   "cat2": {
     title: true,
-    text: "Никому не уступай"
+    text: "Никому не уступать"
   },
   "cat3": {
     title: true,
-    text: "Плыви по течению"
+    text: "Избежать девятого вала"
   },
   "night": {
     title: true,
-    text: "night"
-  },
-  "cat4": {
-    title: true,
-    text: "cat4"
+    text: "Быть выше этого всего"
   },
 
   // empress
   "keanu1": {
-    title: true,
-    text: "keanu1"
+    title: false,
+    text: "Каждая борьба в вашей жизни в итоге превратила вас в человека, которым вы являетесь сегодня. Будьте благодарны за трудные времена, они только делают вас сильнее."
   },
   "keanu2": {
     title: false,
-    text: "Ты потрясающий!"
+    text: "Искусство — это попытка найти хорошее в людях и сделать мир более сострадательным."
   },
   "empress": {
-    text: "empress"
+    title: true,
+    text: "Быть собой"
   }
 };
 
