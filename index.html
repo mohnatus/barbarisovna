@@ -8,7 +8,36 @@
     <link rel="stylesheet" href="index.css?v=4">
 </head>
 <body>
+    <div id="rules">
+        <div class="rules-list">
+            <div class="rules-list__title">
+                Добро пожаловать на выставку...
+            </div>
+            <div class="rules-list__text">
+                Эта выставка ....
+            </div>
+            <div class="rules-list__text">
+                Соблюдайте правила:
+            </div>
+            <div class="rule">
+                1. Не сорить
+            </div>
+            <div class="rule">
+                2. Не тыкать пальцами в произведения искусства
+            </div>
+            <div class="rule">
+                3. Чтобы в деталях насладиться шедевром, нажмите на табличку под ним.
+            </div>
+            <div class="exit" onclick="document.getElementById('rules').style.display = 'none'">
+                Закрыть
+            </div>
+        </div>
+    </div>
     <div class="gallery" id="gallery">
+        <!-- Вход -->   
+        <div class="section" data-section="entrance">
+
+        </div><!-- Вход --> 
 
         <!-- 1. Парадный зал -->
         <div class="section" data-section="ceremonial">
@@ -74,7 +103,7 @@
                     <img src="images/egypt/beetle.jpg" alt="">
                     <div class="head"></div>
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Священный скарабей с какашкой
                 </figcaption>
             </figure>
@@ -125,7 +154,7 @@
                 <div class="picture__image frame1">
                     <img src="images/mult/bojack.png" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Конь с жемчужной сережкой
                 </figcaption>
             </figure>
@@ -135,7 +164,7 @@
                 <div class="picture__image frame1">
                     <img src="images/mult/homer2.jpg" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     ???
                 </figcaption>
             </figure>
@@ -145,7 +174,7 @@
                 <div class="picture__image frame1">
                     <img src="images/mult/hillking.png" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Царица горы
                 </figcaption>
             </figure>
@@ -155,7 +184,7 @@
                 <div class="picture__image frame1">
                     <img src="images/mult/homer1.png" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Счастливое спасение
                 </figcaption>
             </figure>
@@ -173,7 +202,7 @@
                 <div class="picture__image frame1">
                     <img src="images/cinema/starwars1.jpg" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Тройка эвоков
                 </figcaption>
             </figure>
@@ -183,17 +212,17 @@
                 <div class="picture__image frame1">
                     <img src="images/cinema/got.png" alt="">
                 </div>
-                <figcaption class="picture__line">
+                <figcaption class="picture__line increase">
                     <span><span>Дейенерис Бурерожденная из дома Таргариенов, от крови древней Валирии, первая этого имени, королева андалов, ройнаров и Первых Людей, владычица семи королевств, и хранительница областей, Неопалимая, правительница Миэрина, кхалиси Великого травяного моря, Разрушительница Оков и Матерь Драконов</span></span>
                 </figcaption>
             </figure>
 
             <!-- Йода и Дарт Вейдер -->
-            <figure class="picture" data-picture="starwars2">
+            <figure class="picture active" onclick="showWish('starwars2')" data-picture="starwars2">
                 <div class="picture__image frame1">
                     <img src="images/cinema/starwars2.png" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Амур и Психея
                 </figcaption>
             </figure>
@@ -203,7 +232,7 @@
                 <div class="picture__image frame1">
                     <img src="images/cinema/friends.png" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Гитарист-бобыль
                 </figcaption>
             </figure>
@@ -214,7 +243,7 @@
                 <div class="picture__image frame1">
                     <img src="images/cinema/starwars3.jpg" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Чубакка на шаре
                 </figcaption>
             </figure>
@@ -234,7 +263,7 @@
                 <div class="picture__image frame1">
                     <img src="images/literally/comics1.jpg" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Поддержка
                 </figcaption>
             </figure>
@@ -244,7 +273,7 @@
                 <div class="picture__image frame1">
                     <img src="images/literally/comics2.jpg" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Уничтожение
                 </figcaption>
             </figure>
@@ -254,7 +283,7 @@
                 <div class="picture__image frame1">
                     <img src="images/literally/comics3.jpg" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Вдалиотводск
                 </figcaption>
             </figure>
@@ -264,7 +293,7 @@
                 <div class="picture__image frame1">
                     <img src="images/literally/comics4.jpg" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Беззаконие
                 </figcaption>
             </figure>
@@ -273,7 +302,7 @@
                 <div class="picture__image frame1">
                     <img src="images/literally/comics5.jpg" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Спектр ощущений синий
                 </figcaption>
             </figure>
@@ -290,18 +319,27 @@
                 <div class="picture__image frame1">
                     <img src="images/isaak/isaak1.jpg" alt="">
                 </div>
+                <figcaption class="picture__caption increase">
+                    Вид сверху
+                </figcaption>
             </figure>
 
             <figure class="picture" data-picture="isaak2">
                 <div class="picture__image frame1">
                     <img src="images/isaak/isaak2.jpg" alt="">
                 </div>
+                <figcaption class="picture__caption increase">
+                    Вид издалека
+                </figcaption>
             </figure>
 
             <figure class="picture" data-picture="isaak3">
                 <div class="picture__image frame1">
                     <img src="images/isaak/isaak3.jpg" alt="">
                 </div>
+                <figcaption class="picture__caption increase">
+                    Вид с близкого расстояния
+                </figcaption>
             </figure>
         </div><!-- Зал Исакиевского собора -->
 
@@ -313,13 +351,40 @@
 
             <!-- Демон -->
             <figure class="picture active" data-picture="demon">
-                <div class="picture__image frame1">
+                <div class="picture__image frame1 puzzle-place">
                     <img src="images/demon/demon.jpg" alt="">
+                    <div class="puzzle">
+                        <div class="row">
+                            <div class="cell" data-place="11" data-item="11"></div>
+                            <div class="cell" data-place="12" data-item="12"></div>
+                            <div class="cell" data-place="13" data-item="13"></div>
+                            <div class="cell" data-place="14" data-item="14"></div>
+                            <div class="cell" data-place="15" data-item="15"></div>
+                        </div>
+                        <div class="row">
+                            <div class="cell" data-place="21" data-item="21"></div>
+                            <div class="cell" data-place="22" data-item="22"></div>
+                            <div class="cell" data-place="23" data-item="23"></div>
+                            <div class="cell" data-place="24" data-item="24"></div>
+                            <div class="cell" data-place="25" data-item="25"></div>
+                        </div>
+                        <div class="row">
+                            <div class="cell" data-place="31" data-item="31"></div>
+                            <div class="cell" data-place="32" data-item="32"></div>
+                            <div class="cell" data-place="33" data-item="33"></div>
+                            <div class="cell" data-place="34" data-item="34"></div>
+                            <div class="cell" data-place="35" data-item="35"></div>
+                        </div>
+                    </div>
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Демон Рассыпающийся
                 </figcaption>
             </figure>
+
+            <div class="puzzle-ground">
+
+            </div>
             
         </div><!-- Демонический зал -->
 
@@ -332,11 +397,11 @@
             <div class="coffeemachine active"  onclick="showWish('coffeemachine')"></div>
 
             <!-- Банки кофе, Уорхол -->
-            <figure class="picture active"  onclick="showWish('coffee')" data-picture="coffee">
+            <figure class="picture active" onclick="showWish('coffee')" data-picture="coffee">
                 <div class="picture__image frame1">
                     <img src="images/job/coffee.jpg" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Банки кофе, Уорхол
                 </figcaption>
             </figure>
@@ -346,7 +411,7 @@
                 <div class="picture__image frame1">
                     <img src="images/job/bears.png" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Утро в Evoca
                 </figcaption>
             </figure>
@@ -356,7 +421,7 @@
                 <div class="picture__image frame1">
                     <img src="images/job/vitruvian.png" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Витрувианская Барбарисовна
                 </figcaption>
             </figure>
@@ -366,7 +431,7 @@
                 <div class="picture__image frame1">
                     <img src="images/job/scream.jpg" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Середина рабочего дня
                 </figcaption>
             </figure>
@@ -376,20 +441,23 @@
                 <div class="picture__image frame1">
                     <img src="images/job/dali.jpg" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Конец рабочего дня
                 </figcaption>
             </figure>
 
             <!-- Винтовка это праздник -->
-            <figure class="picture active" data-picture="gun">
+            <figure class="picture active" data-picture="gun" onclick="listen('gun')">
                 <div class="picture__image frame1">
                     <img src="images/job/gun.jpeg" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Понедельник
                 </figcaption>
             </figure>
+
+            <div style="display:none"><audio src="media/gun.mp3" id="gun"></audio></div>
+            
         </div>
 
         <!-- 9. Зал физического здоровья -->
@@ -403,7 +471,7 @@
                 <div class="picture__image frame1">
                     <img src="images/physical/peaches.jpg" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Барбарисовна с персиками
                 </figcaption>
             </figure>
@@ -413,7 +481,7 @@
                 <div class="picture__image frame1">
                     <img src="images/physical/venera.jpg" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Рождение Барбарисовны
                 </figcaption>
             </figure>
@@ -423,8 +491,8 @@
                 <div class="picture__image frame1">
                     <img src="images/physical/yoga.jpeg" alt="">
                 </div>
-                <figcaption class="picture__caption">
-                    ???
+                <figcaption class="picture__caption increase">
+                    На пути к гармонии
                 </figcaption>
             </figure>
 
@@ -433,8 +501,8 @@
                 <div class="picture__image frame1">
                     <img src="images/physical/riders.png" alt="">
                 </div>
-                <figcaption class="picture__caption">
-                    Три Барбарисовны-богатыря
+                <figcaption class="picture__caption increase">
+                    Три богатырских Барбарисовны
                 </figcaption>
             </figure>
 
@@ -446,22 +514,31 @@
             <div class="section__floor"><span></span></div>
             <div class="section__granny"></div>
 
-            <figure class="picture active" onclick="showWish('owl')" data-picture="owl">
+            <figure class="picture" data-picture="owl">
                 <div class="picture__image frame1">
                     <img src="images/mental/owl.jpg" alt="">
                 </div>
+                <figcaption class="picture__caption increase">
+                    Сова
+                </figcaption>
             </figure>
 
             <figure class="picture active" onclick="showWish('cat1')" data-picture="cat1">
                 <div class="picture__image frame1">
                     <img src="images/mental/cat1.jpg" alt="">
                 </div>
+                <figcaption class="picture__caption increase">
+                    ???
+                </figcaption>
             </figure>
 
             <figure class="picture active" onclick="showWish('cat2')" data-picture="cat2">
                 <div class="picture__image frame1">
                     <img src="images/mental/cat2.png" alt="">
                 </div>
+                <figcaption class="picture__caption increase">
+                    ???
+                </figcaption>
             </figure>
 
             
@@ -470,7 +547,9 @@
                 <div class="picture__image frame1">
                     <img src="images/mental/cat3.png" alt="">
                 </div>
-                
+                <figcaption class="picture__caption increase">
+                    ???
+                </figcaption>
             </figure>
 
             <!-- Звездная ночь -->
@@ -478,6 +557,9 @@
                 <div class="picture__image frame1">
                     <img src="images/mental/night.png" alt="">
                 </div>
+                <figcaption class="picture__caption increase">
+                    Звездная ночь
+                </figcaption>
             </figure>
         </div><!-- Зал душевного здоровья -->
 
@@ -509,7 +591,7 @@
                 <div class="picture__image frame1">
                     <img src="images/holiday/empress.jpg" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Шальная императрица Барбарисовна
                 </figcaption>
             </figure>

@@ -68,6 +68,12 @@ const wishes = {
     text: "hillking"
   },
 
+  // cinema
+  "starwars2": {
+    title: true,
+    text: "Найти пару"
+  },
+
   // literally
   "comics1": {
     title: true,
@@ -90,6 +96,7 @@ const wishes = {
     text: "comics5"
   },
 
+  // job
   "bears": {
     title: true,
     text: "bears"
@@ -102,6 +109,8 @@ const wishes = {
     title: true,
     text: "Не расплавься на работе"
   },
+
+  // physical
   "peaches": {
     title: true,
     text: "Ешь больше витаминов"
@@ -114,14 +123,8 @@ const wishes = {
     title: true,
     text: "Будь гибче"
   },
-  "ball": {
-    title: true,
-    text: "Держи баланс"
-  },
-  "owl": {
-    title: true,
-    text: "owl"
-  },
+  
+  // mental
   "cat1": {
     title: true,
     text: "cat1"
@@ -146,6 +149,8 @@ const wishes = {
     title: true,
     text: "cat4"
   },
+
+  // empress
   "keanu1": {
     title: true,
     text: "keanu1"
@@ -216,3 +221,13 @@ document.addEventListener('click', function(e) {
 }, true);
 
 
+
+const listen = function(id) {
+  let audio = document.getElementById(id);
+  if (audio.paused) {
+    audio.currentTime = 0;
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}

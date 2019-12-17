@@ -17,6 +17,30 @@ body {
     overflow: hidden;
 }
 
+.increase {
+    cursor: pointer;
+}
+
+#rules {
+    position: fixed;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 20px;
+}
+
+.rules-list {
+    background: white;
+    padding: 20px;
+}
+
+.rules-list__title {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
 #image {
     position: fixed;
     top: 0; bottom: 0;
@@ -579,10 +603,8 @@ body {
 
 /* Демонический зал */
     [data-section="demon"] {
-        
-min-width: 1750px;
-        
-background: url(images/demon/wall.jpg) center / 200px auto repeat;
+        min-width: 1750px; 
+        background: url(images/demon/wall.jpg) center / 200px auto repeat;
     }
 
     [data-section="demon"] .section__floor span {
@@ -598,6 +620,110 @@ background: url(images/demon/wall.jpg) center / 200px auto repeat;
         top: 50px;
         width: 768px;
         height: 500px;
+    }
+
+    [data-picture="demon"] img {
+        visibility: hidden;
+    }
+
+    [data-picture="demon"] .puzzle {
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    /* 
+        5*3 фрагментов
+        688 - ширина
+        420 - высота
+    */
+
+    .puzzle .cell {
+        position: absolute;
+        background-image: url(images/demon/demon.jpg);
+        background-size: 688px 420px;
+        background-repeat: no-repeat;
+        width: calc(688px / 5);
+        height: calc(420px / 3);
+    }
+
+    .puzzle .cell[data-item="11"] {
+        background-position: 0px 0px;
+        left: 0;
+        top: 0;
+    }
+    .puzzle .cell[data-item="12"] {
+        background-position: calc(688px / -5) 0px;
+        left: calc(688px / 5);
+        right: 0;
+    }
+    .puzzle .cell[data-item="13"] {
+        background-position: calc(688px / -5 * 2) 0px;
+        left: calc(688px / 5 * 2);
+        top:  0;
+    }
+    .puzzle .cell[data-item="14"] {
+        background-position: calc(688px / -5 * 3) 0px;
+        left: calc(688px / 5 * 3);
+        top: 0;
+    }
+    .puzzle .cell[data-item="15"] {
+        background-position: calc(688px / -5 * 4) 0px;
+        left: calc(688px / 5 * 4);
+        top: 0;
+    }
+    
+    .puzzle .cell[data-item="21"] {
+        background-position: 0px calc(420px / -3);
+        left: 0;
+        top: calc(420px / 3);
+    }
+    .puzzle .cell[data-item="22"] {
+        background-position: calc(688px / -5) calc(420px / -3);
+        left: calc(688px / 5);
+        top: calc(420px / 3);
+    }
+    .puzzle .cell[data-item="23"] {
+        background-position: calc(688px / -5 * 2) calc(420px / -3);
+        left: calc(688px / 5 * 2);
+        top: calc(420px / 3);
+    }
+    .puzzle .cell[data-item="24"] {
+        background-position: calc(688px / -5 * 3) calc(420px / -3);
+        left: calc(688px / 5 * 3);
+        top: calc(420px / 3);
+    }
+    .puzzle .cell[data-item="25"] {
+        background-position: calc(688px / -5 * 4) calc(420px / -3);
+        left: calc(688px / 5 * 4);
+        top: calc(420px / 3);
+    }
+
+    .puzzle .cell[data-item="31"] {
+        background-position: 0px calc(420px / -3 * 2);
+        left: 0;
+        top: calc(420px / 3 * 2);
+    }
+    .puzzle .cell[data-item="32"] {
+        background-position: calc(688px / -5) calc(420px / -3 * 2);
+        left: calc(688px / 5);
+        top: calc(420px / 3 * 2);
+    }
+    .puzzle .cell[data-item="33"] {
+        background-position: calc(688px / -5 * 2) calc(420px / -3 * 2);
+        left: calc(688px / 5 * 2);
+        top: calc(420px / 3 * 2);
+    }
+    .puzzle .cell[data-item="34"] {
+        background-position: calc(688px / -5 * 3) calc(420px / -3 * 2);
+        left: calc(688px / 5 * 3);
+        top: calc(420px / 3 * 2);
+    }
+    .puzzle .cell[data-item="35"] {
+        background-position: calc(688px / -5 * 4) calc(420px / -3 * 2);
+        left: calc(688px / 5 * 4);
+        top: calc(420px / 3 * 2);
     }
 
 /* Рабочий зал */
