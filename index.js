@@ -41,15 +41,15 @@ const wishes = {
   // ceremonial hall
   "tiger": {
     title: true,
-    text: "tiger",
+    text: "Тигриной смелости",
   },
   "monalisa": {
     title: true,
-    text: "Будь загадочной как Мона Лиза"
+    text: "Здорового похуизма"
   },
   "redhorse": {
     title: true,
-    text: "redhorse",
+    text: "Неожиданных радостей",
   },
 
   // egypt
