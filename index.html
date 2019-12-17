@@ -33,7 +33,20 @@
             </div>
         </div>
     </div>
+
     <div class="gallery" id="gallery">
+        <div style="display: none">
+            <audio src="media/mur1.mp3" id="mur1"></audio>
+            <audio src="media/mur2.mp3" id="mur2"></audio>
+            <audio src="media/mur3.mp3" id="mur3"></audio>
+            <audio src="media/mur4.mp3" id="mur4"></audio>
+            <audio src="media/mur5.mp3" id="mur5"></audio>
+            <audio src="media/mur6.mp3" id="mur6"></audio>
+            <audio src="media/mur7.mp3" id="mur7"></audio>
+        </div>
+        
+
+
         <!-- Вход -->   
         <div class="section" data-section="entrance">
 
@@ -88,7 +101,7 @@
                 <span class="head"></span>
             </div>
 
-            <figure class="picture" data-picture="egypt1">
+            <figure class="picture active" data-picture="egypt1" onclick="listen('mur2')">
                 <div class="picture__image frame1">
                     <img src="images/egypt/egypt1.png" alt="">
                 </div>
@@ -109,7 +122,7 @@
             </figure>
 
             <!-- поклонение коту -->
-            <figure class="picture" data-picture="egypt4">
+            <figure class="picture active" data-picture="egypt4" onclick="">
                 <div class="picture__image frame1">
                     <img src="images/egypt/egypt4.png" alt="">
                 </div>
@@ -119,7 +132,7 @@
             </figure>
 
 
-            <figure class="picture" data-picture="egypt2">
+            <figure class="picture active" data-picture="egypt2" onclick="listen('mur3')">
                 <div class="picture__image frame1">
                     <img src="images/egypt/egypt2.jpg" alt="">
                 </div>
@@ -130,7 +143,7 @@
             </figure>
 
             
-            <figure class="picture" data-picture="egypt3">
+            <figure class="picture active" data-picture="egypt3" onclick="listen('mur4')">
                 <div class="picture__image frame1">
                     <img src="images/egypt/egypt3.jpg" alt="">
                 </div>
@@ -180,12 +193,13 @@
             </figure>
 
             <!-- Гомер в воронке -->
-            <figure class="picture" data-picture="homer1">
+            <figure class="picture active" data-picture="homer1" onclick="show('homer1')">
                 <div class="picture__image frame1">
-                    <img src="images/mult/homer1.png" alt="">
+                    <img src="images/mult/homer1.png" alt="" style="display: none">
+                    <video src="media/homer.mkv" id="homer1"></video>
                 </div>
                 <figcaption class="picture__caption increase">
-                    Счастливое спасение
+                    Ой
                 </figcaption>
             </figure>
 
@@ -208,9 +222,10 @@
             </figure>
 
             <!-- Дейенерис Бурерожденная -->
-            <figure class="picture" data-picture="got">
+            <figure class="picture" data-picture="got" onclick="show('got')">
                 <div class="picture__image frame1">
-                    <img src="images/cinema/got.png" alt="">
+                    <img src="images/cinema/got.png" alt="" style="display: none">
+                    <video src="media/got.mkv" id="got"></video>
                 </div>
                 <figcaption class="picture__line increase">
                     <span><span>Дейенерис Бурерожденная из дома Таргариенов, от крови древней Валирии, первая этого имени, королева андалов, ройнаров и Первых Людей, владычица семи королевств, и хранительница областей, Неопалимая, правительница Миэрина, кхалиси Великого травяного моря, Разрушительница Оков и Матерь Драконов</span></span>
@@ -239,9 +254,9 @@
 
             <!-- Чубакка на шаре -->
             <figure class="picture active" data-picture="starwars3" 
-            onclick="document.getElementById('chubakka').play()">
+            onclick="listen('chubakka')">
                 <div class="picture__image frame1">
-                    <img src="images/cinema/starwars3.jpg" alt="">
+                    <img src="images/cinema/starwars3.png" alt="">
                 </div>
                 <figcaption class="picture__caption increase">
                     Чубакка на шаре
@@ -399,7 +414,7 @@
             <!-- Банки кофе, Уорхол -->
             <figure class="picture active" onclick="showWish('coffee')" data-picture="coffee">
                 <div class="picture__image frame1">
-                    <img src="images/job/coffee.jpg" alt="">
+                    <img src="images/job/coffee.png" alt="">
                 </div>
                 <figcaption class="picture__caption increase">
                     Банки кофе, Уорхол
@@ -532,6 +547,15 @@
                 </figcaption>
             </figure>
 
+            <figure class="picture active" onclick="showWish('corgi')" data-picture="corgi">
+                <div class="picture__image frame1">
+                    <img src="images/mental/corgi.jpg" alt="">
+                </div>
+                <figcaption class="picture__caption increase">
+                    ???
+                </figcaption>
+            </figure>
+
             <figure class="picture active" onclick="showWish('cat2')" data-picture="cat2">
                 <div class="picture__image frame1">
                     <img src="images/mental/cat2.png" alt="">
@@ -609,8 +633,5 @@
 
     <script src="index.js"></script>
 
-    <script>
-        //document.getElementById('gallery').scrollLeft = 20000;
-    </script>
 </body>
 </html>

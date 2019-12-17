@@ -231,3 +231,13 @@ const listen = function(id) {
     audio.pause();
   }
 }
+
+const show = function(id) {
+  let video = document.getElementById(id);
+  if (video.paused) {
+    video.currentTime = 0;
+    video.play();
+  } else {
+    video.pause();
+  }
+}
