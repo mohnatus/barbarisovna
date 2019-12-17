@@ -60,60 +60,68 @@ const wishes = {
 
   // mult
   "bojack": {
-    title: true,
-    text: "bojack"
+    title: false,
+    text: "В этом мире есть два пути: легкий путь и правильный путь.<br>Ты плывешь в Нью-Йорк либо огибая мыс Горн, как мужик, либо через Панамский канал, как демократ злоебучий."
   },
   "hillking": {
-    title: true,
-    text: "hillking"
+    title: false,
+    text: "Как странно, в девяти метрах от меня страдает человек, но это не мешает мне наслаждаться бассейном. Наверное, я просто взрослею."
   },
 
   // cinema
   "starwars2": {
     title: true,
-    text: "Найти пару"
+    text: ""
+  },
+  "starwars2": {
+    title: true,
+    text: "Найти человека, который будет тебя дополнять"
   },
 
   // literally
   "comics1": {
     title: true,
-    text: "comics1"
+    text: "Человека, который всё впитает"
   },
   "comics2": {
     title: true,
-    text: "comics2"
+    text: "Почаще уничтожать и наблюдать уничтожение маскировки"
   },
   "comics3": {
     title: true,
-    text: "comics3"
+    text: "Реже находиться во Вдалиотводске"
   },
   "comics4": {
     title: true,
-    text: "comics4"
+    text: "Не страдать от недостатка теплоты"
   },
   "comics5": {
     title: true,
-    text: "comics5"
+    text: "Быть благоразумной"
   },
 
   // job
+  "coffee": {
+    title: true,
+    text: "Побольше хорошего"
+  },
   "bears": {
     title: true,
-    text: "bears"
+    text: "Адекватных коллег"
   },
   "vitruvian": {
     title: true,
-    text: "vitruvian"
+    text: "Дополнительную пару рук и ног"
   },
   "dali": {
     title: true,
-    text: "Не расплавься на работе"
+    text: "Не расплавиться на работе"
   },
 
   // physical
   "peaches": {
     title: true,
-    text: "Ешь больше витаминов"
+    text: "Больше витаминов"
   },
   "venera": {
     title: true,
@@ -121,7 +129,11 @@ const wishes = {
   },
   "yoga": {
     title: true,
-    text: "Будь гибче"
+    text: "Быть гибче и держать баланс"
+  },
+  "riders": {
+    title: true,
+    text: "Производить на других хорошее впечатление"
   },
   
   // mental
@@ -129,10 +141,7 @@ const wishes = {
     title: true,
     text: "cat1"
   },
-  "riders": {
-    title: true,
-    text: "riders"
-  },
+  
   "cat2": {
     title: true,
     text: "Никому не уступай"
@@ -221,13 +230,22 @@ document.addEventListener('click', function(e) {
 }, true);
 
 
+let listenTimer = null;
 
-const listen = function(id) {
+const listen = function(id, stop) {
   let audio = document.getElementById(id);
   if (audio.paused) {
     audio.currentTime = 0;
     audio.play();
+
+    if (stop && stop > 0) {
+      listenTimer = setTimeout(function() {
+        clearTimeout(listenTimer);
+        audio.pause();
+      }, stop * 1000);
+    }
   } else {
+    clearTimeout(listenTimer);
     audio.pause();
   }
 }
