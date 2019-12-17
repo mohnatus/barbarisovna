@@ -17,6 +17,18 @@ body {
     overflow: hidden;
 }
 
+#image {
+    position: fixed;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: contain;
+    background-position: center;
+    z-index: 1000;
+    display: none;
+    background-repeat: no-repeat;;
+}
+
 .gallery {
     position: absolute;
     top: 0;
@@ -56,19 +68,37 @@ body {
     display: none;
     transition: opacity 400ms;
     z-index: 100;
+    color: white;
 }
 
 .wish__wrapper {
     position: absolute;
     right: 20px;
     left: 20px;
-    width: 300px;
-    top: 50%;
-    transform: translateY(-50%);
+    width: 400px;
+    height: 300px;
+    top: 50px;
     max-width: calc(100% - 40px);
     margin: auto;
     background: white;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wish__title {
+    font-size: 2em;
+    z-index: 20;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wish__text {
+    justify-content: center;
+    flex-grow: 1;
+    display: flex;
+    z-index: 20;
+    align-items: center;
 }
 
 .section {
@@ -148,7 +178,6 @@ body {
     border: 40px solid #353535;
 }
 
-
 .picture img {
     width: 100%;
     height: 100%;
@@ -177,6 +206,7 @@ body {
     background: url(images/tablelong.png) center / 100% 100% no-repeat;
 }
 
+
 .picture__line {
     position: absolute;
     top: calc(100% + 15px);
@@ -204,13 +234,11 @@ body {
     position: relative;
 }
 
-
 .frame1 {
     border-width: 40px;
     border-style: solid;
     border-image: url(images/frames/frame1.png) 445 430 stretch;
 }
-
 
 .frame1:before {
     background: #353535;
@@ -278,8 +306,7 @@ body {
     }
 
     [data-section="egypt"] .section__granny {
-        background: url(images/egypt/granny.png) bottom / contain no-repeat;
-        
+        background: url(images/egypt/granny.png) bottom / contain no-repeat; 
     }
 
     [data-section="egypt"] .mummy {
@@ -292,11 +319,20 @@ body {
         z-index: 3;
     }
 
-    [data-picture="egypt4"] {
-        left: 1248px;
-        top: 50px;
-        width: 730px;
-        height: 512px;
+    [data-section="egypt"] .mummy .head {
+        position: absolute;
+        top: 140px;
+        left: 286px;
+        width: 100px;
+        height: 100px;
+        background: url(images/egypt/head-2.png) center / contain no-repeat;
+    }
+
+    [data-picture="egypt1"] {
+        left: 350px;
+        top: 163px;
+        width: 391px;
+        height: 301px;
     }
 
     [data-picture="beetle"] {
@@ -306,12 +342,41 @@ body {
         height: 251px;
     }
 
-    [data-picture="egypt1"] {
-        left: 350px;
-        top: 163px;
-        width: 391px;
-        height: 301px;
+    @keyframes beetle {
+        from {
+            transform: rotate(0deg);
+        } 
+        to {
+            transform: rotate(360deg);
+        }
     }
+
+    [data-picture="beetle"] .head {
+        position: absolute;
+        top: 32px;
+        left: 46px;
+        width: 100px;
+        height: 100px;
+        background: url(images/egypt/head.png) center / contain no-repeat;
+    }
+
+    [data-picture="beetle"].rotate .head {
+        animation-name: beetle;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    [data-picture="egypt4"] {
+        left: 1248px;
+        top: 50px;
+        width: 730px;
+        height: 512px;
+    }
+
+    
+
+    
 
     [data-picture="egypt2"] {
         left: 2122px;
@@ -420,7 +485,7 @@ body {
         left: 2563px;
         top: 42px;
         width: 340px;
-        height: 507px;
+        height: 445px;
     }
 
 /* Буквальный зал */ 
@@ -446,11 +511,11 @@ body {
     }
 
     [data-picture="comics1"], [data-picture="comics3"], [data-picture="comics5"] {
-        top: 70px;
+        top: 50px;
     }
 
     [data-picture="comics2"], [data-picture="comics4"] {
-        top: 200px;
+        top: 140px;
     }
 
     [data-picture="comics1"] {
@@ -514,8 +579,10 @@ body {
 
 /* Демонический зал */
     [data-section="demon"] {
-        min-width: 1750px;
-        background: url(images/demon/wall.jpg) center / 200px auto repeat;
+        
+min-width: 1750px;
+        
+background: url(images/demon/wall.jpg) center / 200px auto repeat;
     }
 
     [data-section="demon"] .section__floor span {

@@ -22,7 +22,7 @@
                     <img src="images/ceremonial/tiger.png" alt="">
                 </div>
 
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Туся Барбарисовна
                 </figcaption>
             </figure>
@@ -32,7 +32,7 @@
                 <div class="picture__image frame1">
                     <img src="images/ceremonial/monalisa.png" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Екатерина Барбарисовна
                 </figcaption>
             </figure>
@@ -42,7 +42,7 @@
                 <div class="picture__image frame1">
                     <img src="images/ceremonial/redhorse.png" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Купание красного кота
                 </figcaption>
             </figure>
@@ -55,22 +55,24 @@
             <div class="section__granny"></div>
 
             <div class="section__title">Египетский зал</div>
-            <div class="mummy active" onclick="showWish('mummy')"></div>
+            <div class="mummy active" onclick="showWish('mummy')">
+                <span class="head"></span>
+            </div>
 
             <figure class="picture" data-picture="egypt1">
                 <div class="picture__image frame1">
                     <img src="images/egypt/egypt1.png" alt="">
                 </div>
-                <figcaption class="picture__caption">
-                    ???
+                <figcaption class="picture__caption increase">
+                    Подношение божественному коту
                 </figcaption>
             </figure>
 
-
             <!-- священный жук -->
-            <figure class="picture active" data-picture="beetle" onclick="showWish('beetle')">
+            <figure class="picture active" data-picture="beetle" onclick="rotateHead(this)">
                 <div class="picture__image frame1">
                     <img src="images/egypt/beetle.jpg" alt="">
+                    <div class="head"></div>
                 </div>
                 <figcaption class="picture__caption">
                     Священный скарабей с какашкой
@@ -78,11 +80,11 @@
             </figure>
 
             <!-- поклонение коту -->
-            <figure class="picture active" data-picture="egypt4" onclick="showWish('fluidcat')">
+            <figure class="picture" data-picture="egypt4">
                 <div class="picture__image frame1">
                     <img src="images/egypt/egypt4.png" alt="">
                 </div>
-                <figcaption class="picture__caption">
+                <figcaption class="picture__caption increase">
                     Поклонение коту
                 </figcaption>
             </figure>
@@ -93,8 +95,8 @@
                     <img src="images/egypt/egypt2.jpg" alt="">
                 </div>
 
-                <figcaption class="picture__caption">
-                    ???
+                <figcaption class="picture__caption increase">
+                    О, великий Котэ!
                 </figcaption>
             </figure>
 
@@ -104,8 +106,8 @@
                     <img src="images/egypt/egypt3.jpg" alt="">
                 </div>
 
-                <figcaption class="picture__caption">
-                    ???
+                <figcaption class="picture__caption increase">
+                    Прекрасная Бастет
                 </figcaption>
             </figure>
 
@@ -129,7 +131,7 @@
             </figure>
 
             <!-- Гомер с пивом -->
-            <figure class="picture active" data-picture="homer2">
+            <figure class="picture" data-picture="homer2">
                 <div class="picture__image frame1">
                     <img src="images/mult/homer2.jpg" alt="">
                 </div>
@@ -149,7 +151,7 @@
             </figure>
 
             <!-- Гомер в воронке -->
-            <figure class="picture active" data-picture="homer1">
+            <figure class="picture" data-picture="homer1">
                 <div class="picture__image frame1">
                     <img src="images/mult/homer1.png" alt="">
                 </div>
@@ -167,7 +169,7 @@
             <div class="section__granny"></div>
 
             <!-- Тройка эвоков -->
-            <figure class="picture active" data-picture="starwars1">
+            <figure class="picture" data-picture="starwars1">
                 <div class="picture__image frame1">
                     <img src="images/cinema/starwars1.jpg" alt="">
                 </div>
@@ -177,7 +179,7 @@
             </figure>
 
             <!-- Дейенерис Бурерожденная -->
-            <figure class="picture active" data-picture="got">
+            <figure class="picture" data-picture="got">
                 <div class="picture__image frame1">
                     <img src="images/cinema/got.png" alt="">
                 </div>
@@ -187,27 +189,28 @@
             </figure>
 
             <!-- Йода и Дарт Вейдер -->
-            <figure class="picture active" data-picture="starwars2">
+            <figure class="picture" data-picture="starwars2">
                 <div class="picture__image frame1">
                     <img src="images/cinema/starwars2.png" alt="">
                 </div>
                 <figcaption class="picture__caption">
-                    ???
+                    Амур и Психея
                 </figcaption>
             </figure>
 
             <!-- Фиби-бобыль -->
-            <figure class="picture active" data-picture="friends">
+            <figure class="picture" data-picture="friends">
                 <div class="picture__image frame1">
                     <img src="images/cinema/friends.png" alt="">
                 </div>
                 <figcaption class="picture__caption">
-                    ???
+                    Гитарист-бобыль
                 </figcaption>
             </figure>
 
             <!-- Чубакка на шаре -->
-            <figure class="picture active" data-picture="starwars3">
+            <figure class="picture active" data-picture="starwars3" 
+            onclick="document.getElementById('chubakka').play()">
                 <div class="picture__image frame1">
                     <img src="images/cinema/starwars3.jpg" alt="">
                 </div>
@@ -215,6 +218,9 @@
                     Чубакка на шаре
                 </figcaption>
             </figure>
+
+            <div style="display:none"><audio src="media/chubakka.mp3" id="chubakka"></audio></div>
+            
 
         </div><!-- Зал кино и сериалов -->
 
@@ -224,51 +230,51 @@
             <div class="section__floor"><span></span></div>
             <div class="section__granny"></div>
 
-            <figure class="picture" data-picture="comics1">
+            <figure class="picture active" onclick="showWish('comics1')" data-picture="comics1">
                 <div class="picture__image frame1">
                     <img src="images/literally/comics1.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
-                    ???
+                    Поддержка
                 </figcaption>
             </figure>
 
             
-            <figure class="picture" data-picture="comics2">
+            <figure class="picture active" onclick="showWish('comics2')" data-picture="comics2">
                 <div class="picture__image frame1">
                     <img src="images/literally/comics2.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
-                    ???
+                    Уничтожение
                 </figcaption>
             </figure>
 
             
-            <figure class="picture" data-picture="comics3">
+            <figure class="picture active" onclick="showWish('comics3')" data-picture="comics3">
                 <div class="picture__image frame1">
                     <img src="images/literally/comics3.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
-                    ???
+                    Вдалиотводск
                 </figcaption>
             </figure>
 
             
-            <figure class="picture" data-picture="comics4">
+            <figure class="picture active" onclick="showWish('comics4')" data-picture="comics4">
                 <div class="picture__image frame1">
                     <img src="images/literally/comics4.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
-                    ???
+                    Беззаконие
                 </figcaption>
             </figure>
 
-            <figure class="picture" data-picture="comics5">
+            <figure class="picture active" onclick="showWish('comics5')" data-picture="comics5">
                 <div class="picture__image frame1">
                     <img src="images/literally/comics5.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption">
-                    ???
+                    Спектр ощущений синий
                 </figcaption>
             </figure>
 
@@ -511,11 +517,13 @@
     </div>
 
     <div id="wish" class="wish">
-        <div class="wish__wrapper">
+        <div class="wish__wrapper frame1">
             <div class="wish__title">Желаю!</div>
             <div class="wish__text"></div>
         </div>
     </div>
+
+    <div id="image"></div>
 
     <script src="index.js"></script>
 

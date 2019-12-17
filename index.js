@@ -38,30 +38,27 @@ for (let i = 0; i < lines.length; i++) {
 }
 
 const wishes = {
-  "monalisa": {
-    title: true,
-    text: "Будь загадочной как Мона Лиза"
-  },
+  // ceremonial hall
   "tiger": {
     title: true,
     text: "tiger",
+  },
+  "monalisa": {
+    title: true,
+    text: "Будь загадочной как Мона Лиза"
   },
   "redhorse": {
     title: true,
     text: "redhorse",
   },
+
+  // egypt
   "mummy": {
     title: true,
     text: "Будь активной как Нихель Пихель"
   },
-  "beetle": {
-    title: true,
-    text: "beetle"
-  },
-  "fluidcat": {
-    title: true,
-    text: "fluidcat"
-  },
+
+  // mult
   "bojack": {
     title: true,
     text: "bojack"
@@ -70,6 +67,29 @@ const wishes = {
     title: true,
     text: "hillking"
   },
+
+  // literally
+  "comics1": {
+    title: true,
+    text: "comics1"
+  },
+  "comics2": {
+    title: true,
+    text: "comics2"
+  },
+  "comics3": {
+    title: true,
+    text: "comics3"
+  },
+  "comics4": {
+    title: true,
+    text: "comics4"
+  },
+  "comics5": {
+    title: true,
+    text: "comics5"
+  },
+
   "bears": {
     title: true,
     text: "bears"
@@ -158,4 +178,41 @@ const showWish = (function() {
     el.style.opacity = 1;
   }
 })();
+
+let rotateTimer = null;
+
+let rotateHead = function(el) {
+  if (el.classList.contains('rotate')) {
+    clearTimeout(rotateTimer);
+    el.classList.remove('rotate');
+    return;
+  }
+  el.classList.add('rotate');
+  rotateTimer = setTimeout(function() {
+    clearTimeout(rotateTimer);
+    el.classList.remove('rotate');
+  }, 10 * 1000)
+}
+
+let image = document.getElementById('image');
+
+image.onclick = function() {
+  image.style.display = "none";
+}
+const increase = function(url) {
+  image.style.backgroundImage = 'url(' + url + ')';
+  image.style.display = "block";
+}
+document.addEventListener('click', function(e) {
+  let caption = e.target.closest('.increase');
+  if (caption) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    let picture = caption.closest('.picture');
+    let image = picture.querySelector('img');
+    let src = image.src;
+    increase(src);
+  }
+}, true);
+
 
