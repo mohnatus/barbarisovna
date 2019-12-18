@@ -355,4 +355,28 @@ puzzleWrapper.addEventListener('click', function() {
       groundCells[i].setAttribute('data-item', random[i]);
     }
   }
+});
+
+
+let egypt = document.getElementById('egypt');
+let egyptimg = egypt.querySelector('img');
+let egyptvideo = egypt.querySelector('video');
+
+egyptvideo.addEventListener('ended', function() {
+  egyptvideo.pause();
+  egyptimg.style.display = 'block';
+  egyptvideo.style.display = 'none';
 })
+
+egypt.onclick = function() {
+  if (egyptvideo.paused) {
+    egyptimg.style.display = 'none';
+    egyptvideo.currentTime = 0;
+    egyptvideo.style.display = 'block';
+    egyptvideo.play();
+  } else {
+    egyptvideo.pause();
+    egyptimg.style.display = 'block';
+    egyptvideo.style.display = 'none';
+  }
+}
