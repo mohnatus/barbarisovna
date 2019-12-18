@@ -140,7 +140,7 @@
             <div class="section" data-section="ceremonial">
                 <div class="section__title">Парадный зал</div>
                 <div class="section__floor"><span></span></div>
-                <div class="section__granny active">
+                <div class="section__granny active" onclick="this.classList.toggle('says')">
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
@@ -187,7 +187,7 @@
             <!-- 2. Египетский зал -->
             <div class="section" data-section="egypt">
                 <div class="section__floor"><span></span></div>
-                <div class="section__granny active">
+                <div class="section__granny active" onclick="this.classList.toggle('says')">
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
@@ -263,7 +263,7 @@
                 <div class="section__title">Мультяшный зал</div>
 
                 <div class="section__floor"><span></span></div>
-                <div class="section__granny active">
+                <div class="section__granny active" onclick="this.classList.toggle('says')">
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
@@ -321,7 +321,7 @@
             <div class="section" data-section="cinema">
                 <div class="section__title">Зал кино и сериалов</div>
                 <div class="section__floor"><span></span></div>
-                <div class="section__granny active">
+                <div class="section__granny active" onclick="this.classList.toggle('says')">
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
@@ -391,7 +391,7 @@
             <div class="section" data-section="literally">
                 <div class="section__title">Буквальный зал</div>
                 <div class="section__floor"><span></span></div>
-                <div class="section__granny active">
+                <div class="section__granny active" onclick="this.classList.toggle('says')">
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
@@ -460,7 +460,7 @@
             <div class="section" data-section="isaak">
                 <div class="section__title">Исаакиевский зал</div>
                 <div class="section__floor"><span></span></div>
-                <div class="section__granny active">
+                <div class="section__granny active" onclick="this.classList.toggle('says')">
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
@@ -501,7 +501,7 @@
             <div class="section" data-section="demon">
                 <div class="section__title">Демонический зал</div>
                 <div class="section__floor"><span></span></div>
-                <div class="section__granny active">
+                <div class="section__granny active" onclick="this.classList.toggle('says')">
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
@@ -579,7 +579,7 @@
             <div class="section" data-section="job">
                 <div class="section__title">Рабочий зал</div>
                 <div class="section__floor"><span></span></div>
-                <div class="section__granny active">
+                <div class="section__granny active" onclick="this.classList.toggle('says')">
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
@@ -623,14 +623,15 @@
                 </figure>
 
                 <!-- Крик -->
-                <figure class="picture" data-picture="scream">
-                    <div class="picture__image frame1 active increase" data-image="images/job/scream.jpg">
-                        <img src="images/job/scream.jpg" alt="">
+                <figure class="picture" data-picture="scream" id="scream">
+                    <div class="picture__image frame1 active increase" data-image="images/job/scream.png">
+                        <img src="images/job/scream.png" alt="">
+                        <video src="media/scream.mp4" style="display: none"></video>
                     </div>
                     <figcaption class="picture__caption">
                         Середина рабочего дня
                     </figcaption>
-                    <!-- <div class="picture__message active" onclick=""></div> -->
+                    <div class="picture__message active"></div>
                 </figure>
 
                 <!-- Постоянство памяти -->
@@ -660,7 +661,7 @@
             <div class="section" data-section="physical">
                 <div class="section__title">Зал физического здоровья</div>
                 <div class="section__floor"><span></span></div>
-                <div class="section__granny active">
+                <div class="section__granny active" onclick="this.classList.toggle('says')">
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
@@ -718,7 +719,7 @@
             <div class="section" data-section="mental">
                 <div class="section__title">Зал душевного здоровья</div>
                 <div class="section__floor"><span></span></div>
-                <div class="section__granny active">
+                <div class="section__granny active" onclick="this.classList.toggle('says')">
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
@@ -792,7 +793,7 @@
             <div class="section" data-section="apsny">
                 <div class="section__title">Зал Апсны</div>
                 <div class="section__floor"><span></span></div>
-                <div class="section__granny active">
+                <div class="section__granny active" onclick="this.classList.toggle('says')">
                     <div class="bottle"></div>
                     <div class="speech">
                         <span class="first"></span>

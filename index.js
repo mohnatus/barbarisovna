@@ -426,6 +426,30 @@ label.onclick = function() {
   }
 }
 
+let scream = document.getElementById('scream');
+let screamlabel = scream.querySelector('.picture__message');
+let screamimg = scream.querySelector('img');
+let screamvideo = scream.querySelector('video');
+
+screamvideo.addEventListener('ended', function() {
+  screamvideo.pause();
+  screamimg.style.display = 'block';
+  screamvideo.style.display = 'none';
+})
+
+screamlabel.onclick = function() {
+  if (screamvideo.paused) {
+    screamimg.style.display = 'none';
+    screamvideo.currentTime = 0;
+    screamvideo.style.display = 'block';
+    screamvideo.play();
+  } else {
+    screamvideo.pause();
+    screamimg.style.display = 'block';
+    screamvideo.style.display = 'none';
+  }
+}
+
 // let audio1 = document.getElementById('smellycat');
 // let audio1el = document.getElementById('smellycat-control');
 // audio1.addEventListener('ended', function() {

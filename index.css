@@ -311,6 +311,7 @@ input:checked + .checkbox:before {
     z-index: 5;
     left: 30px;
     bottom: 50px;
+
 }
 
 .section__granny .speech {
@@ -318,6 +319,11 @@ input:checked + .checkbox:before {
     bottom: 80%;
     left: 50%;
     filter: drop-shadow(2px 4px 6px black);
+    display: none;
+}
+
+.section__granny.says .speech {
+    display: block;
 }
 
 .speech .first {
@@ -336,7 +342,6 @@ input:checked + .checkbox:before {
     height: 35px;
     background: white;
     position: absolute;
-    /* border-radius: 14px / 10px; */
     bottom: 92px;
     left: 20px;
     transform: skew(134deg, -74deg);
