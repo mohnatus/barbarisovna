@@ -240,6 +240,16 @@ body {
     background: url(images/tablelong.png) center / 100% 100% no-repeat;
 }
 
+.picture__message {
+    position: absolute;
+    top: calc(100% + 70px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: url(images/present.jpg) center / contain no-repeat;
+    cursor: pointer;
+}
 
 .picture__line {
     position: absolute;
@@ -397,7 +407,7 @@ body {
         background: url(images/egypt/head.png) center / contain no-repeat;
     }
 
-    [data-picture="beetle"].rotate .head {
+    [data-picture="beetle"] .rotate .head {
         animation-name: beetle;
         animation-duration: 1.5s;
         animation-timing-function: linear;
@@ -442,7 +452,7 @@ body {
 
     [data-section="mult"] .section__granny {
         background: url(images/mult/granny.png) bottom / contain no-repeat;
-        
+        width: 260px;
     }
 
     [data-picture="bojack"] {
@@ -908,7 +918,8 @@ body {
 
     [data-section="physical"] .section__granny {
         background: url(images/physical/granny.png) bottom / contain no-repeat;
-        
+        width: 320px;
+        bottom: -11px;
     }
 
     [data-picture="peaches"] {
@@ -1010,19 +1021,27 @@ body {
 /* Ð—Ð°Ð» Ð°Ð¿ÑÐ½Ñ‹ */
 
 [data-section="apsny"] {
-    background: 
-        url(images/holiday/wall.jpg) center / 200px auto repeat;
-    
+    background: #e8e8e8;
+    min-width: 2000px;
 }
 
 [data-section="apsny"] .section__floor span {
     background: url(images/apsny/floor.jpg) center / 500px;
-    /* transform: perspective(2000px) rotate3d(0.3,0,0,62deg); */
 }
 
 [data-section="apsny"] .section__granny {
-    background: url(images/apsny/granny.png) bottom / contain no-repeat;
-    
+    background: url(images/apsny/granny.png) bottom / contain no-repeat; 
+}
+
+.apsny {
+    background: url(images/apsny/apsny.png) bottom / contain no-repeat;
+    width: 980px;
+    height: 651px;
+    bottom: -23px;
+    position: absolute;
+    z-index: 3;
+    left: 500px;
+    /* outline: 1px solid; */
 }
 
 /* ÐŸÑ€Ð°Ð·Ð´Ð½Ð¸Ñ‡Ð½Ñ‹Ð¹ Ð·Ð°Ð» */

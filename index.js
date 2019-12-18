@@ -67,11 +67,19 @@ const wishes = {
     title: false,
     text: "Как странно, в девяти метрах от меня страдает человек, но это не мешает мне наслаждаться бассейном. Наверное, я просто взрослею."
   },
+  "homer1": {
+    title: false,
+    text: "Жизнь - это просто куча всякой фигни, которая происходит"
+  },
+  "homer2": {
+    title: true,
+    text: "Чтобы желания всегда совпадали с возможностями"
+  },
 
   // cinema
-  "starwars2": {
+  "starwars1": {
     title: true,
-    text: ""
+    text: "Не брать на себя непосильные задачи"
   },
   "starwars2": {
     title: true,
@@ -221,15 +229,14 @@ const increase = function(url) {
   image.style.backgroundImage = 'url(' + url + ')';
   image.style.display = "block";
 }
+
 document.addEventListener('click', function(e) {
-  let caption = e.target.closest('.increase');
-  if (caption) {
-    e.preventDefault();
-    e.stopImmediatePropagation();
-    let picture = caption.closest('.picture');
-    let image = picture.querySelector('img');
-    let src = image.src;
-    increase(src);
+  let target = e.target.closest('.increase');
+  if (target) {
+    let image = target.dataset.image;
+    if (!image) return;
+
+    increase(image);
   }
 }, true);
 
@@ -363,6 +370,7 @@ puzzleWrapper.addEventListener('click', function() {
 
 
 let egypt = document.getElementById('egypt');
+let label = egypt.querySelector('.picture__message');
 let egyptimg = egypt.querySelector('img');
 let egyptvideo = egypt.querySelector('video');
 
@@ -372,7 +380,7 @@ egyptvideo.addEventListener('ended', function() {
   egyptvideo.style.display = 'none';
 })
 
-egypt.onclick = function() {
+label.onclick = function() {
   if (egyptvideo.paused) {
     egyptimg.style.display = 'none';
     egyptvideo.currentTime = 0;
@@ -384,3 +392,19 @@ egypt.onclick = function() {
     egyptvideo.style.display = 'none';
   }
 }
+
+// let audio1 = document.getElementById('smellycat');
+// let audio1el = document.getElementById('smellycat-control');
+// audio1.addEventListener('ended', function() {
+//   audio1el.style.display = "none";
+// })
+// audio1.addEventListener('pause', function() {
+//   audio1el.style.display = "none";
+// })
+// audio1.addEventListener('playing', function() {
+//   audio1el.style.display = "block";
+// });
+// audio1el.addEventListener('click', function(e) {
+//   e.stopPropagation();
+//   audio1.pause();
+// })
