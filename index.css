@@ -431,7 +431,7 @@ body {
 /* ÐœÑƒÐ»ÑŒÑ‚ÑÑˆÐ½Ñ‹Ð¹ Ð·Ð°Ð» */ 
 
     [data-section="mult"] {
-        min-width: 2879px;
+        min-width: 2950px;
         background-color: #f9a0af;
     }
 
@@ -455,21 +455,21 @@ body {
         top: 100px;
         width: 541px;
         height: 451px;
-        left: 2039px;
+        left: 2174px;
     }
 
     [data-picture="hillking"] {
         top: 30px;
         width: 676px;
         height: 530px;
-        left: 1234px;
+        left: 1342px;
     } 
 
     [data-picture="homer2"] {
-        top: 172px;
-        width: 308px;
-        height: 210px;
-        left: 800px;
+        top: 139px;
+        width: 378px;
+        height: 318px;
+        left: 833px;
     }
 
 /* Ð—Ð°Ð» ÐºÐ¸Ð½Ð¾ Ð¸ ÑÐµÑ€Ð¸Ð°Ð»Ð¾Ð² */ 
