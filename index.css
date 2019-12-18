@@ -393,6 +393,7 @@ body {
         left: 46px;
         width: 100px;
         height: 100px;
+        transform-origin: 54px 50px;
         background: url(images/egypt/head.png) center / contain no-repeat;
     }
 
@@ -847,7 +848,7 @@ body {
     }
 
     .coffeemachine .bean {
-        
+
     }
 
 
