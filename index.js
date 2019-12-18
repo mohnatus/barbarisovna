@@ -101,6 +101,10 @@ const wishes = {
   },
 
   // job
+  "coffeemachine": {
+    title: true,
+    text: "Отдыхать от работы почаще"
+  },
   "coffee": {
     title: true,
     text: "Много-много хорошего и вкусного"
