@@ -402,69 +402,32 @@ puzzleWrapper.addEventListener('click', function() {
 });
 
 
-let egypt = document.getElementById('egypt');
-let label = egypt.querySelector('.picture__message');
-let egyptimg = egypt.querySelector('img');
-let egyptvideo = egypt.querySelector('video');
+let withVideo = document.querySelectorAll('.with-video');
+for (let i = 0; i < withVideo.length; i++) {
+  let el = withVideo[i];
+  let label = el.querySelector('.picture__message');
+  let img = el.querySelector('img');
+  let video = el.querySelector('video');
 
-egyptvideo.addEventListener('ended', function() {
-  egyptvideo.pause();
-  egyptimg.style.display = 'block';
-  egyptvideo.style.display = 'none';
-})
+  video.addEventListener('ended', function() {
+    video.pause();
+    img.style.display = 'block';
+    video.style.display = 'none';
+  })
 
-label.onclick = function() {
-  if (egyptvideo.paused) {
-    egyptimg.style.display = 'none';
-    egyptvideo.currentTime = 0;
-    egyptvideo.style.display = 'block';
-    egyptvideo.play();
-  } else {
-    egyptvideo.pause();
-    egyptimg.style.display = 'block';
-    egyptvideo.style.display = 'none';
+  label.onclick = function() {
+    if (video.paused) {
+      img.style.display = 'none';
+      video.currentTime = 0;
+      video.style.display = 'block';
+      video.play();
+    } else {
+      video.pause();
+      img.style.display = 'block';
+      video.style.display = 'none';
+    }
   }
 }
-
-let scream = document.getElementById('scream');
-let screamlabel = scream.querySelector('.picture__message');
-let screamimg = scream.querySelector('img');
-let screamvideo = scream.querySelector('video');
-
-screamvideo.addEventListener('ended', function() {
-  screamvideo.pause();
-  screamimg.style.display = 'block';
-  screamvideo.style.display = 'none';
-})
-
-screamlabel.onclick = function() {
-  if (screamvideo.paused) {
-    screamimg.style.display = 'none';
-    screamvideo.currentTime = 0;
-    screamvideo.style.display = 'block';
-    screamvideo.play();
-  } else {
-    screamvideo.pause();
-    screamimg.style.display = 'block';
-    screamvideo.style.display = 'none';
-  }
-}
-
-// let audio1 = document.getElementById('smellycat');
-// let audio1el = document.getElementById('smellycat-control');
-// audio1.addEventListener('ended', function() {
-//   audio1el.style.display = "none";
-// })
-// audio1.addEventListener('pause', function() {
-//   audio1el.style.display = "none";
-// })
-// audio1.addEventListener('playing', function() {
-//   audio1el.style.display = "block";
-// });
-// audio1el.addEventListener('click', function(e) {
-//   e.stopPropagation();
-//   audio1.pause();
-// })
 
 function toHall(hall) {
   let $hall = document.querySelector('[data-section="' + hall + '"]');

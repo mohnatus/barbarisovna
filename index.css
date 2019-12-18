@@ -892,6 +892,14 @@ input:checked + .checkbox:before {
         left: 1000px;
     }
 
+    [data-picture="isaak2"] video {
+        display: block;
+        width: calc(100% + 200px);
+        height: calc(100% + 100px);
+        margin-left: -100px;
+        margin-top: -50px;
+    }
+
     [data-picture="isaak3"] {
         top: 120px;
         width: 483px;
