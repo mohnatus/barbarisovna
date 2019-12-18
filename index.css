@@ -284,13 +284,13 @@ body {
     right: -12px;
 }
 
-/* Вход */
+/* Ð’Ñ…Ð¾Ð´ */
 
     [data-section="entrance"]:before {
         display: none;
     }
 
-/* Парадный зал */
+/* ÐŸÐ°Ñ€Ð°Ð´Ð½Ñ‹Ð¹ Ð·Ð°Ð» */
 
     [data-section="ceremonial"] {
         min-width: 2101px;
@@ -329,7 +329,7 @@ body {
     }
 
 
-/* Египетский зал */ 
+/* Ð•Ð³Ð¸Ð¿ÐµÑ‚ÑÐºÐ¸Ð¹ Ð·Ð°Ð» */ 
     [data-section="egypt"] {
         min-width: 3800px;
         background: 
@@ -428,7 +428,7 @@ body {
         height: 322px;
     }
 
-/* Мультяшный зал */ 
+/* ÐœÑƒÐ»ÑŒÑ‚ÑÑˆÐ½Ñ‹Ð¹ Ð·Ð°Ð» */ 
 
     [data-section="mult"] {
         min-width: 2879px;
@@ -472,7 +472,7 @@ body {
         left: 800px;
     }
 
-/* Зал кино и сериалов */ 
+/* Ð—Ð°Ð» ÐºÐ¸Ð½Ð¾ Ð¸ ÑÐµÑ€Ð¸Ð°Ð»Ð¾Ð² */ 
 
     [data-section="cinema"] {
         color: white;
@@ -530,7 +530,7 @@ body {
         height: 445px;
     }
 
-/* Буквальный зал */ 
+/* Ð‘ÑƒÐºÐ²Ð°Ð»ÑŒÐ½Ñ‹Ð¹ Ð·Ð°Ð» */ 
 
     [data-section="literally"] {
         background-color: #acc8f0;
@@ -580,7 +580,7 @@ body {
         left: 2150px;
     }
 
-/* Исаакиевский зал */ 
+/* Ð˜ÑÐ°Ð°ÐºÐ¸ÐµÐ²ÑÐºÐ¸Ð¹ Ð·Ð°Ð» */ 
 
     [data-section="isaak"] {
         width: 150vw;
@@ -619,9 +619,9 @@ body {
         left: 2182px;
     }
 
-/* Демонический зал */
+/* Ð”ÐµÐ¼Ð¾Ð½Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ Ð·Ð°Ð» */
     [data-section="demon"] {
-        min-width: 1750px; 
+        min-width: 2600px;
         background: url(images/demon/wall.jpg) center / 200px auto repeat;
     }
 
@@ -651,10 +651,34 @@ body {
         right: 0;
     }
 
+    [data-picture="demon1"] {
+        left: 1300px;
+        top: 50px;
+        width: 768px;
+        height: 500px;
+    }
+
+    [data-picture="demon1"] .puzzle {
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .puzzle .cell {
+        outline: 2px solid white;
+    }
+
+    
+    .puzzle-place.finished .cell,
+    .puzzle-ground.finished .cell {
+        outline: none;
+    }
+
     /* 
-        5*3 фрагментов
-        688 - ширина
-        420 - высота
+        5*3 Ñ„Ñ€Ð°Ð³Ð¼ÐµÐ½Ñ‚Ð¾Ð²
+        688 - ÑˆÐ¸Ñ€Ð¸Ð½Ð°
+        420 - Ð²Ñ‹ÑÐ¾Ñ‚Ð°
     */
 
     .puzzle .cell {
@@ -664,87 +688,137 @@ body {
         background-repeat: no-repeat;
         width: calc(688px / 5);
         height: calc(420px / 3);
+        cursor: pointer;
+    }
+
+    .puzzle .cell:hover,
+    .puzzle .cell.selected {
+        filter: brightness(2);
+    }
+    .puzzle-place.finished .cell:hover,
+    .puzzle-place.finished .cell.selected {
+        filter: none;
+    }
+
+    .puzzle .cell[data-item=""] {
+        background-image: none;
+        left: 0;
+        top: 0;
+        cursor: auto;
     }
 
     .puzzle .cell[data-item="11"] {
         background-position: 0px 0px;
-        left: 0;
-        top: 0;
     }
     .puzzle .cell[data-item="12"] {
-        background-position: calc(688px / -5) 0px;
-        left: calc(688px / 5);
-        right: 0;
+        background-position: calc(688px / -5) 0px; 
     }
     .puzzle .cell[data-item="13"] {
-        background-position: calc(688px / -5 * 2) 0px;
-        left: calc(688px / 5 * 2);
-        top:  0;
+        background-position: calc(688px / -5 * 2) 0px; 
     }
     .puzzle .cell[data-item="14"] {
         background-position: calc(688px / -5 * 3) 0px;
-        left: calc(688px / 5 * 3);
-        top: 0;
     }
     .puzzle .cell[data-item="15"] {
         background-position: calc(688px / -5 * 4) 0px;
-        left: calc(688px / 5 * 4);
-        top: 0;
     }
     
     .puzzle .cell[data-item="21"] {
         background-position: 0px calc(420px / -3);
-        left: 0;
-        top: calc(420px / 3);
     }
     .puzzle .cell[data-item="22"] {
         background-position: calc(688px / -5) calc(420px / -3);
-        left: calc(688px / 5);
-        top: calc(420px / 3);
     }
     .puzzle .cell[data-item="23"] {
         background-position: calc(688px / -5 * 2) calc(420px / -3);
-        left: calc(688px / 5 * 2);
-        top: calc(420px / 3);
     }
     .puzzle .cell[data-item="24"] {
         background-position: calc(688px / -5 * 3) calc(420px / -3);
-        left: calc(688px / 5 * 3);
-        top: calc(420px / 3);
     }
     .puzzle .cell[data-item="25"] {
         background-position: calc(688px / -5 * 4) calc(420px / -3);
-        left: calc(688px / 5 * 4);
-        top: calc(420px / 3);
     }
 
     .puzzle .cell[data-item="31"] {
         background-position: 0px calc(420px / -3 * 2);
-        left: 0;
-        top: calc(420px / 3 * 2);
     }
     .puzzle .cell[data-item="32"] {
         background-position: calc(688px / -5) calc(420px / -3 * 2);
-        left: calc(688px / 5);
-        top: calc(420px / 3 * 2);
     }
     .puzzle .cell[data-item="33"] {
         background-position: calc(688px / -5 * 2) calc(420px / -3 * 2);
-        left: calc(688px / 5 * 2);
-        top: calc(420px / 3 * 2);
     }
     .puzzle .cell[data-item="34"] {
         background-position: calc(688px / -5 * 3) calc(420px / -3 * 2);
-        left: calc(688px / 5 * 3);
-        top: calc(420px / 3 * 2);
     }
     .puzzle .cell[data-item="35"] {
         background-position: calc(688px / -5 * 4) calc(420px / -3 * 2);
+    }
+
+    .puzzle .cell[data-place="11"] {
+        left: 0;
+        top: 0;
+    }
+    .puzzle .cell[data-place="12"] {
+        left: calc(688px / 5);
+        right: 0;
+    }
+    .puzzle .cell[data-place="13"] {
+        left: calc(688px / 5 * 2);
+        top:  0;
+    }
+    .puzzle .cell[data-place="14"] {
+        left: calc(688px / 5 * 3);
+        top:  0;
+    }
+    .puzzle .cell[data-place="15"] {
+        left: calc(688px / 5 * 4);
+        top:  0;
+    }
+
+    .puzzle .cell[data-place="21"] {
+        left: 0;
+        top: calc(420px / 3);
+    }
+    .puzzle .cell[data-place="22"] {
+        left: calc(688px / 5);
+        top: calc(420px / 3);
+    }
+    .puzzle .cell[data-place="23"] {
+        left: calc(688px / 5 * 2);
+        top: calc(420px / 3);
+    }
+    .puzzle .cell[data-place="24"] {
+        left: calc(688px / 5 * 3);
+        top: calc(420px / 3);
+    }
+    .puzzle .cell[data-place="25"] {
+        left: calc(688px / 5 * 4);
+        top: calc(420px / 3);
+    }
+
+    .puzzle .cell[data-place="31"] {
+        left: 0;
+        top: calc(420px / 3 * 2);
+    }
+    .puzzle .cell[data-place="32"] {
+        left: calc(688px / 5);
+        top: calc(420px / 3 * 2);
+    }
+    .puzzle .cell[data-place="33"] {
+        left: calc(688px / 5 * 2);
+        top: calc(420px / 3 * 2);
+    }
+    .puzzle .cell[data-place="34"] {
+        left: calc(688px / 5 * 3);
+        top: calc(420px / 3 * 2);
+    }
+    .puzzle .cell[data-place="35"] {
         left: calc(688px / 5 * 4);
         top: calc(420px / 3 * 2);
     }
 
-/* Рабочий зал */
+/* Ð Ð°Ð±Ð¾Ñ‡Ð¸Ð¹ Ð·Ð°Ð» */
 
     [data-section="job"] {
         min-width: 4500px;
@@ -814,7 +888,7 @@ body {
         top: 140px;
     }
 
-/* Зал физического здоровья */
+/* Ð—Ð°Ð» Ñ„Ð¸Ð·Ð¸Ñ‡ÐµÑÐºÐ¾Ð³Ð¾ Ð·Ð´Ð¾Ñ€Ð¾Ð²ÑŒÑ */
 
     [data-section="physical"] {
         min-width: 3160px;
@@ -860,7 +934,7 @@ body {
     }
 
 
-/* Зал душевного здоровья */
+/* Ð—Ð°Ð» Ð´ÑƒÑˆÐµÐ²Ð½Ð¾Ð³Ð¾ Ð·Ð´Ð¾Ñ€Ð¾Ð²ÑŒÑ */
 
     [data-section="mental"] {
         min-width: 3936px;
@@ -927,7 +1001,7 @@ body {
     }
 
 
-/* Зал апсны */
+/* Ð—Ð°Ð» Ð°Ð¿ÑÐ½Ñ‹ */
 
 [data-section="apsny"] {
     background: 
@@ -945,7 +1019,7 @@ body {
     
 }
 
-/* Праздничный зал */
+/* ÐŸÑ€Ð°Ð·Ð´Ð½Ð¸Ñ‡Ð½Ñ‹Ð¹ Ð·Ð°Ð» */
 
 [data-section="holiday"] {
     min-width: 2200px;

@@ -259,3 +259,100 @@ const show = function(id) {
     video.pause();
   }
 }
+
+
+let puzzleWrapper = document.querySelector('.puzzle-place');
+let puzzleGround = document.querySelector('.puzzle-ground');
+let puzzleCells = puzzleWrapper.querySelectorAll('.cell');
+let groundCells = puzzleGround.querySelectorAll('.cell');
+let finished = true;
+let selectedCell = null;
+let justFinished = false;
+
+let cells = [
+  11, 12, 13, 14, 15, 
+  21, 22, 23, 24, 25,
+  31, 32, 33, 34, 35
+];
+
+function setSelected(cell) {
+  if (selectedCell) {
+    selectedCell.classList.remove('selected');
+  }
+  if (cell) {
+    selectedCell = cell;
+    selectedCell.classList.add('selected');
+  } else {
+    selectedCell = null;
+  }
+}
+
+function checkPuzzle() {
+  for (let i = 0; i < puzzleCells.length; i++) {
+    if (puzzleCells[i].dataset.item !== puzzleCells[i].dataset.place) {
+      return;
+    }
+  }
+  finished = true;
+  justFinished = true;
+  puzzleGround.classList.add('finished');
+  puzzleWrapper.classList.add('finished');
+  console.log('finished')
+}
+
+function onCellClick(cell) {
+  if (finished) return;
+
+  let currentItem = cell.dataset.item; 
+
+  if (selectedCell) {
+    if (currentItem) {
+      setSelected(cell);
+    } else {
+      cell.setAttribute('data-item', selectedCell.dataset.item);
+      selectedCell.setAttribute('data-item', '');
+      setSelected(null);
+      
+      checkPuzzle();
+    }
+  } else {
+    if (currentItem) {
+      setSelected(cell);
+    }
+  }
+}
+
+for (let i = 0; i < groundCells.length; i++) {
+  groundCells[i].addEventListener('click', function() {
+    onCellClick(groundCells[i]);
+  })
+}
+
+for (let i = 0; i < puzzleCells.length; i++) {
+  puzzleCells[i].addEventListener('click', function() {
+    onCellClick(puzzleCells[i]);
+  })
+}
+
+puzzleWrapper.addEventListener('click', function() {
+  if (finished) {
+    if (justFinished) {
+      justFinished = false;
+      return;
+    }
+    finished = false;
+    puzzleGround.classList.remove('finished');
+    puzzleWrapper.classList.remove('finished');
+
+    for (let i = 0; i < puzzleCells.length; i++) {
+      puzzleCells[i].setAttribute('data-item', '')
+    }
+    let random = cells.concat();
+    random.sort(function(a, b) {
+      return Math.random() - 0.5;
+    });
+    for (let i = 0; i < groundCells.length; i++) {
+      groundCells[i].setAttribute('data-item', random[i]);
+    }
+  }
+})
