@@ -114,22 +114,27 @@
                 <div class="picture__image frame1 active increase" onclick="listen('mur2', 4)" data-image="images/egypt/egypt1.png">
                     <img src="images/egypt/egypt1.png" alt="">
                 </div>
+                <figcaption class="picture__caption">
+                    Челядь приносит жертвы священному коту
+                </figcaption>
+                <div class="picture__message active" onclick="showWish('egypt1')"></div>
             </figure>
 
             <!-- священный жук -->
-            <figure class="picture active" data-picture="beetle">
-                <div class="picture__image frame1" onclick="rotateHead(this)">
+            <figure class="picture" data-picture="beetle">
+                <div class="picture__image frame1 active" onclick="rotateHead(this)">
                     <img src="images/egypt/beetle.jpg" alt="">
                     <div class="head"></div>
                 </div>
                 <figcaption class="picture__caption">
                     Священный скарабей с какашкой
                 </figcaption>
+                <div class="picture__message active" onclick="showWish('beetle')"></div>
             </figure>
 
             <!-- поклонение коту -->
-            <figure class="picture active" data-picture="egypt4" id="egypt">
-                <div class="picture__image frame1 increase" data-image="images/egypt/egypt4.png">
+            <figure class="picture" data-picture="egypt4" id="egypt">
+                <div class="picture__image frame1 active increase" data-image="images/egypt/egypt4.png">
                     <img src="images/egypt/egypt4.png" alt="">
                     <video src="media/cats.mp4" id="cats" style="display: none"></video>
                 </div>
@@ -144,6 +149,10 @@
                 <div class="picture__image frame1 active increase" data-image="images/egypt/egypt2.jpg" onclick="listen('mur3', 4)">
                     <img src="images/egypt/egypt2.jpg" alt="">
                 </div>
+                <figcaption class="picture__caption">
+                    Служители храма молятся великому Котэ
+                </figcaption>
+                <div class="picture__message active" onclick="showWish('egypt2')"></div>
             </figure>
 
             
@@ -151,6 +160,10 @@
                 <div class="picture__image frame1 active increase" data-image="images/egypt/egypt3.jpg" onclick="listen('mur4', 4)">
                     <img src="images/egypt/egypt3.jpg" alt="">
                 </div>
+                <figcaption class="picture__caption">
+                    Бастет в декрете
+                </figcaption>
+                <div class="picture__message active" onclick="showWish('egypt3')"></div>
             </figure>
 
         </div><!-- Египетский зал -->
@@ -233,6 +246,7 @@
                 <figcaption class="picture__line">
                     <span><span>Дейенерис Бурерожденная из дома Таргариенов, от крови древней Валирии, первая этого имени, королева андалов, ройнаров и Первых Людей, владычица семи королевств, и хранительница областей, Неопалимая, правительница Миэрина, кхалиси Великого травяного моря, Разрушительница Оков и Матерь Драконов</span></span>
                 </figcaption>
+                <div class="picture__message active" onclick="showWish('got')"></div>
             </figure>
 
             <!-- Йода и Дарт Вейдер -->
@@ -266,10 +280,8 @@
                 <figcaption class="picture__caption">
                     Чубакка на шаре
                 </figcaption>
+                <div class="picture__message active" onclick="showWish('starwars3')"></div>
             </figure>
-
-            
-            
 
         </div><!-- Зал кино и сериалов -->
 
@@ -506,7 +518,7 @@
 
             <!-- Винтовка это праздник -->
             <figure class="picture" data-picture="gun">
-                <div class="picture__image frame1 active">
+                <div class="picture__image frame1">
                     <img src="images/job/gun.jpeg" alt="">
                 </div>
                 <figcaption class="picture__caption">
@@ -581,6 +593,7 @@
                 <figcaption class="picture__caption">
                     Сова
                 </figcaption>
+                <div class="picture__message active" onclick="showWish('owl')"></div>
             </figure>
 
             <figure class="picture" data-picture="cat1">
@@ -641,7 +654,8 @@
             <div class="section__floor"><span></span></div>
             <div class="section__granny"></div>
 
-            <div class="apsny"></div>
+            <div class="apsny-table">Апсны</div>
+            <div class="apsny active increase" data-image="images/apsny/bottle.png"></div>
         </div><!-- Зал апсны -->
 
         <!-- 12. Праздничный зал -->
@@ -649,31 +663,34 @@
             <div class="section__title section__title--center">Императорский зал</div>
             <div class="section__floor"><span></span></div>
 
-            <figure class="picture active" onclick="showWish('keanu1')" data-picture="keanu1">
-                <div class="picture__image frame1">
+            <figure class="picture" data-picture="keanu1">
+                <div class="picture__image frame1 active increase" data-image="images/holiday/keanu1.png">
                     <img src="images/holiday/keanu1.png" alt="">
                 </div>
-                <figcaption class="picture__caption increase">
+                <figcaption class="picture__caption">
                     Киану любит тебя
                 </figcaption>
+                <div class="picture__message active" onclick="showWish('keanu1')"></div>
             </figure>
 
-            <figure class="picture active" onclick="showWish('keanu2')" data-picture="keanu2">
-                <div class="picture__image frame1">
+            <figure class="picture" data-picture="keanu2">
+                <div class="picture__image frame1 active increase" data-image="images/holiday/keanu2.png">
                     <img src="images/holiday/keanu2.png" alt="">
                 </div>
                 <figcaption class="picture__caption increase">
                     Киану считает тебя потрясающей
                 </figcaption>
+                <div class="picture__message active" onclick="showWish('keanu2')"></div>
             </figure>
 
-            <figure class="picture active" onclick="showWish('empress')" data-picture="empress">
-                <div class="picture__image frame1">
+            <figure class="picture" data-picture="empress">
+                <div class="picture__image frame1 active increase" data-image="images/holiday/empress.jpg">
                     <img src="images/holiday/empress.jpg" alt="">
                 </div>
                 <figcaption class="picture__caption increase">
                     Шальная императрица Барбарисовна
                 </figcaption>
+                <div class="picture__message active" onclick="showWish('empress')"></div>
             </figure>
         </div><!-- Праздничный зал -->
     </div>

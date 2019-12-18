@@ -57,6 +57,22 @@ const wishes = {
     title: true,
     text: "Нихель-Пихельного энтузиазма"
   },
+  "egypt1": {
+    title: true,
+    text: "egypt1"
+  },
+  "beetle": {
+    title: true,
+    text: "Меньше какашек вокруг тебя"
+  },
+  "egypt2": {
+    title: true,
+    text: "egypt2"
+  },
+  "egypt3": {
+    title: true,
+    text: "egypt3"
+  },
 
   // mult
   "bojack": {
@@ -84,6 +100,14 @@ const wishes = {
   "starwars2": {
     title: true,
     text: "Найти человека, который будет тебя дополнять"
+  },
+  "got": {
+    title: true,
+    text: "got"
+  },
+  "starwars3": {
+    title: true,
+    text: "starwars 3"
   },
 
   // literally
@@ -149,6 +173,10 @@ const wishes = {
   },
   
   // mental
+  "owl": {
+    title: true,
+    text: "owl"
+  },
   "cat1": {
     title: true,
     text: "Не забывать отдыхать"

@@ -1044,6 +1044,21 @@ body {
     /* outline: 1px solid; */
 }
 
+.apsny-table {
+    width: 300px;
+    height: 50px;
+    background: url(images/table.png) center / 100% 100% no-repeat;
+    text-align: center;
+    line-height: 45px;
+    padding: 0 30px;
+    font-size: 20px;
+    font-weight: bold;
+    left: 840px;
+    top: 100px;
+    position: absolute;
+    color: #6b0000;
+}
+
 /* ÐŸÑ€Ð°Ð·Ð´Ð½Ð¸Ñ‡Ð½Ñ‹Ð¹ Ð·Ð°Ð» */
 
 [data-section="holiday"] {
