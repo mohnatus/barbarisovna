@@ -490,7 +490,9 @@ input:checked + .checkbox:before {
 
     [data-section="ceremonial"] .section__granny {
         background: url(images/ceremonial/granny.png) bottom / contain no-repeat;
-        right: 50px;
+        bottom: -28px;
+        width: 232px;
+        height: 520px;
     }
 
     [data-picture="tiger"] {
@@ -528,7 +530,9 @@ input:checked + .checkbox:before {
     }
 
     [data-section="egypt"] .section__granny {
-        background: url(images/egypt/granny.png) bottom / contain no-repeat; 
+        background: url(images/egypt/granny.png) bottom / contain no-repeat;
+        width: 272px;
+        bottom: 0;
     }
 
     [data-section="egypt"] .mummy {
@@ -731,7 +735,9 @@ input:checked + .checkbox:before {
 
     [data-section="literally"] .section__granny {
         background: url(images/literally/granny.png) bottom / contain no-repeat;
-        width: 250px;
+        width: 267px;
+        height: 556px;
+        bottom: -18px;
     }
 
     [data-section="literally"] [data-picture] {
@@ -783,7 +789,10 @@ input:checked + .checkbox:before {
 
     [data-section="isaak"] .section__granny {
         background: url(images/isaak/granny.png) bottom / contain no-repeat;
-        
+        bottom: -20px;
+        width: 230px;
+        transform: scaleX(-1);
+        height: 580px;
     }
 
     [data-picture="isaak1"] {
@@ -819,6 +828,9 @@ input:checked + .checkbox:before {
 
     [data-section="demon"] .section__granny {
         background: url(images/demon/granny.png) bottom / contain no-repeat;
+        width: 295px;
+        height: 563px;
+        bottom: 10px;
     }
 
     [data-picture="demon"] {
@@ -1020,7 +1032,10 @@ input:checked + .checkbox:before {
 
     [data-section="job"] .section__granny {
         background: url(images/job/granny.png) bottom / contain no-repeat;
-        
+        bottom: 3px;
+        width: 250px;
+        height: 569px;
+        transform: scaleX(-1);
     }
 
     .coffeemachine {
@@ -1142,7 +1157,9 @@ input:checked + .checkbox:before {
 
     [data-section="mental"] .section__granny {
         background: url(images/mental/granny.png) bottom / contain no-repeat;
-        
+        width: 270px;
+        height: 545px;
+        bottom: 26px;
     }
 
     [data-picture="owl"] {
@@ -1207,7 +1224,10 @@ input:checked + .checkbox:before {
 }
 
 [data-section="apsny"] .section__granny {
-    background: url(images/apsny/granny.png) bottom / contain no-repeat; 
+    background: url(images/apsny/granny.png) bottom / contain no-repeat;
+    width: 260px;
+    height: 576px;
+    bottom: 0;
 }
 
 .apsny {
