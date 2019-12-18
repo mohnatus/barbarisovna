@@ -285,6 +285,7 @@ input:checked + .checkbox:before {
     font-weight: bold;
     left: 100px;
     color: #6b0000;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
 }
 
 .section__floor {
@@ -398,6 +399,7 @@ input:checked + .checkbox:before {
     border-width: 40px;
     border-style: solid;
     border-image: url(images/frames/frame1.png) 445 430 stretch;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .frame1:before {
@@ -449,6 +451,7 @@ input:checked + .checkbox:before {
         left: 0;
         right: 0;
         margin:  auto;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
     }
 
     .rules-sheet, .map-sheet {
@@ -462,6 +465,7 @@ input:checked + .checkbox:before {
         font-weight: bold;
         font-family: 'Pacifico', cursive;
         text-align: center;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
     }
 
     .rules-sheet {
