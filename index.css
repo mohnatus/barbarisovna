@@ -427,6 +427,50 @@ input:checked + .checkbox:before {
         display: none;
     }
 
+    [data-section="entrance"] {
+        background: 
+            url(images/entrance/wall.jpg) center / 200px auto repeat;
+    }
+    [data-section="entrance"] .section__floor span {
+        background: url(images/entrance/floor.jpg) center / 500px;
+    }
+
+    .entrance__title {
+        max-width: 500px;
+        padding: 30px 40px;
+        background: url(images/table.png) center / 100% 100% no-repeat;
+        position: absolute;
+        text-align: center;
+        line-height: 1.4;
+        font-size: 22px;
+        font-weight: bold;
+        color: black;
+        top: 50px;
+        left: 0;
+        right: 0;
+        margin:  auto;
+    }
+
+    .rules-sheet, .map-sheet {
+        width: 150px;
+        background:white;
+        position:absolute;
+        top: 300px;
+        height: 250px;
+        padding: 10px;
+        font-size:14px;
+        font-weight: bold;
+        font-family: 'Pacifico', cursive;
+        text-align: center;
+    }
+
+    .rules-sheet {
+        left: calc(50% - 400px);
+    }
+     .map-sheet {
+        left: calc(50% + 250px);
+    }
+
 /* ÐŸÐ°Ñ€Ð°Ð´Ð½Ñ‹Ð¹ Ð·Ð°Ð» */
 
     [data-section="ceremonial"] {
