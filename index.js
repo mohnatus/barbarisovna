@@ -436,3 +436,11 @@ label.onclick = function() {
 //   e.stopPropagation();
 //   audio1.pause();
 // })
+
+function toHall(hall) {
+  let $hall = document.querySelector('[data-section="' + hall + '"]');
+  if (!$hall) return;
+
+  let left = $hall.getBoundingClientRect().left;
+  document.getElementById('gallery').scrollLeft = left;
+}

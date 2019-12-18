@@ -13,27 +13,91 @@
         <div id="rules">
             <div class="rules-list">
                 <div class="rules-list__title">
-                    Добро пожаловать на выставку...
+                    Добро пожаловать на выставку частной коллекции поддельного искусства!
                 </div>
                 <div class="rules-list__text">
-                    Эта выставка ....
+                    <b>На территории выставки строго соблюдайте следующие правила:</b>
                 </div>
+                <div class="rule">
+                    1. Не сорите
+                </div>
+                <div class="rule">
+                    2. Не тыкайте пальцами в произведения искусства
+                </div>
+                <div class="rule">
+                    3. Не хлопайте дверьми
+                </div>
+                <div class="rule">
+                    4. Следуйте всем указаниям смотрителей залов
+                </div>
+                <div class="rule">
+                    5. Включите звук
+                </div>
+
                 <div class="rules-list__text">
-                    Соблюдайте правила:
+                    <b>Инструкция:</b>
                 </div>
                 <div class="rule">
-                    1. Не сорить
+                    1. Представленные на выставке шедевры искусства можно рассмотреть поближе, нажав на них.
                 </div>
                 <div class="rule">
-                    2. Не тыкать пальцами в произведения искусства
+                    2. На таблички со знаком подарка тоже можно нажать.
                 </div>
                 <div class="rule">
-                    3. Чтобы в деталях насладиться шедевром, нажмите на табличку под ним.
+                    3. Многие элементы выставки интерактивны.
                 </div>
-                <div class="exit" onclick="document.getElementById('rules').style.display = 'none'">
-                    Закрыть
+                <div class="rule">
+                    4. В любой непонятной ситуации используйте метод тыка.
+                </div>
+
+                <hr>
+
+                <div  class="rules-list__text">
+                    <label>
+                        <input type="checkbox" id="mark" style="display: none">
+                        <span class="checkbox"></span>
+                        <span>Поставьте галочку</span>
+                    </label>
+
+                    <div id="rulesError" style="display:none">
+                        Поставьте галочку, если хотите попасть на выставку!!!
+                    </div>
+                    
+                    <div class="small">
+                        Поставив галочку, вы подтверждаете свое согласие переписать на организаторов выставки свою квартиру, бизнес, банковские сбережения и кошку. Мы вам благодарны.
+                    </div>
+                </div>
+
+                <script>
+                    function closeRules() {
+                        if (document.getElementById('mark').checked) {
+                            document.getElementById('rules').style.display = 'none';
+                            document.getElementById('rulesError').style.display = 'none';
+                        } else {
+                            document.getElementById('rulesError').style.display = 'block';
+                        }
+                    }
+                </script>
+
+                <div class="exit" onclick="closeRules()">
+                    Хочу на выставку
                 </div>
             </div>
+        </div>
+
+        <div id="map" style="display: none" onclick="this.style.display = 'none'">
+            <div onclick="toHall('ceremonial')">Парадный зал</div>
+            <div onclick="toHall('egypt')">Египетский зал</div>
+            <div onclick="toHall('mult')">Мультяшный зал</div>
+            <div onclick="toHall('cinema')">Зал кино и сериалов</div>
+            <div onclick="toHall('literally')">Буквальный зал</div>
+            <div onclick="toHall('isaak')">Исаакиевский зал</div>
+            <div onclick="toHall('demon')">Демонический зал</div>
+            <div onclick="toHall('job')">Рабочий зал</div>
+            <div onclick="toHall('physical')">Зал физического здоровья</div>
+            <div onclick="toHall('mental')">Зал душевного здоровья</div>
+            <div onclick="toHall('apsny')">Зал Апсны</div>
+            <div onclick="toHall('empress')">Императорский зал</div>
         </div>
 
         <div class="gallery" id="gallery">
@@ -57,6 +121,14 @@
             <!-- Вход -->   
             <div class="section" data-section="entrance">
                 выставка частной коллекции поддельного искусства
+
+                <div class="rules-sheet" onclick="document.getElementById('rules').style.display = 'block'">
+                    Правила выставки
+                </div>
+
+                <div class="map-sheet" onclick="document.getElementById('map').style.display = 'block'">
+                    Карта выставки
+                </div>
             </div><!-- Вход --> 
 
             <!-- 1. Парадный зал -->
@@ -347,7 +419,7 @@
 
             </div><!-- Буквальный зал -->
 
-            <!-- 6. Зал Исаакиевского собора -->
+            <!-- 6. Исаакиевский зал -->
             <div class="section" data-section="isaak">
                 <div class="section__title">Исаакиевский зал</div>
                 <div class="section__floor"><span></span></div>
@@ -380,7 +452,7 @@
                         Вид с близкого расстояния
                     </figcaption>
                 </figure>
-            </div><!-- Зал Исакиевского собора -->
+            </div><!-- Исаакиевский зал -->
 
             <!-- 7. Демонический зал -->
             <div class="section" data-section="demon">
@@ -659,7 +731,7 @@
                 <div class="apsny active increase" data-image="images/apsny/bottle.png"></div>
             </div><!-- Зал апсны -->
 
-            <!-- 12. Праздничный зал -->
+            <!-- 12. Императорский зал -->
             <div class="section" data-section="holiday">
                 <div class="section__title section__title--center">Императорский зал</div>
                 <div class="section__floor"><span></span></div>
@@ -693,7 +765,7 @@
                     </figcaption>
                     <div class="picture__message active" onclick="showWish('empress')"></div>
                 </figure>
-            </div><!-- Праздничный зал -->
+            </div><!-- Императорский зал -->
         </div>
 
         <div id="wish" class="wish">
@@ -706,7 +778,7 @@
         <div id="image"></div>
     </div>
     
-    <div id="closed" style="">
+    <div id="closed" style="display: none">
         <div class="timer">
             <div class="container">
                 <div class="balloon white">
@@ -747,11 +819,12 @@
     <script>
         function openGallery() {
             document.getElementById('closed').style.display = "none";
-            document.getElementById('opened').style.display = "block";
+            document.getElementById('opened').style.display = "";
         }
 
         if (new Date() < new Date(2020, 0, 1)) {
             window.galleryClosed = true;
+            document.getElementById('closed').style.display = "";
         } else {
             openGallery();
         }
