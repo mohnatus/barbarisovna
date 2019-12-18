@@ -473,3 +473,7 @@ function toHall(hall) {
   let left = $hall.getBoundingClientRect().left;
   document.getElementById('gallery').scrollLeft = left;
 }
+
+document.getElementById('horoscope-open').onclick = function(e) {
+  e.stopImmediatePropagation();
+}

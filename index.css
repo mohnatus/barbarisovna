@@ -742,6 +742,16 @@ input:checked + .checkbox:before {
         bottom: 85%;
     }
 
+    [data-section="cinema"] .section__granny .paper {
+        position: absolute;
+        background: url(images/cinema/paper.png) center / contain no-repeat;
+        width: 111px;
+        height: 70px;
+        left: 88px;
+        top: 248px;
+        transform: scaleX(-1);
+    }
+
     [data-picture="starwars1"] {
         left: 350px;
         top: 129px;
