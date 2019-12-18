@@ -44,6 +44,11 @@
             <audio src="media/mur5.mp3" id="mur5"></audio>
             <audio src="media/mur6.mp3" id="mur6"></audio>
             <audio src="media/mur7.mp3" id="mur7"></audio>
+
+            <audio src="media/chubakka.mp3" id="chubakka"></audio>
+            <audio src="media/gun.mp3" id="gun"></audio>
+            <audio src="media/smellycat.mp3" id="smellycat"></audio>
+            <audio src="media/owl.mp3" id="owl"></audio>
         </div>
         
         <!-- Вход -->   
@@ -182,7 +187,7 @@
             </figure>
 
             <!-- Царь горы -->
-            <figure class="picture active"onclick="showWish('hillking')"  data-picture="hillking">
+            <figure class="picture active" onclick="showWish('hillking')"  data-picture="hillking">
                 <div class="picture__image frame1">
                     <img src="images/mult/hillking.png" alt="">
                 </div>
@@ -194,11 +199,10 @@
             <!-- Гомер в воронке -->
             <figure class="picture active" data-picture="homer1" onclick="show('homer1')">
                 <div class="picture__image frame1">
-                    <img src="images/mult/homer1.png" alt="" style="display: none">
                     <video src="media/homer.mkv" id="homer1"></video>
                 </div>
-                <figcaption class="picture__caption increase">
-                    Не торопись
+                <figcaption class="picture__caption">
+                    Карстовая воронка
                 </figcaption>
             </figure>
 
@@ -223,10 +227,9 @@
             <!-- Дейенерис Бурерожденная -->
             <figure class="picture active" data-picture="got" onclick="show('got')">
                 <div class="picture__image frame1">
-                    <img src="images/cinema/got.png" alt="" style="display: none">
                     <video src="media/got.mkv" id="got"></video>
                 </div>
-                <figcaption class="picture__line increase">
+                <figcaption class="picture__line">
                     <span><span>Дейенерис Бурерожденная из дома Таргариенов, от крови древней Валирии, первая этого имени, королева андалов, ройнаров и Первых Людей, владычица семи королевств, и хранительница областей, Неопалимая, правительница Миэрина, кхалиси Великого травяного моря, Разрушительница Оков и Матерь Драконов</span></span>
                 </figcaption>
             </figure>
@@ -242,7 +245,7 @@
             </figure>
 
             <!-- Фиби-бобыль -->
-            <figure class="picture active" data-picture="friends">
+            <figure class="picture active" data-picture="friends" onclick="listen('smellycat')">
                 <div class="picture__image frame1">
                     <img src="images/cinema/friends.png" alt="">
                 </div>
@@ -262,7 +265,7 @@
                 </figcaption>
             </figure>
 
-            <div style="display:none"><audio src="media/chubakka.mp3" id="chubakka"></audio></div>
+            
             
 
         </div><!-- Зал кино и сериалов -->
@@ -435,7 +438,9 @@
             <div class="section__floor"><span></span></div>
             <div class="section__granny"></div>
 
-            <div class="coffeemachine active"  onclick="showWish('coffeemachine')"></div>
+            <div class="coffeemachine active"  onclick="showWish('coffeemachine')">
+                <span class="bean"></span>
+            </div>
 
             <!-- Банки кофе, Уорхол -->
             <figure class="picture active" onclick="showWish('coffee')" data-picture="coffee">
@@ -496,9 +501,6 @@
                     Понедельник
                 </figcaption>
             </figure>
-
-            <div style="display:none"><audio src="media/gun.mp3" id="gun"></audio></div>
-            
         </div>
 
         <!-- 9. Зал физического здоровья -->
@@ -555,7 +557,7 @@
             <div class="section__floor"><span></span></div>
             <div class="section__granny"></div>
 
-            <figure class="picture active" data-picture="owl">
+            <figure class="picture active" data-picture="owl" onclick="listen('owl', 10)">
                 <div class="picture__image frame1">
                     <img src="images/mental/owl.jpg" alt="">
                 </div>

@@ -55,7 +55,7 @@ const wishes = {
   // egypt
   "mummy": {
     title: true,
-    text: "Будь активной как Нихель Пихель"
+    text: "Нихель-Пихельного энтузиазма"
   },
 
   // mult
@@ -103,7 +103,7 @@ const wishes = {
   // job
   "coffee": {
     title: true,
-    text: "Побольше хорошего"
+    text: "Много-много хорошего и вкусного"
   },
   "bears": {
     title: true,

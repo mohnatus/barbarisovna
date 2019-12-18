@@ -846,6 +846,11 @@ body {
         background: url(images/job/coffeemachine.png) bottom / contain no-repeat;
     }
 
+    .coffeemachine .bean {
+        
+    }
+
+
     [data-picture="coffee"] {
         left: 313px;
         top: 123px;
