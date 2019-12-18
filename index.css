@@ -198,6 +198,10 @@ input:checked + .checkbox:before {
     animation-direction: reverse;
 }
 
+.active.deactive:hover {
+    animation: none;
+}
+
 .wish {
     position: fixed;
     top: 0px;
@@ -895,9 +899,9 @@ input:checked + .checkbox:before {
     [data-picture="isaak2"] video {
         display: block;
         width: calc(100% + 200px);
-        height: calc(100% + 100px);
+        height: calc(100% + 147px);
         margin-left: -100px;
-        margin-top: -50px;
+        margin-top: -78px;
     }
 
     [data-picture="isaak3"] {

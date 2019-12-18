@@ -322,7 +322,9 @@
                 <div class="section__title">Зал кино и сериалов</div>
                 <div class="section__floor"><span></span></div>
                 <div class="section__granny active" onclick="this.classList.toggle('says')">
-                    <div class="paper active" id="horoscope-open"></div>
+                    <div class="paper active" id="horoscope-open"
+                    onmouseover="this.parentElement.classList.add('deactive')"
+                    onmouseout="this.parentElement.classList.remove('deactive')"></div>
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
