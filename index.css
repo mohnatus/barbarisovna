@@ -313,6 +313,50 @@ input:checked + .checkbox:before {
     bottom: 50px;
 }
 
+.section__granny .speech {
+    position: absolute;
+    bottom: 80%;
+    left: 50%;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.speech .first {
+    width: 14px;
+    height: 14px;
+    background: white;
+    position: absolute;
+    border-radius: 10px / 10px;
+    bottom: 0;
+    display: none;
+    left: 0;
+}
+
+.speech .second {
+    width: 30px;
+    height: 35px;
+    background: white;
+    position: absolute;
+    /* border-radius: 14px / 10px; */
+    bottom: 92px;
+    left: 20px;
+    transform: skew(134deg, -74deg);
+}
+
+.speech .text {
+    width: 252px;
+    height: 132px;
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 50px;
+    left: -30px;
+    color: #6b0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
 .picture {
     position: absolute;
 }
@@ -495,6 +539,10 @@ input:checked + .checkbox:before {
         height: 520px;
     }
 
+    [data-section="ceremonial"] .section__granny .speech {
+        bottom: 90%;
+    }
+
     [data-picture="tiger"] {
         top: 177px;
         left: 351px;
@@ -635,6 +683,10 @@ input:checked + .checkbox:before {
         width: 260px;
     }
 
+    [data-section="mult"] .section__granny .speech {
+        bottom: 65%;
+    }
+
     [data-picture="bojack"] {
         top: 100px;
         left: 350px;
@@ -679,6 +731,10 @@ input:checked + .checkbox:before {
         background: url(images/cinema/granny.png) bottom / contain no-repeat;
         width: 300px;
         bottom: 0px;
+    }
+
+    [data-section="cinema"] .section__granny .speech {
+        bottom: 85%;
     }
 
     [data-picture="starwars1"] {
@@ -740,6 +796,10 @@ input:checked + .checkbox:before {
         bottom: -18px;
     }
 
+    [data-section="literally"] .section__granny .speech {
+        bottom: 82%;
+    }
+
     [data-section="literally"] [data-picture] {
         width: 350px;
         height: 350px;
@@ -795,6 +855,14 @@ input:checked + .checkbox:before {
         height: 580px;
     }
 
+    [data-section="isaak"] .section__granny .speech {
+        bottom: 88%;
+    }
+
+    [data-section="isaak"] .section__granny .speech {
+        transform: scaleX(-1);
+    }
+
     [data-picture="isaak1"] {
         top: 142px;
         width: 488px;
@@ -831,6 +899,10 @@ input:checked + .checkbox:before {
         width: 295px;
         height: 563px;
         bottom: 10px;
+    }
+
+    [data-section="demon"] .section__granny .speech {
+        bottom: 85%;
     }
 
     [data-picture="demon"] {
@@ -1038,6 +1110,11 @@ input:checked + .checkbox:before {
         transform: scaleX(-1);
     }
 
+    [data-section="job"] .section__granny .speech {
+        transform: scaleX(-1);
+        bottom: 90%;
+    }
+
     .coffeemachine {
         position: absolute;
         bottom: 50px;
@@ -1114,6 +1191,10 @@ input:checked + .checkbox:before {
         bottom: -11px;
     }
 
+    [data-section="physical"] .section__granny .speech {
+        bottom: 90%;
+    }
+
     [data-picture="peaches"] {
         left: 350px;
         width: 345px;
@@ -1160,6 +1241,10 @@ input:checked + .checkbox:before {
         width: 270px;
         height: 545px;
         bottom: 26px;
+    }
+
+    [data-section="mental"] .section__granny .speech {
+        bottom: 92%;
     }
 
     [data-picture="owl"] {
@@ -1224,10 +1309,34 @@ input:checked + .checkbox:before {
 }
 
 [data-section="apsny"] .section__granny {
-    background: url(images/apsny/granny.png) bottom / contain no-repeat;
     width: 260px;
     height: 576px;
+    bottom: -9px;
+}
+
+[data-section="apsny"] .section__granny .speech {
+        bottom: 84%;
+    }
+
+[data-section="apsny"] .section__granny:before {
+    content: '';
+    position: absolute;
+    z-index: 5;
+    top: 0;
     bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(images/apsny/granny.png) bottom / contain no-repeat;
+}
+
+[data-section="apsny"] .section__granny .bottle {
+    position: absolute;
+    width: 24px;
+    height: 97px;
+    background: url(images/apsny/bottle.png) bottom / contain no-repeat;
+    bottom: 90px;
+    left: 25px;
+    z-index: 3;
 }
 
 .apsny {
