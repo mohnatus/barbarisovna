@@ -38,6 +38,11 @@ for (let i = 0; i < lines.length; i++) {
 }
 
 const wishes = {
+  "book": {
+    title: true,
+    text: "Меньше плохих книг",
+  },
+
   // ceremonial hall
   "tiger": {
     title: true,

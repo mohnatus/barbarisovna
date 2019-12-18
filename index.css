@@ -410,6 +410,17 @@ input:checked + .checkbox:before {
     right: -12px;
 }
 
+.trash-book {
+    position: absolute;
+    bottom: 6px;
+    right: 80px;
+    width: 200px;
+    height: 350px;
+    background: url(images/trash.gif) bottom / contain no-repeat;
+    cursor: pointer;
+    z-index: 3;
+}
+
 /* Ð’Ñ…Ð¾Ð´ */
 
     [data-section="entrance"]:before {
