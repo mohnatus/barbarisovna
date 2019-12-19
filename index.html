@@ -97,7 +97,8 @@
             <div onclick="toHall('physical')">Зал физического здоровья</div>
             <div onclick="toHall('mental')">Зал душевного здоровья</div>
             <div onclick="toHall('apsny')">Зал Апсны</div>
-            <div onclick="toHall('empress')">Императорский зал</div>
+            <div onclick="toHall('holiday')">Императорский зал</div>
+            <div onclick="toHall('president')">Президентский зал</div>
         </div>
 
         <div class="gallery" id="gallery">
@@ -896,6 +897,22 @@
                     <div class="picture__message active" onclick="showWish('empress')"></div>
                 </figure>
             </div><!-- Императорский зал -->
+
+            <!-- 13. Президентский зал -->
+            <div class="section" data-section="president">
+                <div class="section__title section__title--center">Президентский зал</div>
+                <div class="section__floor"><span></span></div>
+
+                <div class="tree"></div>
+                <div class="stool"></div>
+
+                <figure class="picture" data-picture="president">
+                    <div class="picture__image active" onclick="show('president', true)">
+                        <video src="media/president.mp4" id="president"></video>
+                    </div>
+                </figure>
+
+            </div><!-- Президентский зал -->
         </div>
 
         <div id="wish" class="wish">

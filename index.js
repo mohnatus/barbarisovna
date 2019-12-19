@@ -319,10 +319,10 @@ const listen = function(id, stop) {
   }
 }
 
-const show = function(id) {
+const show = function(id, pause) {
   let video = document.getElementById(id);
   if (video.paused) {
-    video.currentTime = 0;
+    if (!pause) video.currentTime = 0;
     video.play();
   } else {
     video.pause();

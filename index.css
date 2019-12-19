@@ -510,7 +510,7 @@ input:checked + .checkbox:before {
 
     .rules-sheet, .map-sheet {
         width: 150px;
-        background:white;
+        background:white url(images/entrance/paper.png) bottom / contain no-repeat;
         position:absolute;
         top: 300px;
         height: 250px;
@@ -1449,10 +1449,6 @@ input:checked + .checkbox:before {
         url(images/holiday/wall.jpg) center / 200px auto repeat;
 }
 
-[data-section="holiday"]:after {
-    display: none;
-}
-
 [data-section="holiday"] .section__floor span {
     background: url(images/apsny/floor.jpg) center / 500px;
     /* transform: perspective(2000px) rotate3d(0.3,0,0,62deg); */
@@ -1478,4 +1474,45 @@ input:checked + .checkbox:before {
     height: 483px;
     left: 1472px;
     top: 80px;
+}
+
+/* president hall */
+
+[data-section="president"] {
+    min-width: 2200px;
+    background: url(images/president/wall.png) center / 300px 100% repeat;
+}
+
+[data-section="holpresidentiday"]:after {
+    display: none;
+}
+
+[data-section="holiday"] .section__floor span {
+    background: url(images/president/floor.jpg) center / 500px;
+    /* transform: perspective(2000px) rotate3d(0.3,0,0,62deg); */
+}
+
+[data-picture="president"] {
+    left: 978px;
+    top: 100px;
+    width: 554px;
+    height: 438px;
+}
+
+.tree {
+    position: absolute;
+    background: green url(images/president/tree.png) bottom / contain no-repeat;
+    width: 300px;
+    height: 700px;
+    left: 1200px;
+    bottom: 30px;
+}
+
+.stool {
+    position: absolute;
+    background: brown url(images/president/stool.png) bottom / contain no-repeat;
+    width: 300px;
+    height: 300px;
+    left: 700px;
+    bottom: 30px;
 }
