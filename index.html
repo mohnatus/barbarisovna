@@ -116,6 +116,9 @@
                 <audio src="media/owl.mp3" id="owl"></audio>
                 <audio src="media/horse.mp3" id="horse"></audio>
                 <audio src="media/bells.mp3" id="bells"></audio>
+                <audio src="media/beetle.mp3" id="beetle"></audio>
+                <audio src="media/zzz.mp3" id="zzz"></audio>
+                <audio src="media/omm.mp3" id="omm"></audio>
             </div>
             
             <!-- Вход -->   
@@ -138,13 +141,27 @@
 
             <!-- 1. Парадный зал -->
             <div class="section" data-section="ceremonial">
+                <script>
+                    function ceremonialGranny(el) {
+                        if (el.classList.contains('says')) {
+                            el.classList.remove('says');
+                            document.getElementById('zzz').pause();
+                        } else {
+                            el.classList.add('says');
+                            document.getElementById('zzz').currentTime = 0;
+                            document.getElementById('zzz').play();
+                        }
+                    }
+                </script>
+
+
                 <div class="section__title">Парадный зал</div>
                 <div class="section__floor"><span></span></div>
-                <div class="section__granny active" onclick="this.classList.toggle('says')">
+                <div class="section__granny active" onclick="ceremonialGranny(this)" >
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
-                        <span class="text">Какой-то текст</span>
+                        <span class="text">* zzzZZZ *</span>
                     </div>
                 </div>
 
@@ -191,7 +208,7 @@
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
-                        <span class="text">Какой-то текст</span>
+                        <span class="text">К мумиям не приставать!<br>За бинты не дергать!</span>
                     </div>
                 </div>
 
@@ -267,7 +284,7 @@
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
-                        <span class="text">Какой-то текст</span>
+                        <span class="text">Вы готовы, дети?</span>
                     </div>
                 </div>
 
@@ -328,7 +345,7 @@
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
-                        <span class="text">Какой-то текст</span>
+                        <span class="text">* Чота приуныл *</span>
                     </div>
                 </div>
 
@@ -349,7 +366,7 @@
                         <video src="media/got.mkv" id="got"></video>
                     </div>
                     <figcaption class="picture__line">
-                        <span><span>Дейенерис Бурерожденная из дома Таргариенов, от крови древней Валирии, первая этого имени, королева андалов, ройнаров и Первых Людей, владычица семи королевств, и хранительница областей, Неопалимая, правительница Миэрина, кхалиси Великого травяного моря, Разрушительница Оков и Матерь Драконов</span></span>
+                        <span><span>Екатерина Бурерожденная из дома Козловых, от крови древнего Бориса, одна тысяча четыреста тридцать первая этого имени, королева вандалов, деминых, томляновичей и Бриллиантовых Людей, владычица 1C и хранительница семи кофейных аппаратов, Непоколебимая, управительница аккаунта в Инстаграмме, кхалиси Великого кофейного моря, Покорительница выставок и Матерь Кота</span></span>
                     </figcaption>
                     <div class="picture__message active" onclick="showWish('got')"></div>
                 </figure>
@@ -398,7 +415,7 @@
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
-                        <span class="text">Какой-то текст</span>
+                        <span class="text">Ощущайте удовольствие от созерцания изображений</span>
                     </div>
                 </div>
 
@@ -467,7 +484,7 @@
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
-                        <span class="text">Какой-то текст</span>
+                        <span class="text">В картины пальцами не тыкать!</span>
                     </div>
                 </div>
 
@@ -512,7 +529,7 @@
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
-                        <span class="text">Какой-то текст</span>
+                        <span class="text">В картины пальцами тыкать!</span>
                     </div>
                 </div>
 
@@ -590,7 +607,7 @@
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
-                        <span class="text">Какой-то текст</span>
+                        <span class="text">Вы тут отдыхаете,<br>а я работаю</span>
                     </div>
                 </div>
 
@@ -672,7 +689,7 @@
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
-                        <span class="text">Какой-то текст</span>
+                        <span class="text">Упал - отжался!</span>
                     </div>
                 </div>
 
@@ -700,7 +717,7 @@
 
                 <!-- Йога -->
                 <figure class="picture" data-picture="yoga">
-                    <div class="picture__image frame1 active">
+                    <div class="picture__image frame1 active increase" data-image="images/physical/yoga.jpeg">
                         <img src="images/physical/yoga.jpeg" alt="">
                     </div>
                     <figcaption class="picture__caption">
@@ -724,13 +741,27 @@
 
             <!-- 10. Зал душевного здоровья -->
             <div class="section" data-section="mental">
+                <script>
+                    function mentalGranny(el) {
+                        if (el.classList.contains('says')) {
+                            el.classList.remove('says');
+                            document.getElementById('omm').pause();
+                        } else {
+                            el.classList.add('says');
+                            document.getElementById('omm').currentTime = 0;
+                            document.getElementById('omm').play();
+                        }
+                    }
+                </script>
+
+
                 <div class="section__title">Зал душевного здоровья</div>
                 <div class="section__floor"><span></span></div>
-                <div class="section__granny active" onclick="this.classList.toggle('says')">
+                <div class="section__granny active" onclick="mentalGranny(this)">
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
-                        <span class="text">Какой-то текст</span>
+                        <span class="text">* Медитирует *</span>
                     </div>
                 </div>
 
@@ -798,20 +829,29 @@
 
             <!-- 11. Зал апсны -->
             <div class="section" data-section="apsny">
+                
                 <div class="section__title">Зал Апсны</div>
+                
                 <div class="section__floor"><span></span></div>
                 <div class="section__granny active" onclick="this.classList.toggle('says')">
-                    <div class="bottle"></div>
+                    <div class="bottle active" onmouseover="this.parentElement.classList.add('deactive')"
+                    onmouseout="this.parentElement.classList.remove('deactive')"></div>
                     <div class="speech">
                         <span class="first"></span>
                         <span class="second"></span>
-                        <span class="text">Какой-то текст</span>
+                        <span class="text">Ик!</span>
                     </div>
                 </div>
 
-                
+                <script>
+                    document.querySelector('.bottle').onclick = function(e) {
+                        e.stopPropagation();
+                        showWish('bottle')
+                    }
+                </script>
 
                 <div class="apsny-table">Апсны</div>
+                <div class="apsny-message" onclick="showWish('apsny')"></div>
                 <div class="apsny active increase" data-image="images/apsny/bottle.png"></div>
             </div><!-- Зал апсны -->
 

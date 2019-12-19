@@ -64,7 +64,7 @@ const wishes = {
   },
   "egypt1": {
     title: true,
-    text: "egypt1"
+    text: "Послушной челяди"
   },
   "beetle": {
     title: true,
@@ -72,11 +72,11 @@ const wishes = {
   },
   "egypt2": {
     title: true,
-    text: "egypt2"
+    text: "Правильно поклоняющихся почитателей"
   },
   "egypt3": {
     title: true,
-    text: "egypt3"
+    text: "Цветов и подарочков"
   },
 
   // mult
@@ -108,11 +108,11 @@ const wishes = {
   },
   "got": {
     title: true,
-    text: "got"
+    text: "Летать на драконах и хуярить всех"
   },
   "starwars3": {
     title: true,
-    text: "starwars 3"
+    text: "Быть грациозной и не навернуться с шара"
   },
 
   // literally
@@ -144,7 +144,7 @@ const wishes = {
   },
   "coffee": {
     title: true,
-    text: "Много-много хорошего и вкусного"
+    text: "Много вкусняшек"
   },
   "bears": {
     title: true,
@@ -180,7 +180,7 @@ const wishes = {
   // mental
   "owl": {
     title: true,
-    text: "owl"
+    text: "Вращать головой на 360 градусов"
   },
   "cat1": {
     title: true,
@@ -201,6 +201,16 @@ const wishes = {
   "night": {
     title: true,
     text: "Быть выше этого всего"
+  },
+
+  // apsny 
+  "apsny": {
+    title: true,
+    text: "Апсны"
+  },
+  "bottle": {
+    title: false,
+    text: "Кажется, этот экспонат недавно использовали..."
   },
 
   // empress

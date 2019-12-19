@@ -115,7 +115,7 @@ body {
 }
 
 input:checked + .checkbox:before {
-    content: '✓';
+    content: '\2713';
     position: relative;
     top: -35px;
 }
@@ -364,6 +364,7 @@ input:checked + .checkbox:before {
     align-items: center;
     justify-content: center;
     padding: 40px;
+    text-align: center;
 }
 
 .picture {
@@ -476,7 +477,7 @@ input:checked + .checkbox:before {
     z-index: 3;
 }
 
-/* Ð’Ñ…Ð¾Ð´ */
+/* Ãâ€™Ã‘â€¦ÃÂ¾ÃÂ´ */
 
     [data-section="entrance"]:before {
         display: none;
@@ -529,7 +530,7 @@ input:checked + .checkbox:before {
         left: calc(50% + 250px);
     }
 
-/* ÐŸÐ°Ñ€Ð°Ð´Ð½Ñ‹Ð¹ Ð·Ð°Ð» */
+/* ÃÅ¸ÃÂ°Ã‘â‚¬ÃÂ°ÃÂ´ÃÂ½Ã‘â€¹ÃÂ¹ ÃÂ·ÃÂ°ÃÂ» */
 
     [data-section="ceremonial"] {
         min-width: 2101px;
@@ -574,7 +575,7 @@ input:checked + .checkbox:before {
     }
 
 
-/* Ð•Ð³Ð¸Ð¿ÐµÑ‚ÑÐºÐ¸Ð¹ Ð·Ð°Ð» */ 
+/* Ãâ€¢ÃÂ³ÃÂ¸ÃÂ¿ÃÂµÃ‘â€šÃ‘ÂÃÂºÃÂ¸ÃÂ¹ ÃÂ·ÃÂ°ÃÂ» */ 
     [data-section="egypt"] {
         min-width: 3800px;
         background: 
@@ -676,7 +677,7 @@ input:checked + .checkbox:before {
         height: 322px;
     }
 
-/* ÐœÑƒÐ»ÑŒÑ‚ÑÑˆÐ½Ñ‹Ð¹ Ð·Ð°Ð» */ 
+/* ÃÅ“Ã‘Æ’ÃÂ»Ã‘Å’Ã‘â€šÃ‘ÂÃ‘Ë†ÃÂ½Ã‘â€¹ÃÂ¹ ÃÂ·ÃÂ°ÃÂ» */ 
 
     [data-section="mult"] {
         min-width: 2950px;
@@ -724,7 +725,7 @@ input:checked + .checkbox:before {
         left: 833px;
     }
 
-/* Ð—Ð°Ð» ÐºÐ¸Ð½Ð¾ Ð¸ ÑÐµÑ€Ð¸Ð°Ð»Ð¾Ð² */ 
+/* Ãâ€”ÃÂ°ÃÂ» ÃÂºÃÂ¸ÃÂ½ÃÂ¾ ÃÂ¸ Ã‘ÂÃÂµÃ‘â‚¬ÃÂ¸ÃÂ°ÃÂ»ÃÂ¾ÃÂ² */ 
 
     [data-section="cinema"] {
         color: white;
@@ -797,7 +798,7 @@ input:checked + .checkbox:before {
         height: 445px;
     }
 
-/* Ð‘ÑƒÐºÐ²Ð°Ð»ÑŒÐ½Ñ‹Ð¹ Ð·Ð°Ð» */ 
+/* Ãâ€˜Ã‘Æ’ÃÂºÃÂ²ÃÂ°ÃÂ»Ã‘Å’ÃÂ½Ã‘â€¹ÃÂ¹ ÃÂ·ÃÂ°ÃÂ» */ 
 
     [data-section="literally"] {
         background-color: #acc8f0;
@@ -853,7 +854,7 @@ input:checked + .checkbox:before {
         left: 2150px;
     }
 
-/* Ð˜ÑÐ°Ð°ÐºÐ¸ÐµÐ²ÑÐºÐ¸Ð¹ Ð·Ð°Ð» */ 
+/* ÃËœÃ‘ÂÃÂ°ÃÂ°ÃÂºÃÂ¸ÃÂµÃÂ²Ã‘ÂÃÂºÃÂ¸ÃÂ¹ ÃÂ·ÃÂ°ÃÂ» */ 
 
     [data-section="isaak"] {
         width: 150vw;
@@ -911,7 +912,13 @@ input:checked + .checkbox:before {
         left: 2182px;
     }
 
-/* Ð”ÐµÐ¼Ð¾Ð½Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ Ð·Ð°Ð» */
+    [data-picture="isaak3"] video {
+        height: calc(100% + 100px);
+        width: calc(100% + 100px);
+        margin-top: -49px;
+    }
+
+/* Ãâ€ÃÂµÃÂ¼ÃÂ¾ÃÂ½ÃÂ¸Ã‘â€¡ÃÂµÃ‘ÂÃÂºÃÂ¸ÃÂ¹ ÃÂ·ÃÂ°ÃÂ» */
     [data-section="demon"] {
         min-width: 2600px;
         background: url(images/demon/wall.jpg) center / 200px auto repeat;
@@ -975,9 +982,9 @@ input:checked + .checkbox:before {
     }
 
     /* 
-        5*3 Ñ„Ñ€Ð°Ð³Ð¼ÐµÐ½Ñ‚Ð¾Ð²
-        688 - ÑˆÐ¸Ñ€Ð¸Ð½Ð°
-        420 - Ð²Ñ‹ÑÐ¾Ñ‚Ð°
+        5*3 Ã‘â€žÃ‘â‚¬ÃÂ°ÃÂ³ÃÂ¼ÃÂµÃÂ½Ã‘â€šÃÂ¾ÃÂ²
+        688 - Ã‘Ë†ÃÂ¸Ã‘â‚¬ÃÂ¸ÃÂ½ÃÂ°
+        420 - ÃÂ²Ã‘â€¹Ã‘ÂÃÂ¾Ã‘â€šÃÂ°
     */
 
     .puzzle .cell {
@@ -1117,7 +1124,7 @@ input:checked + .checkbox:before {
         top: calc(420px / 3 * 2);
     }
 
-/* Ð Ð°Ð±Ð¾Ñ‡Ð¸Ð¹ Ð·Ð°Ð» */
+/* ÃÂ ÃÂ°ÃÂ±ÃÂ¾Ã‘â€¡ÃÂ¸ÃÂ¹ ÃÂ·ÃÂ°ÃÂ» */
 
     [data-section="job"] {
         min-width: 4500px;
@@ -1200,7 +1207,7 @@ input:checked + .checkbox:before {
         top: 140px;
     }
 
-/* Ð—Ð°Ð» Ñ„Ð¸Ð·Ð¸Ñ‡ÐµÑÐºÐ¾Ð³Ð¾ Ð·Ð´Ð¾Ñ€Ð¾Ð²ÑŒÑ */
+/* Ãâ€”ÃÂ°ÃÂ» Ã‘â€žÃÂ¸ÃÂ·ÃÂ¸Ã‘â€¡ÃÂµÃ‘ÂÃÂºÃÂ¾ÃÂ³ÃÂ¾ ÃÂ·ÃÂ´ÃÂ¾Ã‘â‚¬ÃÂ¾ÃÂ²Ã‘Å’Ã‘Â */
 
     [data-section="physical"] {
         min-width: 3160px;
@@ -1251,7 +1258,7 @@ input:checked + .checkbox:before {
     }
 
 
-/* Ð—Ð°Ð» Ð´ÑƒÑˆÐµÐ²Ð½Ð¾Ð³Ð¾ Ð·Ð´Ð¾Ñ€Ð¾Ð²ÑŒÑ */
+/* Ãâ€”ÃÂ°ÃÂ» ÃÂ´Ã‘Æ’Ã‘Ë†ÃÂµÃÂ²ÃÂ½ÃÂ¾ÃÂ³ÃÂ¾ ÃÂ·ÃÂ´ÃÂ¾Ã‘â‚¬ÃÂ¾ÃÂ²Ã‘Å’Ã‘Â */
 
     [data-section="mental"] {
         min-width: 3936px;
@@ -1324,7 +1331,7 @@ input:checked + .checkbox:before {
     }
 
 
-/* Ð—Ð°Ð» Ð°Ð¿ÑÐ½Ñ‹ */
+/* Ãâ€”ÃÂ°ÃÂ» ÃÂ°ÃÂ¿Ã‘ÂÃÂ½Ã‘â€¹ */
 
 [data-section="apsny"] {
     background: #e8e8e8;
@@ -1354,6 +1361,7 @@ input:checked + .checkbox:before {
     left: 0;
     right: 0;
     background: url(images/apsny/granny.png) bottom / contain no-repeat;
+    pointer-events: none;
 }
 
 [data-section="apsny"] .section__granny .bottle {
@@ -1392,7 +1400,23 @@ input:checked + .checkbox:before {
     color: #6b0000;
 }
 
-/* ÐŸÑ€Ð°Ð·Ð´Ð½Ð¸Ñ‡Ð½Ñ‹Ð¹ Ð·Ð°Ð» */
+.apsny-message {
+    width: 50px;
+    height: 58px;
+    background: url(images/present.png) center / 100% 100% no-repeat;
+    text-align: center;
+    line-height: 45px;
+    /* padding: 0 30px; */
+    font-size: 20px;
+    font-weight: bold;
+    left: 970px;
+    cursor:   pointer;
+    top: 180px;
+    position: absolute;
+    color: #6b0000;
+}
+
+/* ÃÅ¸Ã‘â‚¬ÃÂ°ÃÂ·ÃÂ´ÃÂ½ÃÂ¸Ã‘â€¡ÃÂ½Ã‘â€¹ÃÂ¹ ÃÂ·ÃÂ°ÃÂ» */
 
 [data-section="holiday"] {
     min-width: 2200px;
