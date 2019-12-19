@@ -1374,6 +1374,31 @@ input:checked + .checkbox:before {
     z-index: 3;
 }
 
+.apsny-bg {
+    position: absolute;
+    top:  0;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    width: 800px;
+    left: 596px;
+}
+
+.apsny-bg .top {
+    background: url(images/apsny/top.png) top / 100% no-repeat;
+    height: 267px;
+}
+
+.apsny-bg .middle {
+    background: url(images/apsny/middle.png) top / 100% 100% no-repeat;
+    flex-grow: 1;
+}
+
+.apsny-bg .bottom {
+    background: url(images/apsny/bottom.png) top / 100% no-repeat;
+    height: 200px;
+}
+
 .apsny {
     background: url(images/apsny/apsny.png) bottom / contain no-repeat;
     width: 980px;
@@ -1395,7 +1420,7 @@ input:checked + .checkbox:before {
     font-size: 20px;
     font-weight: bold;
     left: 840px;
-    top: 100px;
+    top: 27px;
     position: absolute;
     color: #6b0000;
 }
