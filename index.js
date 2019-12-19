@@ -251,13 +251,20 @@ const showWish = (function() {
 let rotateTimer = null;
 
 let rotateHead = function(el) {
+  let audio = document.getElementById('beetle');
+
   if (el.classList.contains('rotate')) {
     clearTimeout(rotateTimer);
     el.classList.remove('rotate');
+    audio.pause();
     return;
   }
+
+  audio.play();
   el.classList.add('rotate');
   rotateTimer = setTimeout(function() {
+    audio.currentTime = 0;
+    audio.pause();
     clearTimeout(rotateTimer);
     el.classList.remove('rotate');
   }, 10 * 1000)
@@ -268,18 +275,26 @@ let image = document.getElementById('image');
 image.onclick = function() {
   image.style.display = "none";
 }
-const increase = function(url) {
-  image.style.backgroundImage = 'url(' + url + ')';
+const increase = function(url, bg) {
+  if (bg) {
+    image.style.background = 'url(' + url + ') center / contain no-repeat, url(' + bg + ') center / cover no-repeat';
+  } else {
+    image.style.background = "";
+    image.style.backgroundImage = 'url(' + url + ')';
+  }
+
   image.style.display = "block";
 }
 
 document.addEventListener('click', function(e) {
   let target = e.target.closest('.increase');
-  if (target) {
+  if (target) { 
     let image = target.dataset.image;
     if (!image) return;
 
-    increase(image);
+    let bg = target.dataset.bg;
+
+    increase(image, bg);
   }
 }, true);
 
